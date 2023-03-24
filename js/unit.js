@@ -89,4 +89,5 @@ set_protect_stats('enfida',40,7);
 //ヴィオ
 stats_set('enfivi',"エンフィタスアーマ・ヴィオ",0,10,3,3,3,0.05,2);
 set_protect_stats('enfivi',40,7)
+
 export default unit_stats;

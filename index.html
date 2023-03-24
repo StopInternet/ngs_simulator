@@ -1,1 +1,65 @@
+<html lang="en">
+    <head>
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>クラス</h3>
+        クラスの選択：
+        <select id="class-select">
+          <option value="">--クラスを選択してください--</option>
+        </select><br>
+        クラスレベル（1~70）：
+        <input type="number" min="1" max="70" value="1" id="class_level"><br>
 
+        クラススキル習得数（メイン・サブクラス含む1~94）：
+        <input type="number" min="1" max="94" value="1" id="skill"><br>
+        <br><br>
+        クラス名：<div id="class_name"></div>
+        レベル：<div id="class_level_c"></div>
+        体力：<div id="class_hp"></div>
+        攻撃力：<div id="class_atk"></div>
+        防御力：<div id="class_def"></div>
+        クラススキル習得数：<div id="class_skill"></div><br>
+        <h3>武器</h3>
+        武器の選択：
+        <select id="wepon-select">
+            <option value="">--武器を選択してください--</option>
+          </select><br>
+        強化値：
+        <input type="number" min="0" max="60" value="0" id="plus_w"><br>
+        潜在レベル：
+        <input type="number" min="0" max="4" value="0" id="senzai"><br>
+        攻撃力：<div id="select_wepon_plus"></div>
+        潜在レベル：<div id="select_senzai"></div>
+        <h3>防具</h3>
+        防具の選択（１）：
+        <select id="unit1-select">
+            <option value="">--防具（１）を選択してください--</option>
+          </select><br>
+        強化値：
+        <input type="number" min="0" max="60" value="0" id="plus_unit1"><br><br>
+        防具名：<div id="select_unit1_name"></div>
+        防御力値：<div id="select_unit1_plus"></div><br>
+        防具の選択（２）：
+        <select id="unit2-select">
+            <option value="">--防具（２）を選択してください--</option>
+          </select><br>
+        強化値：
+          <input type="number" min="0" max="60" value="0" id="plus_unit2"><br><br>
+          防具名：<div id="select_unit2_name"></div>
+          防御力値：<div id="select_unit2_plus"></div><br>
+        防具の選択（３）：
+        <select id="unit3-select">
+            <option value="">--防具（３）を選択してください--</option>
+          </select><br>
+        強化値：
+        <input type="number" min="0" max="60" value="0" id="plus_unit3"><br><br>
+        防具名：<div id="select_unit3_name"></div>
+        防御力値：<div id="select_unit3_plus"></div><br>
+        <br>
+        戦闘力：
+        <div id="result_sentou"></div> 
+        <button id="myButton">戦闘力を計算</button>
+    </body>
+    <script type="module" src="js/main.js"></script>
+</html>

@@ -8,7 +8,7 @@
  */
 
 import unit_stats from "./unit.js"
-import tag_op from "./op_tag.js"
+//import tag_op from "./op_tag.js"
 import wepons from "./wepon_stats.js"
 import class_stats from "./class_stats.js"
 
@@ -72,9 +72,14 @@ var def_3 = 0;
 var def1_hp = 0;
 var def2_hp = 0;
 var def3_hp = 0;
+//PP補正
 var def1_pp = 0;
 var def2_pp = 0;
 var def3_pp = 0;
+//追加補正
+var add_1 = 0;
+var add_2 = 0;
+var add_3 = 0;
 
 //クラスの表示設定
 const selectField_class = document.getElementById("class-select");
@@ -130,6 +135,7 @@ selectField_unit1.addEventListener("change", function() {
 //防具１の防御力
 select_unit1plus.addEventListener("input",function(){
     def_1 = unit_stats[selectField_unit1.value].def[select_unit1plus.value];
+    add_1 = unit_stats[selectField_unit1.value].a_plus[1];
     document.getElementById("select_unit1_plus").innerHTML = def_1
 })
 
@@ -146,6 +152,7 @@ selectField_unit2.addEventListener("change", function() {
 //防具２の防御力
 select_unit2plus.addEventListener("input",function(){
     def_2 = unit_stats[selectField_unit2.value].def[select_unit2plus.value];
+    add_2 = unit_stats[selectField_unit2.value].a_plus[1];
     document.getElementById("select_unit2_plus").innerHTML = def_2
 })
 
@@ -162,20 +169,39 @@ selectField_unit3.addEventListener("change", function() {
 //防御力３の防御力
 select_unit3plus.addEventListener("input",function(){
     def_3 = unit_stats[selectField_unit3.value].def[select_unit3plus.value];
+    add_3 = unit_stats[selectField_unit3.value].a_plus[1];
     document.getElementById("select_unit3_plus").innerHTML = def_3
 });
 
 //総計算
 const myButton = document.querySelector("#myButton");
+function calculateBattlePower(baseAttack, weaponAttack, damageUpperLimit, damageLowerLimit, weaponPotentialLevel, defense, specialCorrection, hpBoost, ppBoost, classSkillCount,addplus) {
+    let battlePower = baseAttack
+  battlePower += weaponAttack * ((damageUpperLimit + damageLowerLimit) / 2)
+  battlePower += weaponPotentialLevel * 10
+  battlePower += (defense*0.5) + addplus + specialCorrection + (hpBoost / 10)
+  battlePower += ppBoost
+  battlePower += classSkillCount * 3
+  return Math.floor(battlePower);
+  }
+
 myButton.addEventListener("click", function() {
 /**
  * /**
- * 戦闘力計算式
- * 戦闘力=基礎攻撃力+[武器攻撃力*(ダメージ上限%+ダメージ下限%)/2]+武器潜在Lv*10
-　　　+[防御力/2+特殊能力による特殊補正値+装備本体によるHP上昇値/10]+装備本体によるPP上昇値+クラススキル習得数*3
+  戦闘力計算式
+  戦闘力=基礎攻撃力+
+  [武器攻撃力*(ダメージ上限%+ダメージ下限%)/2]+
+  武器潜在Lv*10
+  +[防御力/2+特殊能力による特殊補正値+装備本体によるHP上昇値/10]+
+  装備本体によるPP上昇値+
+  クラススキル習得数*3
  */
 var sent_va = 0;
-var defA = (def_1+def_2+def_3)
-sent_va = class_a + (atk_n*(1.0+damege_pro)/2) + (senzai*10) + ((class_d+defA)/2)+((def1_hp+def2_hp+def3_hp)/10)+(def1_pp+def2_pp+def3_pp)+(skill_c*3)
-document.getElementById("result_sentou").innerHTML = Math.floor(sent_va)
+var defA = class_d+def_1+def_2+def_3;
+var defhpA = def1_hp + def2_hp + def3_hp;
+var defppA = def1_pp + def2_pp + def3_pp;
+var add_all = add_1 + add_2 + add_3;
+var sp_op = 0;
+var result = calculateBattlePower(class_a, atk_n, 1,damege_pro,senzai,defA,sp_op,defhpA,defppA,skill_c,add_all);
+document.getElementById("result_sentou").innerHTML = result
 });

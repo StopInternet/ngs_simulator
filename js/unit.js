@@ -4,17 +4,17 @@
 
 
 const unit_stats = {
-    lecerl:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    eizyax:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    efiaru:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    efiber:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    efituv:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    enfida:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
-    enfivi:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{}},
+    lecerl:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    eizyax:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    efiaru:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    efiber:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    efituv:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    enfida:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    enfivi:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
 }   
 
 //ステータス設定
-function stats_set(id,name,hp,pp,power,shoot,magic,damege_protect){
+function stats_set(id,name,hp,pp,power,shoot,magic,damege_protect,plus_a){
     //防具のステータス設定
     unit_stats[id].name[1] = name;
     unit_stats[id].hp[1] = hp;
@@ -23,6 +23,7 @@ function stats_set(id,name,hp,pp,power,shoot,magic,damege_protect){
     unit_stats[id].shoot[1] = shoot;
     unit_stats[id].magic[1] = magic;
     unit_stats[id].damege_protect[1] = damege_protect;
+    unit_stats[id].a_plus[1] = plus_a;
 }
 
 function set_protect_stats(id,def,rare){
@@ -66,26 +67,26 @@ function set_protect_stats(id,def,rare){
 }
 //✪8
 //レクレール
-stats_set('lecerl',"レクレールアーマ",0,0,4,4,4,0.05);
+stats_set('lecerl',"レクレールアーマ",0,0,4,4,4,0.05,16.5);
 set_protect_stats('lecerl',35,7);
 //エイジャクス
-stats_set('eizyax',"エイジャクスアーマ",30,5,3.5,3.5,3.5,0.05);
+stats_set('eizyax',"エイジャクスアーマ",30,5,3.5,3.5,3.5,0.05,6.5);
 set_protect_stats('eizyax',41,7);
 //エフィタス（aru,tuv,ber)
 //アルガ
-stats_set('efiaru',"エフィタスアーマ・アルガ",30,4,3,3,0,0.05);
+stats_set('efiaru',"エフィタスアーマ・アルガ",30,4,3,3,0,0.05,5.5);
 set_protect_stats('efiaru',39,7);
 //ベルタ
-stats_set('efiber',"エフィタスアーマ・ベルタ",30,4,0,3,3,0.05);
+stats_set('efiber',"エフィタスアーマ・ベルタ",30,4,0,3,3,0.05,5.5);
 set_protect_stats('efiber',39,7);
 //ツェザ
-stats_set('efituv',"エフィタスアーマ・ツェザ",30,4,3,0,3,0.05);
+stats_set('efituv',"エフィタスアーマ・ツェザ",30,4,3,0,3,0.05,5.5);
 set_protect_stats('efituv',39,7);
 //エンフィタス
 //ヴィダ
-stats_set('enfida',"エンフィタスアーマ・ヴィダ",55,0,3,3,3,0.05);
+stats_set('enfida',"エンフィタスアーマ・ヴィダ",55,0,3,3,3,0.05,6.5);
 set_protect_stats('enfida',40,7);
 //ヴィオ
-stats_set('enfivi',"エンフィタスアーマ・ヴィオ",0,10,3,3,3,0.05);
+stats_set('enfivi',"エンフィタスアーマ・ヴィオ",0,10,3,3,3,0.05,2);
 set_protect_stats('enfivi',40,7)
 export default unit_stats;

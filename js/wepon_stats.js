@@ -28,6 +28,7 @@ const wepons = {
 //名前の生成
 function name_set(id,name){
     const wepon = {
+        0:"シリーズ",
         1:"ソード",2:"ワイヤー",3:"スピア",4:"ダガー",5:"セイバー",6:"ナックル",7:"カタナ",8:"ブレード",
         9:"ライフル",10:"ランチャー",11:"マシンガン",12:"ボウ",13:"ロッド",14:"タリス",15:"ウォンド",16:"タクト"
     }
@@ -36,14 +37,16 @@ function name_set(id,name){
         wepons[id].properties[i] = i
     }
     //プリムリブラ
+    /**
     if(id== 'purim_ribura'){
         for(var i=1;i<=16;i++){
             wepons[id].name[i] = "プリム"+wepon[i]+"・リブラ";
         }
         return;
     }
+    */
     //名前のセットアップ
-    for(var i=1;i<=16;i++){
+    for(var i=0;i<=16;i++){
         wepons[id].name[i] = name+wepon[i];
     }
     

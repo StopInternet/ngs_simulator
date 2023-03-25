@@ -3,6 +3,32 @@
         <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
+      <h1>PSO2 NGS 戦闘力計算シミュレーター</h1>
+      <p>
+        <h2>どういうことができるの？</h2>
+        各それぞれの値を設定することで戦闘力を計算できるサイトです。<br>
+        例：<br>
+        ハンターレベル30、ネオス+60、レクレール3部位の時の戦闘力を調べることが可能！
+        <br><br>
+
+        <h2>設定時のルールはこれだ！</h2>
+        基本的に、クラスの選択、クラススキルの習得数、武器の選択、防具の選択から行ってください<br>
+        最初からレベルなどを設定すると反映されません。<br><br>
+
+        <h3>特殊能力レベルの設定には気を付けてください。</h3>
+        レベルが１、レベルがないものは共通で「１」で設定を行ってください<br>
+        最大レベルが3や2、1等の特殊能力がある場合は計算が出来なくなる可能性があります。（ウィーカー系等）<br>
+        <br><br>
+        <h3>各設定のミスにも気を付けてください</h3>
+        クラス名、レベル、体力、攻撃力、防御力、クラススキル習得数、潜在レベル、防具名、防御力値が<br>
+        表示されていれば設定されています<br>
+        「undefined」と表示された場合は、設定が間違えてる可能性が高いです。<br>
+
+        特殊能力の検索は「カタカナ」で入力をしてください。ひらがなでは表示されません<br>
+      </p><br>
+
+      <h2>ここから設定をしよう！</h2>
+      <!--クラスの設定-->
         <h3>クラス</h3>
         クラスの選択：
         <select id="class-select">
@@ -20,6 +46,7 @@
         攻撃力：<div id="class_atk"></div>
         防御力：<div id="class_def"></div>
         クラススキル習得数：<div id="class_skill"></div><br>
+        <!--武器の設定-->
         <h3>武器</h3>
         武器の選択：
         <select id="wepon-select">
@@ -30,8 +57,41 @@
         潜在レベル：
         <input type="number" min="0" max="4" value="0" id="senzai"><br>
         攻撃力：<div id="select_wepon_plus"></div>
-        潜在レベル：<div id="select_senzai"></div>
-        <h3>防具</h3>
+        潜在レベル：<div id="select_senzai"></div><br>
+        <!--武器の特殊能力設定-->
+        特殊能力：１
+        <input type="text" id="search-input_w1" placeholder="検索...(カタカナで検索)">
+        <select id="wepon_op1_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="wepon_op1"><br>
+        特殊能力：２
+        <input type="text" id="search-input_w2" placeholder="検索...(カタカナで検索)">
+        <select id="wepon_op2_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="wepon_op2"><br>
+        特殊能力：３
+        <input type="text" id="search-input_w3" placeholder="検索...(カタカナで検索)">
+        <select id="wepon_op3_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="wepon_op3"><br>
+        特殊能力：４
+        <input type="text" id="search-input_w4" placeholder="検索...(カタカナで検索)">
+        <select id="wepon_op4_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="wepon_op4"><br>
+        特殊能力：５
+        <input type="text" id="search-input_w5" placeholder="検索...(カタカナで検索)">
+        <select id="wepon_op5_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="wepon_op5"><br>
+
+        <!--防具の設定-->
+        <h3>防具（１）</h3>
         防具の選択（１）：
         <select id="unit1-select">
             <option value="">--防具（１）を選択してください--</option>
@@ -40,6 +100,40 @@
         <input type="number" min="0" max="60" value="0" id="plus_unit1"><br><br>
         防具名：<div id="select_unit1_name"></div>
         防御力値：<div id="select_unit1_plus"></div><br>
+        <!--防具１の特殊能力設定-->
+        特殊能力：１
+        <input type="text" id="search-input_u11" placeholder="検索...(カタカナで検索)">
+        <select id="unit1_op1_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit1_op1"><br>
+        特殊能力：２
+        <input type="text" id="search-input_u21" placeholder="検索...(カタカナで検索)">
+        <select id="unit1_op2_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit1_op2"><br>
+        特殊能力：３
+        <input type="text" id="search-input_u31" placeholder="検索...(カタカナで検索)">
+        <select id="unit1_op3_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit1_op3"><br>
+        特殊能力：４
+        <input type="text" id="search-input_u41" placeholder="検索...(カタカナで検索)">
+        <select id="unit1_op4_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit1_op4"><br>
+        特殊能力：５
+        <input type="text" id="search-input_u51" placeholder="検索...(カタカナで検索)">
+        <select id="unit1_op5_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit1_op5"><br>
+
+        <!--防具設定(2)-->
+        <h3>防具（２）</h3>
         防具の選択（２）：
         <select id="unit2-select">
             <option value="">--防具（２）を選択してください--</option>
@@ -48,6 +142,41 @@
           <input type="number" min="0" max="60" value="0" id="plus_unit2"><br><br>
           防具名：<div id="select_unit2_name"></div>
           防御力値：<div id="select_unit2_plus"></div><br>
+
+        <!--防具2の特殊能力設定-->
+        特殊能力：１
+        <input type="text" id="search-input_u12" placeholder="検索...(カタカナで検索)">
+        <select id="unit2_op1_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit2_op1"><br>
+        特殊能力：２
+        <input type="text" id="search-input_u22" placeholder="検索...(カタカナで検索)">
+        <select id="unit2_op2_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit2_op2"><br>
+        特殊能力：３
+        <input type="text" id="search-input_u32" placeholder="検索...(カタカナで検索)">
+        <select id="unit2_op3_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit2_op3"><br>
+        特殊能力：４
+        <input type="text" id="search-input_u42" placeholder="検索...(カタカナで検索)">
+        <select id="unit2_op4_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit2_op4"><br>
+        特殊能力：５
+        <input type="text" id="search-input_u52" placeholder="検索...(カタカナで検索)">
+        <select id="unit2_op5_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit2_op5"><br>
+
+
+        <h3>防具（３）</h3>
         防具の選択（３）：
         <select id="unit3-select">
             <option value="">--防具（３）を選択してください--</option>
@@ -56,10 +185,45 @@
         <input type="number" min="0" max="60" value="0" id="plus_unit3"><br><br>
         防具名：<div id="select_unit3_name"></div>
         防御力値：<div id="select_unit3_plus"></div><br>
+        <!--防具3の特殊能力設定-->
+        特殊能力：１
+        <input type="text" id="search-input_u13" placeholder="検索...(カタカナで検索)">
+        <select id="unit3_op1_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit3_op1"><br>
+        特殊能力：２
+        <input type="text" id="search-input_u23" placeholder="検索...(カタカナで検索)">
+        <select id="unit3_op2_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit3_op2"><br>
+        特殊能力：３
+        <input type="text" id="search-input_u33" placeholder="検索...(カタカナで検索)">
+        <select id="unit3_op3_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit3_op3"><br>
+        特殊能力：４
+        <input type="text" id="search-input_u43" placeholder="検索...(カタカナで検索)">
+        <select id="unit3_op4_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit3_op4"><br>
+        特殊能力：５
+        <input type="text" id="search-input_u53" placeholder="検索...(カタカナで検索)">
+        <select id="unit3_op5_select">
+          <option value="null">--特殊能力を選択してください--</option>
+        </select>
+        特殊能力レベル<input type="number" min="1" max="4" value="1" id="unit3_op5"><br>
+
+
         <br>
+        <h2>
         戦闘力：
         <div id="result_sentou"></div> 
-        <button id="myButton">戦闘力を計算</button>
+        <button id="myButton">戦闘力を計算</button></h2>
     </body>
     <script type="module" src="js/main.js"></script>
+    
 </html>

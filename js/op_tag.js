@@ -1,5 +1,5 @@
 const tag_op = {
-    //パワー系
+    //パワー系dayo
     power:{name:{1:"パワー"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
     power_stam:{name:{1:"スタム・パワー"},level:{1:1},value:{1:8}},
     power_supire:{name:{1:"スピレ・パワー"},level:{1:1},value:{1:8}},

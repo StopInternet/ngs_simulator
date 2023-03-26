@@ -1,6 +1,6 @@
-<h1>NGS Combat Calc 【NCC】 NGS戦闘力計算シミュレーター<h1>
+<h1>NGS Combat Calc 【NCC】 <br> NGS戦闘力計算シミュレーター<h1>
 <br>
-サイトリンク<br>
+サイトリンクはこちら<br>
 https://stopinternet.github.io/ngs_simulator/
 <br>
 <h2>ここでは更新情報をメインに書いてます</h2>

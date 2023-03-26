@@ -240,7 +240,7 @@ function calculateBattlePower(baseAttack, weaponAttack, damageUpperLimit, damage
     let battlePower = baseAttack
   battlePower += weaponAttack * (damageUpperLimit + damageLowerLimit) / 2
   battlePower += weaponPotentialLevel * 10
-  battlePower += Math.floor(defense*0.5 + addplus + specialCorrection + hpBoost / 10)
+  battlePower += defense*0.5 + addplus + specialCorrection + hpBoost / 10
   battlePower += ppBoost
   battlePower += classSkillCount * 3
   return battlePower;
@@ -427,7 +427,7 @@ var opAll3 = op1su3 + op2su3 + op3su3 + op4su3 + op5su3
 sp_op = opAllw + opAll1 + opAll2 + opAll3
 
 var result = calculateBattlePower(class_a, atk_n, 1,damege_pro,senzai,defA,sp_op,defhpA,defppA,skill_c,add_all,opAllw);
-document.getElementById("result_sentou").innerHTML = Math.floor(result)
+document.getElementById("result_sentou").innerHTML = result
 });
 //武器OPの検索機能
 const searchInput_w1 = document.getElementById('search-input_w1');

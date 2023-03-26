@@ -128,7 +128,7 @@ const tag_op = {
     sutira_domina:{name:{1:"スティラ・ドミナ"},level:{1:1},value:{1:10}},
 
     //二リア系
-    harufiniria:{name:{1:"ハルフィニリア"},level:{1:1},value:{1:1}},
+    harufiniria:{name:{1:"ハルフィニリア"},level:{1:1},value:{1:13}},
 
     //デコルド
     sutanda_dekorudo:{name:{1:"デコルド・スタンダルド"},level:{1:1,2:2,3:3},value:{1:1,2:3,3:5}},

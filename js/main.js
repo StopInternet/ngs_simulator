@@ -42,7 +42,7 @@ window.onload = function mains(){
         for(const opKey in tag_op){
             const option_op = document.createElement('option');
             option_op.value = opKey;
-            option_op.text = tag_op[opKey].name[1];
+            option_op.text = tag_op[opKey].name;
             opSelect.add(option_op);
         }
     }
@@ -101,9 +101,9 @@ window.onload = function mains(){
     select_op(u35op)
 
     //防具選択
-    const unitSelect1 = document.getElementById('unit1-select');
-    const unitSelect2 = document.getElementById('unit2-select');
-    const unitSelect3 = document.getElementById('unit3-select');
+    var unitSelect1 = document.getElementById('unit1-select');
+    var unitSelect2 = document.getElementById('unit2-select');
+    var unitSelect3 = document.getElementById('unit3-select');
     unit(unitSelect1);
     unit(unitSelect2);
     unit(unitSelect3);
@@ -184,8 +184,8 @@ senzai_level.addEventListener("input",function(){
 });
 
 //防具１の表示設定
-const selectField_unit1 = document.getElementById("unit1-select");
-const select_unit1plus = document.getElementById("plus_unit1");
+var selectField_unit1 = document.getElementById("unit1-select");
+var select_unit1plus = document.getElementById("plus_unit1");
 
 selectField_unit1.addEventListener("change", function() {
     const select_unit1Name = unit_stats[selectField_unit1.value].name[1];
@@ -201,8 +201,8 @@ select_unit1plus.addEventListener("input",function(){
 })
 
 //防具2の表示設定
-const selectField_unit2 = document.getElementById("unit2-select");
-const select_unit2plus = document.getElementById("plus_unit2");
+var selectField_unit2 = document.getElementById("unit2-select");
+var select_unit2plus = document.getElementById("plus_unit2");
 
 selectField_unit2.addEventListener("change", function() {
     const select_unit2Name = unit_stats[selectField_unit2.value].name[1];
@@ -218,8 +218,8 @@ select_unit2plus.addEventListener("input",function(){
 })
 
 //防具3の表示設定
-const selectField_unit3 = document.getElementById("unit3-select");
-const select_unit3plus = document.getElementById("plus_unit3");
+var selectField_unit3 = document.getElementById("unit3-select");
+var select_unit3plus = document.getElementById("plus_unit3");
 
 selectField_unit3.addEventListener("change", function() {
     const select_unit3Name = unit_stats[selectField_unit3.value].name[1];
@@ -293,128 +293,108 @@ var opAllw = 0;
 if(document.getElementById("wepon_op1_select").value != "null"){
     //武器の特殊能力１
     var op1_name = document.getElementById("wepon_op1_select").value;
-    var op1_value = document.getElementById("wepon_op1").value;
-    op1sw = tag_op[op1_name].value[op1_value];
+    op1sw = tag_op[op1_name].value;
 }
 if(document.getElementById("wepon_op2_select").value != "null"){
     //武器の特殊能力2
     var op2_name = document.getElementById("wepon_op2_select").value;
-    var op2_value = document.getElementById("wepon_op2").value;
-    op2sw = tag_op[op2_name].value[op2_value];
+    op2sw = tag_op[op2_name].value;
 }
 if(document.getElementById("wepon_op3_select").value != "null"){
     //武器の特殊能力3
     var op3_name = document.getElementById("wepon_op3_select").value;
-    var op3_value = document.getElementById("wepon_op3").value;
-    op3sw = tag_op[op3_name].value[op3_value];
+    op3sw = tag_op[op3_name].value;
 }
 if(document.getElementById("wepon_op4_select").value != "null"){
     //武器の特殊能力4
     var op4_name = document.getElementById("wepon_op4_select").value;
-    var op4_value = document.getElementById("wepon_op4").value;
-    op4sw = tag_op[op4_name].value[op4_value];
+    op4sw = tag_op[op4_name].value;
 }
 if(document.getElementById("wepon_op5_select").value != "null"){
     //武器の特殊能力5
     var op5_name = document.getElementById("wepon_op5_select").value;
-    var op5_value = document.getElementById("wepon_op5").value;
-    op5sw = tag_op[op5_name].value[op5_value];
+    op5sw = tag_op[op5_name].value;
 }
 
 //防具１の特殊能力値の設定
 if(document.getElementById("unit1_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u1_name = document.getElementById("unit1_op1_select").value;
-    var op1u1_value = document.getElementById("unit1_op1").value;
-    op1su1 = tag_op[op1u1_name].value[op1u1_value];
+    op1su1 = tag_op[op1u1_name].value;
 }
 if(document.getElementById("unit1_op2_select").value != "null"){
     //防具２の特殊能力2
     var op2u1_name = document.getElementById("unit1_op2_select").value;
-    var op2u1_value = document.getElementById("unit1_op2").value;
-    op2su1 = tag_op[op2u1_name].value[op2u1_value];
+    op2su1 = tag_op[op2u1_name].value;
 }
 if(document.getElementById("unit1_op3_select").value != "null"){
     //防具３の特殊能力3
     var op3u1_name = document.getElementById("unit1_op3_select").value;
-    var op3u1_value = document.getElementById("unit1_op3").value;
-    op3su1 = tag_op[op3u1_name].value[op3u1_value];
+    op3su1 = tag_op[op3u1_name].value;
 }
 if(document.getElementById("unit1_op4_select").value != "null"){
     //防具４の特殊能力4
     var op4u1_name = document.getElementById("unit1_op4_select").value;
-    var op4u1_value = document.getElementById("unit1_op4").value;
-    op4su1 = tag_op[op4u1_name].value[op4u1_value];
+    op4su1 = tag_op[op4u1_name].value;
 }
 if(document.getElementById("unit1_op5_select").value != "null"){
     //防具５の特殊能力5
     var op5u1_name = document.getElementById("unit1_op5_select").value;
-    var op5u1_value = document.getElementById("unit1_op5").value;
-    op5su1 = tag_op[op5u1_name].value[op5u1_value];
+    op5su1 = tag_op[op5u1_name].value;
 }
 
 //防具2の特殊能力値の設定
 if(document.getElementById("unit2_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u2_name = document.getElementById("unit2_op1_select").value;
-    var op1u2_value = document.getElementById("unit2_op1").value;
-    op1su2 = tag_op[op1u2_name].value[op1u2_value];
+    op1su2 = tag_op[op1u2_name].value;
 }
 if(document.getElementById("unit2_op2_select").value != "null"){
     //防具２の特殊能力2
     var op2u2_name = document.getElementById("unit2_op2_select").value;
-    var op2u2_value = document.getElementById("unit2_op2").value;
-    op2su2 = tag_op[op2u2_name].value[op2u2_value];
+    op2su2 = tag_op[op2u2_name].value;
 }
 if(document.getElementById("unit2_op3_select").value != "null"){
     //防具３の特殊能力3
     var op3u2_name = document.getElementById("unit2_op3_select").value;
-    var op3u2_value = document.getElementById("unit2_op3").value;
-    op3su2 = tag_op[op3u2_name].value[op3u2_value];
+    op3su2 = tag_op[op3u2_name].value;
 }
 if(document.getElementById("unit2_op4_select").value != "null"){
     //防具４の特殊能力4
     var op4u2_name = document.getElementById("unit2_op4_select").value;
-    var op4u2_value = document.getElementById("unit2_op4").value;
-    op4su2 = tag_op[op4u2_name].value[op4u2_value];
+    op4su2 = tag_op[op4u2_name].value;
 }
 if(document.getElementById("unit2_op5_select").value != "null"){
     //防具５の特殊能力5
     var op5u2_name = document.getElementById("unit2_op5_select").value;
-    var op5u2_value = document.getElementById("unit2_op5").value;
-    op5su2 = tag_op[op5u2_name].value[op5u2_value];
+    op5su2 = tag_op[op5u2_name].value;
 }
 
 //防具3の特殊能力値の設定
 if(document.getElementById("unit3_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u3_name = document.getElementById("unit3_op1_select").value;
-    var op1u3_value = document.getElementById("unit3_op1").value;
-    op1su3 = tag_op[op1u3_name].value[op1u3_value];
+    op1su3 = tag_op[op1u3_name].value;
 }
 if(document.getElementById("unit3_op2_select").value != "null"){
     //防具２の特殊能力2
     var op2u3_name = document.getElementById("unit3_op2_select").value;
-    var op2u3_value = document.getElementById("unit3_op2").value;
-    op2su3 = tag_op[op2u3_name].value[op2u3_value];
+    op2su3 = tag_op[op2u3_name].value;
 }
 if(document.getElementById("unit3_op3_select").value != "null"){
     //防具３の特殊能力3
     var op3u3_name = document.getElementById("unit3_op3_select").value;
-    var op3u3_value = document.getElementById("unit3_op3").value;
-    op3su3 = tag_op[op3u3_name].value[op3u3_value];
+    op3su3 = tag_op[op3u3_name].value;
 }
 if(document.getElementById("unit3_op4_select").value != "null"){
     //防具４の特殊能力4
     var op4u3_name = document.getElementById("unit3_op4_select").value;
-    var op4u3_value = document.getElementById("unit3_op4").value;
-    op4su3 = tag_op[op4u3_name].value[op4u3_value];
+    op4su3 = tag_op[op4u3_name].value;
 }
 if(document.getElementById("unit3_op5_select").value != "null"){
     //防具５の特殊能力5
     var op5u3_name = document.getElementById("unit3_op5_select").value;
-    var op5u3_value = document.getElementById("unit3_op5").value;
-    op5su3 = tag_op[op5u3_name].value[op5u3_value];
+    op5su3 = tag_op[op5u3_name].value;
 }
 
 //能力値の合計
@@ -427,7 +407,7 @@ var opAll3 = op1su3 + op2su3 + op3su3 + op4su3 + op5su3
 sp_op = opAllw + opAll1 + opAll2 + opAll3
 
 var result = calculateBattlePower(class_a, atk_n, 1,damege_pro,senzai,defA,sp_op,defhpA,defppA,skill_c,add_all,opAllw);
-document.getElementById("result_sentou").innerHTML = result
+document.getElementById("result_sentou").innerHTML = Math.floor(result)
 });
 //武器OPの検索機能
 const searchInput_w1 = document.getElementById('search-input_w1');
@@ -436,18 +416,18 @@ const searchInput_w3 = document.getElementById('search-input_w3');
 const searchInput_w4 = document.getElementById('search-input_w4');
 const searchInput_w5 = document.getElementById('search-input_w5');
 
-const op_ui_w1_Select = document.getElementById('wepon_op1_select');
-const op_ui_w2_Select = document.getElementById('wepon_op2_select');
-const op_ui_w3_Select = document.getElementById('wepon_op3_select');
-const op_ui_w4_Select = document.getElementById('wepon_op4_select');
-const op_ui_w5_Select = document.getElementById('wepon_op5_select');
+var op_ui_w1_Select = document.getElementById('wepon_op1_select');
+var op_ui_w2_Select = document.getElementById('wepon_op2_select');
+var op_ui_w3_Select = document.getElementById('wepon_op3_select');
+var op_ui_w4_Select = document.getElementById('wepon_op4_select');
+var op_ui_w5_Select = document.getElementById('wepon_op5_select');
 
 //防具１のOPの検索機能
-const searchInput_u11 = document.getElementById('search-input_u11');
-const searchInput_u21 = document.getElementById('search-input_u21');
-const searchInput_u31 = document.getElementById('search-input_u31');
-const searchInput_u41 = document.getElementById('search-input_u41');
-const searchInput_u51 = document.getElementById('search-input_u51');
+var searchInput_u11 = document.getElementById('search-input_u11');
+var searchInput_u21 = document.getElementById('search-input_u21');
+var searchInput_u31 = document.getElementById('search-input_u31');
+var searchInput_u41 = document.getElementById('search-input_u41');
+var searchInput_u51 = document.getElementById('search-input_u51');
 
 const op_ui_u11_Select = document.getElementById('unit1_op1_select');
 const op_ui_u21_Select = document.getElementById('unit1_op2_select');
@@ -595,4 +575,45 @@ searchInput_u43.addEventListener('input', () => {
 //5
 searchInput_u53.addEventListener('input', () => {
     searchs(searchInput_u53,op_ui_u53_Select)
+});
+
+function copy_wepon_all_value(){
+    op_ui_w1_Select.value = op_ui_u11_Select.value
+}
+
+document.getElementById("li_all").addEventListener('click',()=>{
+    op_ui_u11_Select.value = op_ui_w1_Select.value
+    op_ui_u21_Select.value = op_ui_w2_Select.value 
+    op_ui_u31_Select.value = op_ui_w3_Select.value 
+    op_ui_u41_Select.value = op_ui_w4_Select.value 
+    op_ui_u51_Select.value = op_ui_w5_Select.value 
+
+    op_ui_u12_Select.value = op_ui_w1_Select.value
+    op_ui_u22_Select.value = op_ui_w2_Select.value 
+    op_ui_u32_Select.value = op_ui_w3_Select.value 
+    op_ui_u42_Select.value = op_ui_w4_Select.value 
+    op_ui_u52_Select.value = op_ui_w5_Select.value 
+
+    op_ui_u13_Select.value = op_ui_w1_Select.value
+    op_ui_u23_Select.value = op_ui_w2_Select.value 
+    op_ui_u33_Select.value = op_ui_w3_Select.value 
+    op_ui_u43_Select.value = op_ui_w4_Select.value 
+    op_ui_u53_Select.value = op_ui_w5_Select.value 
+
+    
+});
+
+document.getElementById("li_all1").addEventListener('click',()=>{
+    op_ui_u12_Select.value = op_ui_u11_Select.value
+    op_ui_u22_Select.value = op_ui_u21_Select.value
+    op_ui_u32_Select.value = op_ui_u31_Select.value 
+    op_ui_u42_Select.value = op_ui_u41_Select.value 
+    op_ui_u52_Select.value = op_ui_u51_Select.value
+
+    op_ui_u13_Select.value = op_ui_u11_Select.value
+    op_ui_u23_Select.value = op_ui_u21_Select.value 
+    op_ui_u33_Select.value = op_ui_u31_Select.value
+    op_ui_u43_Select.value = op_ui_u41_Select.value
+    op_ui_u53_Select.value = op_ui_u51_Select.value
+
 });

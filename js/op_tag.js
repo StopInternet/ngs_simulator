@@ -1,252 +1,414 @@
 const tag_op = {
     //パワー系
-    power:{name:{1:"パワー"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    power_stam:{name:{1:"スタム・パワー"},level:{1:1},value:{1:8}},
-    power_supire:{name:{1:"スピレ・パワー"},level:{1:1},value:{1:8}},
-    power_arum:{name:{1:"アルム・パワー"},level:{1:1},value:{1:8}},
-    power_guard:{name:{1:"ガーディ・パワー"},level:{1:1},value:{1:8}},
+    Might_1:{name:"パワーI",level:1,value:4},
+    Might_2:{name:"パワーII",level:2,value:5},
+    Might_3:{name:"パワーIII",level:3,value:6},
+    Might_4:{name:"パワーIV",level:4,value:7},
+
+    Sta_Might:{name:"スタム・パワー",level:1,value:8},
+    Spi_Might:{name:"スピレ・パワー",level:1,value:8},
+    Deft_Might:{name:"アルム・パワー",level:1,value:8},
+    Gua_Might:{name:"ガーディ・パワー",level:1,value:8},
     
     //シュート系
-    shoot:{name:{1:"シュート"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    shoot_stam:{name:{1:"スタム・シュート"},level:{1:1},value:{1:8}},
-    shoot_supire:{name:{1:"スピレ・シュート"},level:{1:1},value:{1:8}},
-    shoot_arum:{name:{1:"スピレ・シュート"},level:{1:1},value:{1:8}},
-    shoot_guard:{name:{1:"ガーディ・シュート"},level:{1:1},value:{1:8}},
+    Precision_1:{name:"シュートI",level:1,value:4},
+    Precision_2:{name:"シュートII",level:2,value:5},
+    Precision_3:{name:"シュートIII",level:3,value:6},
+    Precision_4:{name:"シュートIV",level:4,value:7},
+
+    Sta_Precision:{name:"スタム・シュート",level:1,value:8},
+    Spi_Precision:{name:"スピレ・シュート",level:1,value:8},
+    Deft_Precision:{name:"スピレ・シュート",level:1,value:8},
+    Gua_Precision:{name:"ガーディ・シュート",level:1,value:8},
 
     //テクニック系
-    magic:{name:{1:"テクニック"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    magic_stam:{name:{1:"スタム・テクニック"},level:{1:1},value:{1:8}},
-    magic_supire:{name:{1:"スピレ・テクニック"},level:{1:1},value:{1:8}},
-    magic_arum:{name:{1:"アルム・テクニック"},level:{1:1},value:{1:8}},
-    magic_guard:{name:{1:"ガーディ・テクニック"},level:{1:1},value:{1:8}},
+    Technique_1:{name:"テクニックI",level:1,value:4},
+    Technique_2:{name:"テクニックII",level:2,value:5},
+    Technique_3:{name:"テクニックIII",level:3,value:6},
+    Technique_4:{name:"テクニックIV",level:4,value:7},
+
+
+    Sta_Technique:{name:"スタム・テクニック",level:1,value:8},
+    Spi_Technique:{name:"スピレ・テクニック",level:1,value:8},
+    Deft_Technique:{name:"アルム・テクニック",level:1,value:8},
+    Gua_Technique:{name:"ガーディ・テクニック",level:1,value:8},
 
     //スタミナ、スピレ系
-    stamina:{name:{1:"スタミナ"},level:{1:1,2:2,3:3},value:{1:3,2:4,3:5}},
-    supirita:{name:{1:"スピリタ"},level:{1:1,2:2,3:3},value:{1:2,2:3,3:4}},
+    Stamina_1:{name:"スタミナI",level:1,value:3},
+    Stamina_2:{name:"スタミナII",level:2,value:4},
+    Stamina_3:{name:"スタミナIII",level:3,value:5},
+
+    Spirit_1:{name:"スピリタI",level:1,value:2},
+    Spirit_2:{name:"スピリタII",level:2,value:3},
+    Spirit_3:{name:"スピリタIII",level:3,value:4},
 
     //ディアブル、トリアブル系
-    dasya_dia:{name:{1:"ダシャ・ディアブル"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    dahou_dia:{name:{1:"ダホウ・ディアブル"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    syahou_dia:{name:{1:"シャホウ・ディアブル"},level:{1:1,2:2,3:3,4:4},value:{1:4,2:5,3:6,4:7}},
-    toria:{name:{1:"トリアブル"},level:{1:1},value:{1:8}},
+    Melra_Dualble_1:{name:"ダシャ・ディアブルI",level:1,value:4},
+    Melra_Dualble_2:{name:"ダシャ・ディアブルII",level:2,value:5},
+    Melra_Dualble_3:{name:"ダシャ・ディアブルIII",level:3,value:6},
+    Melra_Dualble_4:{name:"ダシャ・ディアブルIV",level:4,value:7},
+
+    Meltech_Dualble_1:{name:"ダホウ・ディアブルI",level:1,value:4},
+    Meltech_Dualble_2:{name:"ダホウ・ディアブルII",level:2,value:5},
+    Meltech_Dualble_3:{name:"ダホウ・ディアブルIII",level:3,value:6},
+    Meltech_Dualble_4:{name:"ダホウ・ディアブルIV",level:4,value:7},
+
+    Ratech_Dualble_1:{name:"シャホウ・ディアブルI",level:1,value:4},
+    Ratech_Dualble_2:{name:"シャホウ・ディアブルII",level:2,value:5},
+    Ratech_Dualble_3:{name:"シャホウ・ディアブルIII",level:3,value:6},
+    Ratech_Dualble_4:{name:"シャホウ・ディアブルIV",level:4,value:7},
+
+    Triplble:{name:"トリアブル",level:1,value:8},
 
     //アーム系、ガード系
-    arm:{name:{1:"アーム"},level:{1:1,2:2,3:3,4:4},value:{1:3,2:4,3:5,4:6}},
-    guard:{name:{1:"ガード"},level:{1:1,2:2,3:3},value:{1:2,2:3,3:4}},
+    Deftness_1:{name:"アームI",level:1,value:3},
+    Deftness_2:{name:"アームII",level:2,value:4},
+    Deftness_3:{name:"アームIII",level:3,value:5},
+    Deftness_4:{name:"アームIV",level:4,value:6},
+
+    Guard_1:{name:"ガードI",level:1,value:2},
+    Guard_2:{name:"ガードII",level:2,value:3},
+    Guard_3:{name:"ガードIII",level:3,value:4},
 
     //アビリティ
-    abili:{name:{1:"アビリティ"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:10,4:12}},
+    Mastery_1:{name:"アビリティI",level:1,value:6},
+    Mastery_2:{name:"アビリティII",level:2,value:8},
+    Mastery_3:{name:"アビリティIII",level:3,value:10},
+    Mastery_4:{name:"アビリティIV",level:4,value:12},
 
     //レジスト系
-    burn:{name:{1:"バーンレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    freez:{name:{1:"フリーズレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    syoku:{name:{1:"ショックレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    mira:{name:{1:"ミラージュレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    panic:{name:{1:"パニックレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    poisn:{name:{1:"ポイズンレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    pein:{name:{1:"ペインレジスト"},level:{1:1,2:2,3:3},value:{1:4,2:5,3:6}},
-    all:{name:{1:"オールレジスト"},level:{1:1,2:2,3:3},value:{1:6,2:7,3:8}},
+    Burn_Ward_1:{name:"バーンレジストI",level:1,value:4},
+    Burn_Ward_2:{name:"バーンレジストII",level:2,value:5},
+    Burn_Ward_3:{name:"バーンレジストIII",level:3,value:6},
+
+    Freeze_Ward_1:{name:"フリーズレジストI",level:1,value:4},
+    Freeze_Ward_2:{name:"フリーズレジストII",level:2,value:5},
+    Freeze_Ward_3:{name:"フリーズレジストIII",level:3,value:6},
+
+    Shock_Ward_1:{name:"ショックレジストI",level:1,value:4},
+    Shock_Ward_2:{name:"ショックレジストII",level:2,value:5},
+    Shock_Ward_3:{name:"ショックレジストIII",level:3,value:6},
+    
+    Blind_Ward_1:{name:"ミラージュレジストI",level:1,value:4},
+    Blind_Ward_2:{name:"ミラージュレジストII",level:2,value:5},
+    Blind_Ward_3:{name:"ミラージュレジストIII",level:3,value:6},
+
+    Panic_Ward_1:{name:"パニックレジストI",level:1,value:4},
+    Panic_Ward_2:{name:"パニックレジストII",level:2,value:5},
+    Panic_Ward_3:{name:"パニックレジストIII",level:3,value:6},
+
+    Poisn_Ward_1:{name:"ポイズンレジストI",level:1,value:4},
+    Poisn_Ward_2:{name:"ポイズンレジストII",level:2,value:5},
+    Poisn_Ward_3:{name:"ポイズンレジストIII",level:3,value:6},
+
+    Pain_Ward_1:{name:"ペインレジストI",level:1,value:4},
+    Pain_Ward_2:{name:"ペインレジストII",level:2,value:5},
+    Pain_Ward_3:{name:"ペインレジストIII",level:3,value:6},
+
+    Sovereign_Ward_1:{name:"オールレジストI",level:1,value:4},
+    Sovereign_Ward_2:{name:"オールレジストII",level:2,value:5},
+    Sovereign_Ward_3:{name:"オールレジストIII",level:3,value:6},
 
     //ソール系（種別）
-    famz:{name:{1:"フォムズ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:9,4:10}},
-    famz_masini:{name:{1:"フォムズマシニ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:9,4:10}},
-    famz_sande:{name:{1:"フォムズサンデ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:9,4:10}},
-    aruzu_sol:{name:{1:"アルズ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:5,2:7,3:9}},
-    doruz_sol:{name:{1:"ドルズ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:5,2:6,3:7}},
+    Forms_Soul_1:{name:"フォムズ・ソールI",level:1,value:6},
+    Forms_Soul_2:{name:"フォムズ・ソールII",level:2,value:8},
+    Forms_Soul_3:{name:"フォムズ・ソールIII",level:3,value:9},
+    Forms_Soul_4:{name:"フォムズ・ソールIV",level:4,value:10},
+
+    Forms_Machini_Soul_1:{name:"フォムズマシニ・ソールI",level:1,value:6},
+    Forms_Machini_Soul_2:{name:"フォムズマシニ・ソールII",level:2,value:8},
+    Forms_Machini_Soul_3:{name:"フォムズマシニ・ソールIII",level:3,value:9},
+    Forms_Machini_Soul_4:{name:"フォムズマシニ・ソールIV",level:4,value:10},
+
+    Forms_Sand_Soul_1:{name:"フォムズサンデ・ソールI",level:1,value:6},
+    Forms_Sand_Soul_2:{name:"フォムズサンデ・ソールII",level:2,value:8},
+    Forms_Sand_Soul_3:{name:"フォムズサンデ・ソールIII",level:3,value:9},
+    Forms_Sand_Soul_4:{name:"フォムズサンデ・ソールIV",level:4,value:10},
+    
+    Alts_Soul_1:{name:"アルズ・ソールI",level:1,value:5},
+    Alts_Soul_2:{name:"アルズ・ソールII",level:2,value:7},
+    Alts_Soul_3:{name:"アルズ・ソールIII",level:3,value:9},
+
+    Dolz_Soul_1:{name:"ドルズ・ソールI",level:1,value:5},
+    Dolz_Soul_2:{name:"ドルズ・ソールII",level:2,value:6},
+    Dolz_Soul_3:{name:"ドルズ・ソールIII",level:3,value:7},
 
     //エネミー個別
-    daidaru:{name:{1:"ダイダル・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    pedasu:{name:{1:"ペダス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    nex:{name:{1:"ネクス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    sunaido:{name:{1:"スナイド・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    ragras:{name:{1:"ラグラス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    renusu:{name:{1:"レヌス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    eradi:{name:{1:"エラーディ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    reidaru:{name:{1:"レイダル・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    kurokos:{name:{1:"クロコス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    amusu:{name:{1:"アムス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    vadi:{name:{1:"ヴァーディ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    hureido:{name:{1:"フレイド・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    dorudora:{name:{1:"ドルドラ・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    nirus:{name:{1:"ニルス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
-    eizisu:{name:{1:"エイジス・ソール"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:8,3:10,4:11}},
+    Daityl_Sou_1:{name:"ダイダル・ソールI",level:1,value:7},
+    Daityl_Sou_2:{name:"ダイダル・ソールII",level:2,value:8},
+    Daityl_Sou_3:{name:"ダイダル・ソールIII",level:3,value:10},
+    Daityl_Sou_4:{name:"ダイダル・ソールIV",level:4,value:11},
+    
+    Pettas_Soul_1:{name:"ペダス・ソールI",level:1,value:7},
+    Pettas_Soul_2:{name:"ペダス・ソールII",level:2,value:8},
+    Pettas_Soul_3:{name:"ペダス・ソールIII",level:3,value:10},
+    Pettas_Soul_4:{name:"ペダス・ソールIV",level:4,value:11},
+
+    Nex_Soul_1:{name:"ネクス・ソールI",level:1,value:7},
+    Nex_Soul_2:{name:"ネクス・ソールII",level:2,value:8},
+    Nex_Soul_3:{name:"ネクス・ソールIII",level:3,value:10},
+    Nex_Soul_4:{name:"ネクス・ソールIV",level:4,value:11},
+
+    Dust_Soul_1:{name:"スナイド・ソールI",level:1,value:7},
+    Dust_Soul_2:{name:"スナイド・ソールII",level:2,value:8},
+    Dust_Soul_3:{name:"スナイド・ソールIII",level:3,value:10},
+    Dust_Soul_4:{name:"スナイド・ソールIV",level:4,value:11},
+
+    Ragras_Soul_1:{name:"ラグラス・ソールI",level:1,value:7},
+    Ragras_Soul_2:{name:"ラグラス・ソールII",level:2,value:8},
+    Ragras_Soul_3:{name:"ラグラス・ソールIII",level:3,value:10},
+    Ragras_Soul_4:{name:"ラグラス・ソールIV",level:4,value:11},
+
+    Renus_Soul_1:{name:"レヌス・ソールI",level:1,value:7},
+    Renus_Soul_2:{name:"レヌス・ソールII",level:2,value:8},
+    Renus_Soul_3:{name:"レヌス・ソールIII",level:3,value:10},
+    Renus_Soul_4:{name:"レヌス・ソールIV",level:4,value:11},
+
+    Eradi_Soul_1:{name:"エラーディ・ソールI",level:1,value:7},
+    Eradi_Soul_2:{name:"エラーディ・ソールII",level:2,value:8},
+    Eradi_Soul_3:{name:"エラーディ・ソールIII",level:3,value:10},
+    Eradi_Soul_4:{name:"エラーディ・ソールIV",level:4,value:11},
+
+    Frostyl_Soul_1:{name:"レイダル・ソールI",level:1,value:7},
+    Frostyl_Soul_2:{name:"レイダル・ソールII",level:2,value:8},
+    Frostyl_Soul_3:{name:"レイダル・ソールIII",level:3,value:10},
+    Frostyl_Soul_4:{name:"レイダル・ソールIV",level:4,value:11},
+
+    Crocys_Soul_1:{name:"クロコス・ソールI",level:1,value:7},
+    Crocys_Soul_2:{name:"クロコス・ソールII",level:2,value:8},
+    Crocys_Soul_3:{name:"クロコス・ソールIII",level:3,value:10},
+    Crocys_Soul_4:{name:"クロコス・ソールIV",level:4,value:11},
+
+    Ams_Soul_1:{name:"アムス・ソールI",level:1,value:7},
+    Ams_Soul_2:{name:"アムス・ソールII",level:2,value:8},
+    Ams_Soul_3:{name:"アムス・ソールIII",level:3,value:10},
+    Ams_Soul_4:{name:"アムス・ソールIV",level:4,value:11},
+
+    Vardi_Soul_1:{name:"ヴァーディ・ソールI",level:1,value:7},
+    Vardi_Soul_2:{name:"ヴァーディ・ソールII",level:2,value:8},
+    Vardi_Soul_3:{name:"ヴァーディ・ソールIII",level:3,value:10},
+    Vardi_Soul_4:{name:"ヴァーディ・ソールIV",level:4,value:11},
+
+    Freid_Soul_1:{name:"フレイド・ソールI",level:1,value:7},
+    Freid_Soul_2:{name:"フレイド・ソールII",level:2,value:8},
+    Freid_Soul_3:{name:"フレイド・ソールIII",level:3,value:10},
+    Freid_Soul_4:{name:"フレイド・ソールIV",level:4,value:11},
+
+    Doldor_Soul_1:{name:"ドルドラ・ソールI",level:1,value:7},
+    Doldor_Soul_2:{name:"ドルドラ・ソールII",level:2,value:8},
+    Doldor_Soul_3:{name:"ドルドラ・ソールIII",level:3,value:10},
+    Doldor_Soul_4:{name:"ドルドラ・ソールIV",level:4,value:11},
+
+    Nils_Soul_1:{name:"ニルス・ソールI",level:1,value:7},
+    Nils_Soul_2:{name:"ニルス・ソールII",level:2,value:8},
+    Nils_Soul_3:{name:"ニルス・ソールIII",level:3,value:10},
+    Nils_Soul_4:{name:"ニルス・ソールIV",level:4,value:11},
+
+    Aegis_Soul_1:{name:"エイジス・ソールI",level:1,value:7},
+    Aegis_Soul_2:{name:"エイジス・ソールII",level:2,value:8},
+    Aegis_Soul_3:{name:"エイジス・ソールIII",level:3,value:10},
+    Aegis_Soul_4:{name:"エイジス・ソールIV",level:4,value:11},
 
     //アグライ・エウティ・タリア―ソール
     //H
-    aguraiH:{name:{1:"アグライ・ソールH"},level:{1:1},value:{1:11}},
-    euteliH:{name:{1:"エウティ・ソールH"},level:{1:1},value:{1:11}},
-    tariaH:{name:{1:"タリアー・ソールH"},level:{1:1},value:{1:11}},
+    AglaiSoulH:{name:"アグライ・ソールH",level:1,value:11},
+    EuphroySoulH:{name:"エウティ・ソールH",level:1,value:11},
+    ThaliSoulH:{name:"タリアー・ソールH",level:1,value:11},
     //P
-    aguraiP:{name:{1:"アグライ・ソールP"},level:{1:1},value:{1:11}},
-    euteliP:{name:{1:"エウティ・ソールP"},level:{1:1},value:{1:11}},
-    tariaP:{name:{1:"タリアー・ソールP"},level:{1:1},value:{1:11}},
+    AglaiSoulP:{name:"アグライ・ソールP",level:1,value:11},
+    euteliP:{name:"エウティ・ソールP",level:1,value:11},
+    ThaliSoulP:{name:"タリアー・ソールP",level:1,value:11},
     //X
-    aguraiX:{name:{1:"アグライ・ソールX"},level:{1:1},value:{1:11}},
-    euteliX:{name:{1:"エウティ・ソールX"},level:{1:1},value:{1:11}},
-    tariaX:{name:{1:"タリアー・ソールX"},level:{1:1},value:{1:11}},
+    AglaiSoulX:{name:"アグライ・ソールX",level:1,value:11},
+    EuphroySoulX:{name:"エウティ・ソールX",level:1,value:11},
+    ThaliSoulX:{name:"タリアー・ソールX",level:1,value:11},
 
     //ノート系
     //エアルノート
-    earu_noteA:{name:{1:"エアル・ノートA"},level:{1:1},value:{1:5}},
-    earu_noteB:{name:{1:"エアル・ノートB"},level:{1:1},value:{1:4}},
-    earu_noteC:{name:{1:"エアル・ノートC"},level:{1:1},value:{1:4}},
-    earu_noteD:{name:{1:"エアル・ノートD"},level:{1:1},value:{1:4}},
+    earu_noteA:{name:"エアル・ノートA",level:1,value:5},
+    earu_noteB:{name:"エアル・ノートB",level:1,value:4},
+    earu_noteC:{name:"エアル・ノートC",level:1,value:4},
+    earu_noteD:{name:"エアル・ノートD",level:1,value:4},
 
-    magunu_note:{name:{1:"マグヌ・ノート"},level:{1:1},value:{1:5}},
-    raborata_note:{name:{1:"ラボラタ・ノート"},level:{1:1},value:{1:5}},
-    rezora_note:{name:{1:"レゾラ・ノート"},level:{1:1},value:{1:5}},
+    magunu_note:{name:"マグヌ・ノート",level:1,value:5},
+    raborata_note:{name:"ラボラタ・ノート",level:1,value:5},
+    rezora_note:{name:"レゾラ・ノート",level:1,value:5},
 
     //リテナノート
-    ritena_noteA:{name:{1:"リテナ・ノートA"},level:{1:1},value:{1:5}},
-    ritena_noteB:{name:{1:"リテナ・ノートB"},level:{1:1},value:{1:4}},
-    ritena_noteC:{name:{1:"リテナ・ノートC"},level:{1:1},value:{1:4}},
-    ritena_noteD:{name:{1:"リテナ・ノートD"},level:{1:1},value:{1:4}},
+    ritena_noteA:{name:"リテナ・ノートA",level:1,value:5},
+    ritena_noteB:{name:"リテナ・ノートB",level:1,value:4},
+    ritena_noteC:{name:"リテナ・ノートC",level:1,value:4},
+    ritena_noteD:{name:"リテナ・ノートD",level:1,value:4},
 
-    eruna_note:{name:{1:"エルナ・ノート"},level:{1:1},value:{1:5}},
-    akua_note:{name:{1:"マクア・ノート"},level:{1:1},value:{1:5}},
+    eruna_note:{name:"エルナ・ノート",level:1,value:5},
+    akua_note:{name:"マクア・ノート",level:1,value:5},
     //クヴァルノート
-    kuvaru_noteA:{name:{1:"クヴァル・ノートA"},level:{1:1},value:{1:5}},
-    kuvaru_noteB:{name:{1:"クヴァル・ノートB"},level:{1:1},value:{1:4}},
-    kuvaru_noteC:{name:{1:"クヴァル・ノートC"},level:{1:1},value:{1:4}},
-    kuvaru_noteD:{name:{1:"クヴァル・ノートD"},level:{1:1},value:{1:4}},
+    kuvaru_noteA:{name:"クヴァル・ノートA",level:1,value:5},
+    kuvaru_noteB:{name:"クヴァル・ノートB",level:1,value:4},
+    kuvaru_noteC:{name:"クヴァル・ノートC",level:1,value:4},
+    kuvaru_noteD:{name:"クヴァル・ノートD",level:1,value:4},
 
-    berugun_note:{name:{1:"	ベルガン・ノート"},level:{1:1},value:{1:5}},
-    rosutora_note:{name:{1:"ロストラ・ノート"},level:{1:1},value:{1:5}},
+    berugun_note:{name:"	ベルガン・ノート",level:1,value:5},
+    rosutora_note:{name:"ロストラ・ノート",level:1,value:5},
 
     //スティラノート
-    sutelia_noteA:{name:{1:"スティラ・ノートA"},level:{1:1},value:{1:5}},
-    sutelia_noteB:{name:{1:"スティラ・ノートB"},level:{1:1},value:{1:4}},
-    sutelia_noteC:{name:{1:"スティラ・ノートC"},level:{1:1},value:{1:4}},
-    sutelia_noteD:{name:{1:"スティラ・ノートD"},level:{1:1},value:{1:4}},
+    sutelia_noteA:{name:"スティラ・ノートA",level:1,value:5},
+    sutelia_noteB:{name:"スティラ・ノートB",level:1,value:4},
+    sutelia_noteC:{name:"スティラ・ノートC",level:1,value:4},
+    sutelia_noteD:{name:"スティラ・ノートD",level:1,value:4},
 
-    dekusuta_note:{name:{1:"デクスタ・ノート"},level:{1:1},value:{1:5}},
+    dekusuta_note:{name:"デクスタ・ノート",level:1,value:5},
 
     //ドミナ系
-    earu_domina:{name:{1:"エアル・ドミナ"},level:{1:1},value:{1:8}},
-    ritena_domina:{name:{1:"リテナ・ドミナ"},level:{1:1},value:{1:10}},
-    kuvaru_domina:{name:{1:"クヴァル・ドミナ"},level:{1:1},value:{1:10}},
-    sutira_domina:{name:{1:"スティラ・ドミナ"},level:{1:1},value:{1:10}},
+    earu_domina:{name:"エアル・ドミナ",level:1,value:8},
+    ritena_domina:{name:"リテナ・ドミナ",level:1,value:10},
+    kuvaru_domina:{name:"クヴァル・ドミナ",level:1,value:10},
+    sutira_domina:{name:"スティラ・ドミナ",level:1,value:10},
 
     //二リア系
-    harufiniria:{name:{1:"ハルフィニリア"},level:{1:1},value:{1:13}},
+    harufiniria:{name:"ハルフィニリア",level:1,value:13},
 
     //デコルド
-    sutanda_dekorudo:{name:{1:"デコルド・スタンダルド"},level:{1:1,2:2,3:3},value:{1:1,2:3,3:5}},
-    power_dekorudo:{name:{1:"デコルド・パワー"},level:{1:1},value:{1:9}},
-    shoot_dekorudo:{name:{1:"デコルド・シュート"},level:{1:1},value:{1:9}},
-    magic_dekorudo:{name:{1:"デコルド・テクニック"},level:{1:1},value:{1:9}},
+    Decold_Standard_1:{name:"デコルド・スタンダルドI",level:1,value:1},
+    Decold_Standard_2:{name:"デコルド・スタンダルドII",level:2,value:3},
+    Decold_Standard_3:{name:"デコルド・スタンダルドIII",level:3,value:5},
+
+    power_dekorudo:{name:"デコルド・パワー",level:1,value:9},
+    shoot_dekorudo:{name:"デコルド・シュート",level:1,value:9},
+    magic_dekorudo:{name:"デコルド・テクニック",level:1,value:9},
 
     //セクレテ
-    aruzu_sekurete:{name:{1:"アルズ・セクレテ"},level:{1:1,2:2,3:3,4:4},value:{1:3,2:4,3:5,4:6}},
+    Alts_Secreta_1:{name:"アルズ・セクレテI",level:1,value:3},
+    Alts_Secreta_2:{name:"アルズ・セクレテII",level:2,value:4},
+    Alts_Secreta_3:{name:"アルズ・セクレテIII",level:3,value:5},
+    Alts_Secreta_4:{name:"アルズ・セクレテIV",level:4,value:6},
 
     //ギガス系
-    power_gigasu:{name:{1:"ギガス・パワー"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:10,4:11}},
-    shoot_gigasu:{name:{1:"ギガス・シュート"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:10,4:11}},
-    magic_gigasu:{name:{1:"ギガス・テクニック"},level:{1:1,2:2,3:3,4:4},value:{1:6,2:8,3:10,4:11}},
-    agura_gigasu:{name:{1:"ギガス・アグライ"},level:{1:1},value:{1:11}},
-    euteli_gigasu:{name:{1:"ギガス・エウティ"},level:{1:1},value:{1:11}},
-    taria_gigasu:{name:{1:"ギガス・タリアー"},level:{1:1},value:{1:11}},
+    Gigas_Might_1:{name:"ギガス・パワーI",level:1,value:6},
+    Gigas_Might_2:{name:"ギガス・パワーII",level:2,value:8},
+    Gigas_Might_3:{name:"ギガス・パワーIII",level:3,value:10},
+    Gigas_Might_4:{name:"ギガス・パワーIV",level:4,value:11},
+
+    Gigas_Precision_1:{name:"ギガス・シュートI",level:1,value:6},
+    Gigas_Precision_2:{name:"ギガス・シュートII",level:2,value:8},
+    Gigas_Precision_3:{name:"ギガス・シュートIII",level:3,value:10},
+    Gigas_Precision_4:{name:"ギガス・シュートIV",level:4,value:11},
+
+    Gigas_Technique_1:{name:"ギガス・テクニックI",level:1,value:6},
+    Gigas_Technique_2:{name:"ギガス・テクニックII",level:2,value:8},
+    Gigas_Technique_3:{name:"ギガス・テクニックIII",level:3,value:10},
+    Gigas_Technique_4:{name:"ギガス・テクニックIV",level:4,value:11},
+
+    agura_gigasu:{name:"ギガス・アグライ",level:1,value:11},
+    euteli_gigasu:{name:"ギガス・エウティ",level:1,value:11},
+    taria_gigasu:{name:"ギガス・タリアー",level:1,value:11},
     
     //ドレド系
-    doredo_kipa:{name:{1:"ドレド・キーパ"},level:{1:1,2:2,3:3,4:4},value:{1:7,2:7.5,3:10,4:11}},
+    Dread_Keeper_1:{name:"ドレド・キーパI",level:1,value:7},
+    Dread_Keeper_2:{name:"ドレド・キーパII",level:2,value:7.5},
+    Dread_Keeper_3:{name:"ドレド・キーパIII",level:3,value:10},
+    Dread_Keeper_4:{name:"ドレド・キーパIV",level:4,value:11},
 
     //メガス系
-    megasu_fizia:{name:{1:"メガス・フュージア"},level:{1:1},value:{1:4}},
+    MegasFusia:{name:"メガス・フュージア",level:1,value:4},
 
     //ウィーカー系
-    frame_ui:{name:{1:"フレイムウィーカー"},level:{1:1,2:2},value:{1:6,2:11}},
-    aisu_ui:{name:{1:"アイスウィーカー"},level:{1:1,2:2},value:{1:6,2:11}},
-    sunder_ui:{name:{1:"サンダーウィーカー"},level:{1:1},value:{1:6}},
-    uindo_ui:{name:{1:"ウィンドウィーカー"},level:{1:1},value:{1:6}},
-    light_ui:{name:{1:"ライトウィーカー"},level:{1:1},value:{1:6}},
-    gurumu_ui:{name:{1:"グルームウィーカー"},level:{1:1},value:{1:6}},
-    deitime_ui:{name:{1:"デイタイムウィーカー"},level:{1:1},value:{1:6}},
-    nighttime_ui:{name:{1:"ナイトタイムウィーカー"},level:{1:1},value:{1:6}},
+    Fire_Exploit_1:{name:"フレイムウィーカーI",level:1,value:6},
+    Fire_Exploit_2:{name:"フレイムウィーカーII",level:2,value:11},
+    Ice_Exploit_1:{name:"アイスウィーカーI",level:1,value:6},
+    Ice_Exploit_2:{name:"アイスウィーカーII",level:2,value:11},
+    LightExploit:{name:"ライトーウィーカー",level:1,value:6},
+    WindExploit:{name:"ウィンドウィーカー",level:1,value:6},
+    LightningExploit:{name:"サンダーウィーカー",level:1,value:6},
+    gurumu_ui:{name:"グルームウィーカー",level:1,value:6},
+    DaytimeExploit:{name:"デイタイムウィーカー",level:1,value:6},
+    NighttimeExploit:{name:"ナイトタイムウィーカー",level:1,value:6},
 
     //トリア系
-    stamroda_toria:{name:{1:"トリア・スタムロダ"},level:{1:1},value:{1:6}},
-    starosya_toria:{name:{1:"トリア・スタムロシャ"},level:{1:1},value:{1:6}},
-    stamrohou_toria:{name:{1:"トリア・スタムロホウ"},level:{1:1},value:{1:6}},
-    supireroda_toria:{name:{1:"トリア・スピレロダ"},level:{1:1},value:{1:6}},
-    supirerosya_toria:{name:{1:"トリア・スピレロシャ"},level:{1:1},value:{1:6}},
-    supirerohou_toria:{name:{1:"トリア・スピレロホウ"},level:{1:1},value:{1:6}},
-    arumuroda_toria:{name:{1:"トリア・アルムロダ"},level:{1:1},value:{1:6}},
-    arumurosya_toria:{name:{1:"トリア・アルムロシャ"},level:{1:1},value:{1:6}},
-    arumurohou_toria:{name:{1:"トリア・アルムロホウ"},level:{1:1},value:{1:6}},
-    gardroda_toria:{name:{1:"トリア・ガーディロダ"},level:{1:1},value:{1:6}},
-    gardrosya_toria:{name:{1:"トリア・ガーディロシャ"},level:{1:1},value:{1:6}},
-    gard_rohou_toria:{name:{1:"トリア・ガーディロホウ"},level:{1:1},value:{1:6}},
+    stamroda_toria:{name:"トリア・スタムロダ",level:1,value:6},
+    starosya_toria:{name:"トリア・スタムロシャ",level:1,value:6},
+    stamrohou_toria:{name:"トリア・スタムロホウ",level:1,value:6},
+    supireroda_toria:{name:"トリア・スピレロダ",level:1,value:6},
+    supirerosya_toria:{name:"トリア・スピレロシャ",level:1,value:6},
+    supirerohou_toria:{name:"トリア・スピレロホウ",level:1,value:6},
+    arumuroda_toria:{name:"トリア・アルムロダ",level:1,value:6},
+    arumurosya_toria:{name:"トリア・アルムロシャ",level:1,value:6},
+    arumurohou_toria:{name:"トリア・アルムロホウ",level:1,value:6},
+    gardroda_toria:{name:"トリア・ガーディロダ",level:1,value:6},
+    gardrosya_toria:{name:"トリア・ガーディロシャ",level:1,value:6},
+    gard_rohou_toria:{name:"トリア・ガーディロホウ",level:1,value:6},
 
     //シュペル
-    power_syu:{name:{1:"シュペル・パワー"},level:{1:1},value:{1:8}},
-    stamda_syu:{name:{1:"シュペル・スタムダ"},level:{1:1},value:{1:8}},
-    supireda_syu:{name:{1:"シュペル・スピレダ"},level:{1:1},value:{1:8}},
-    shoot_syu:{name:{1:"シュペル・シュート"},level:{1:1},value:{1:8}},
-    stamsya_syu:{name:{1:"シュペル・スタムシャ"},level:{1:1},value:{1:8}},
-    supiresya_syu:{name:{1:"シュペル・スピレシャ"},level:{1:1},value:{1:8}},
-    magic_syu:{name:{1:"シュペル・テクニック"},level:{1:1},value:{1:8}},
-    stamhou_syu:{name:{1:"シュペル・スタムホウ"},level:{1:1},value:{1:8}},
-    supirehou_syu:{name:{1:"シュペル・スピレホウ"},level:{1:1},value:{1:8}},
+    SuperMight:{name:"シュペル・パワー",level:1,value:8},
+    SuperStamel:{name:"シュペル・スタムダ",level:1,value:8},
+    SuperSpimel:{name:"シュペル・スピレダ",level:1,value:8},
+    SuperPrecision:{name:"シュペル・シュート",level:1,value:8},
+    SuperStara:{name:"シュペル・スタムシャ",level:1,value:8},
+    SuperSpira:{name:"シュペル・スピレシャ",level:1,value:8},
+    SuperTechnique:{name:"シュペル・テクニック",level:1,value:8},
+    SuperStatech:{name:"シュペル・スタムホウ",level:1,value:8},
+    SuperSpitech:{name:"シュペル・スピレホウ",level:1,value:8},
 
     //ペリオ
-    espirio:{name:{1:"エスペリオ"},level:{1:1,2:2},value:{1:0,2:0}},
-    haiperio:{name:{1:"ハイペリオ"},level:{1:1},value:{1:0}},
+    Esperio_1:{name:"エスペリオI",level:1,value:0},
+    Esperio_2:{name:"エスペリオII",level:2,value:0},
+    Hi_Perio_1:{name:"ハイペリオI",level:1,value:0},
 
     //アディ・スタ
-    stamda_ade:{name:{1:"アディ・スタムダ"},level:{1:1},value:{1:10}},
-    stamsya_ade:{name:{1:"アディ・スタムシャ"},level:{},value:{1:10}},
-    stamhou_ade:{name:{1:"アディ・スタムホウ"},level:{1:1},value:{1:10}},
-    stadasya_ade:{name:{1:"アディ・スタダシャ"},level:{1:1},value:{1:13}},
-    stadahou_ade:{name:{1:"アディ・スタダホウ"},level:{1:1},value:{1:13}},
-    stasyahou_ade:{name:{1:"アディ・スタシャホウ"},level:{1:1},value:{1:13}},
+    stamda_ade:{name:"アディ・スタムダ",level:1,value:10},
+    stamsya_ade:{name:"アディ・スタムシャ",level:1,value:10},
+    stamhou_ade:{name:"アディ・スタムホウ",level:1,value:10},
+    stadasya_ade:{name:"アディ・スタダシャ",level:1,value:13},
+    stadahou_ade:{name:"アディ・スタダホウ",level:1,value:13},
+    stasyahou_ade:{name:"アディ・スタシャホウ",level:1,value:13},
 
     //アディ・スピ
-    supireda_ade:{name:{1:"アディ・スピレダ"},level:{1:1},value:{1:10}},
-    supisya_ade:{name:{1:"アディ・スピレシャ"},level:{1:1},value:{1:10}},
-    supihou_ade:{name:{1:"アディ・スピレホウ"},level:{1:1},value:{1:10}},
-    supidasya_ade:{name:{1:"アディ・スピダシャ"},level:{1:1},value:{1:13}},
-    supidahou_ade:{name:{1:"アディ・スピダホウ"},level:{1:1},value:{1:13}},
-    supisyahou_ade:{name:{1:"アディ・スピシャホウ"},level:{1:1},value:{1:13}},
+    supireda_ade:{name:"アディ・スピレダ",level:1,value:10},
+    supisya_ade:{name:"アディ・スピレシャ",level:1,value:10},
+    supihou_ade:{name:"アディ・スピレホウ",level:1,value:10},
+    supidasya_ade:{name:"アディ・スピダシャ",level:1,value:13},
+    supidahou_ade:{name:"アディ・スピダホウ",level:1,value:13},
+    supisyahou_ade:{name:"アディ・スピシャホウ",level:1,value:13},
 
     //アディ・スタピ
-    stabida_ade:{name:{1:"アディ・スタピダ"},level:{1:1},value:{1:10}},
-    stapisya_ade:{name:{1:"アディ・スタピシャ"},level:{1:1},value:{1:10}},
-    stapihou_ade:{name:{1:"アディ・スタピホウ"},level:{1:1},value:{1:10}},
-    stapidasya_ade:{name:{1:"アディ・スタピダシャ"},level:{1:1},value:{1:13}},
-    stapidahou_ade:{name:{1:"アディ・スタピダホウ"},level:{1:1},value:{1:13}},
-    stapisyahou_ade:{name:{1:"アディ・スタピシャホウ"},level:{1:1},value:{1:13}},
+    stabida_ade:{name:"アディ・スタピダ",level:1,value:10},
+    stapisya_ade:{name:"アディ・スタピシャ",level:1,value:10},
+    stapihou_ade:{name:"アディ・スタピホウ",level:1,value:10},
+    stapidasya_ade:{name:"アディ・スタピダシャ",level:1,value:13},
+    stapidahou_ade:{name:"アディ・スタピダホウ",level:1,value:13},
+    stapisyahou_ade:{name:"アディ・スタピシャホウ",level:1,value:13},
 
     //アディ・アルム
-    arumda_ade:{name:{1:"アディ・アルムダ"},level:{1:1},value:{1:10}},
-    arumsya_ade:{name:{1:"アディ・アルムシャ"},level:{1:1},value:{1:10}},
-    arumhou_ade:{name:{1:"アディ・アルムホウ"},level:{1:1},value:{1:10}},
-    arumdasya_ade:{name:{1:"アディ・アムダシャ"},level:{1:1},value:{1:13}},
-    arumdahou_ade:{name:{1:"アディ・アムダホウ"},level:{1:1},value:{1:13}},
-    arumsyahou_ade:{name:{1:"アディ・アムシャホウ"},level:{1:1},value:{1:13}},
+    arumda_ade:{name:"アディ・アルムダ",level:1,value:10},
+    arumsya_ade:{name:"アディ・アルムシャ",level:1,value:10},
+    arumhou_ade:{name:"アディ・アルムホウ",level:1,value:10},
+    arumdasya_ade:{name:"アディ・アムダシャ",level:1,value:13},
+    arumdahou_ade:{name:"アディ・アムダホウ",level:1,value:13},
+    arumsyahou_ade:{name:"アディ・アムシャホウ",level:1,value:13},
 
     //アディ・ガーディ
-    gardda_ade:{name:{1:"アディ・ガーディダ"},level:{1:1},value:{1:10}},
-    gardsya_ade:{name:{1:"アディ・ガーディシャ"},level:{1:1},value:{1:10}},
-    gardhou_ade:{name:{1:"アディ・ガーディホウ"},level:{1:1},value:{1:10}},
-    garddasya_ade:{name:{1:"アディ・ガディダシャ"},level:{1:1},value:{1:13}},
-    garddahou_ade:{name:{1:"アディ・ガディダホウ"},level:{1:1},value:{1:13}},
-    gardsyahou_ade:{name:{1:"アディ・ガディシャホウ"},level:{1:1},value:{1:13}},
+    gardda_ade:{name:"アディ・ガーディダ",level:1,value:10},
+    gardsya_ade:{name:"アディ・ガーディシャ",level:1,value:10},
+    gardhou_ade:{name:"アディ・ガーディホウ",level:1,value:10},
+    garddasya_ade:{name:"アディ・ガディダシャ",level:1,value:13},
+    garddahou_ade:{name:"アディ・ガディダホウ",level:1,value:13},
+    gardsyahou_ade:{name:"アディ・ガディシャホウ",level:1,value:13},
 
     //アディ・レジリ
-    rezirida_ade:{name:{1:"アディ・レジリダ"},level:{1:1},value:{1:10}},
-    rezirisya_ade:{name:{1:"アディ・レジリシャ"},level:{1:1},value:{1:10}},
-    rezirihou_ade:{name:{1:"アディ・レジリホウ"},level:{1:1},value:{1:10}},
+    rezirida_ade:{name:"アディ・レジリダ",level:1,value:10},
+    rezirisya_ade:{name:"アディ・レジリシャ",level:1,value:10},
+    rezirihou_ade:{name:"アディ・レジリホウ",level:1,value:10},
 
     //アディレジダ
-    rezidasya_ade:{name:{1:"アディ・レジダシャ"},level:{1:1},value:{1:13}},
-    rezidahou_ade:{name:{1:"アディ・レジダホウ"},level:{1:1},value:{1:13}},
-    rezisyahou_ade:{name:{1:"アディ・レジシャホウ"},level:{1:1},value:{1:13}},
+    rezidasya_ade:{name:"アディ・レジダシャ",level:1,value:13},
+    rezidahou_ade:{name:"アディ・レジダホウ",level:1,value:13},
+    rezisyahou_ade:{name:"アディ・レジシャホウ",level:1,value:13},
 
     //セズン
-    runa_sezun:{name:{1:"セズン・ルーナフィーヴ"},level:{1:1},value:{1:10}},
-    auto_sezun:{name:{1:"セズン・オートナルフィーヴ"},level:{1:1},value:{1:10}},
-    vuinta_sezun:{name:{1:"セズン・ヴィンターフィーヴ"},level:{1:1},value:{1:10}},
-    spring_sezun:{name:{1:"セズン・スプリングフィーヴ"},level:{1:1},value:{1:10}},
+    SezunLunafiv:{name:"セズン・ルーナフィーヴ",level:1,value:10},
+    SezunAutomfevre:{name:"セズン・オートナルフィーヴ",level:1,value:10},
+    SezunWintafiv:{name:"セズン・ヴィンターフィーヴ",level:1,value:10},
+    SezunSpringfiv:{name:"セズン・スプリングフィーヴ",level:1,value:10},
 }
 
 export default tag_op;

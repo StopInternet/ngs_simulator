@@ -4,13 +4,56 @@
 
 
 const unit_stats = {
-    lecerl:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    eizyax:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    efiaru:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    efiber:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    efituv:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    enfida:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
-    enfivi:{name:{},hp:{},pp:{},power:{},shoot:{},magic:{},damege_protect:{},def:{},rare:{},a_plus:{}},
+    //{name:""",hp:0,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    //星７
+    EclaireurArmor:{name:"レクレールアーマ",hp:0,pp:0,power:4,shoot:4,magic:4,damege_protect:-5,def:{},rare:7,plus:16.5},
+    AjaxArmor:{name:"エイジャクスアーマ",hp:30,pp:5,power:3.5,shoot:3.5,magic:3.5,damege_protect:1,def:{},rare:7,plus:6.5},
+    EptizeArmorVio:{name:"エンフィタスアーマ・ヴィオ",hp:0,pp:30,power:3,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:2},
+    EptizeArmorVida:{name:"エンフィタスアーマ・ヴィダ",hp:55,pp:0,power:3,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:6.5},
+    EfitusArmorArga:{name:"エフィタスアーマ・アルガ",hp:30,pp:4,power:3,shoot:3,magic:0,damege_protect:0,def:{},rare:7,plus:5.5},
+    EfitusArmorBelta:{name:"エフィタスアーマ・ベルタ",hp:30,pp:4,power:0,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:5.5},
+    EfitusArmorSheza:{name:"エフィタスアーマ・ツェザ",hp:30,pp:4,power:3,shoot:0,magic:3,damege_protect:0,def:{},rare:7,plus:5.5},
+    //星６
+    BehlgrenArmor:{name:"ベルグリンアーマ",hp:-40,pp:13,power:2.75,shoot:2.75,magic:2.75,damege_protect:0,def:{},rare:6,plus:2},
+    SestatoArmorSheza:{name:"セスタトアーマ・ツェザ",hp:30,pp:4,power:2.25,shoot:0,magic:2.25,damege_protect:0,def:{},rare:6,plus:4},
+    SestatoArmorBelta:{name:"セスタアーマ・ベルタ",hp:30,pp:4,power:0,shoot:2.25,magic:2.25,damege_protect:0,def:{},rare:6,plus:4},
+    SestatoArmorArga:{name:"セスタトアーマ・アルガ",hp:30,pp:4,power:2.25,shoot:2.25,magic:0,damege_protect:0,def:{},rare:6,plus:4},
+    SestatoArmor:{name:"セスタトアーマ",hp:35,pp:5,power:1.5,shoot:1.5,magic:1.5,damege_protect:0,def:{},rare:6,plus:1},
+    DefrozzisArmor:{name:"ディフロージスアーマ",hp:0,pp:9,power:2,shoot:2,magic:2,damege_protect:0,def:{},rare:6,plus:1},
+    DefrozzaArmor:{name:"ディフローザアーマ",hp:50,pp:0,power:1,shoot:1,magic:1,damege_protect:1,def:{},rare:6,plus:4},
+
+    //星５
+    SchwarzestArmor:{name:"シュヴァルゼストアーマ",hp:-25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    SchwarzgardeArmor:{name:"シュヴァルガルデアーマ",hp:25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    SchwarzrossoArmor:{name:"シュヴァルロッゾアーマ",hp:25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VijfArmorArga:{name:"ヴェフスアーマ・アルガ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VijfArmorBelta:{name:"ヴェフスアーマ・ベルタ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VijfArmorSheza:{name:"ヴェフスアーマ・ツェザ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    GreasArmor:{name:"グライアスアーマ",hp:-40,pp:13,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VidalArmor:{name:"ヴィダーレンアーマ",hp:70,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VijfArmor:{name:"ヴェフスアーマ",hp:30,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    ViosArmor:{name:"ヴィオーセルアーマ",hp:0,pp:14,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VidalunArmor:{name:"ヴィダールアーマ",hp:45,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    VioselArmor:{name:"ヴィオースアーマ",hp:0,pp:8,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    //星４
+    GeantArmor:{name:"ジオント・アーマ",hp:-20,pp:10,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    VialtoArmorSheza:{name:"ヴィアルトアーマ・ツェザ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    VialtoArmorBelta:{name:"ヴィアルトアーマ・ベルタ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    VialtoArmorArga:{name:"ヴィアルトアーマ・アルガ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    QualDeArmorSheza:{name:"クアルデアーマ・ツェザ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    QualDeArmorBelta:{name:"クアルデアーマ・ベルタ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    QualDeArmorArga:{name:"クアルデアーマ・アルガ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    VialtoArmor:{name:"ヴィアルトアーマ",hp:30,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    CattleyaArmor:{name:"キャトリアアーマ",hp:20,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    QualDeArmor:{name:"クアルデアーマ",hp:6,pp:10,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    //星３,2,1
+    GoldPrimmArmor:{name:"ゴルドプリムアーマ",hp:10,pp:1,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    TheseusArmor:{name:"テルセウスアーマ",hp:0,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    RenaissaArmor:{name:"レネッサアーマ",hp:10,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    NEXPArmor:{name:"N-EXPアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    SilverPrimmArmor:{name:"シルヴァプリムアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    TzviaArmor:{name:"ツヴァイアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    PrimmArmor:{name:"プリムアーマ",hp:10,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:1,plus:0},
 }   
 
 //ステータス設定
@@ -41,14 +84,40 @@ function set_protect_stats(id,def,rare){
             return plus -= 50;
         }
     }
-    //7,6
-    if(rare===7 || rare===6){
+    //7,6,3,2,1
+    if(rare===7 || rare===6 || rare===3 || rare===2 || rare===1){
+        //防御値設定
+        unit_stats[id].def[0] = def
+        for(var ia=1;ia<=40;ia++){
+            unit_stats[id].def[ia] = def+ia
+        }
+    }
+    //5,4
+    if(rare===5 || rare===4){
         //防御値設定
         unit_stats[id].def[0] = def
         for(var i=1;i<=40;i++){
+            if(i==40){
+                unit_stats[id].def[i] = def+(i+1)
+                continue;
+            }
             unit_stats[id].def[i] = def+i
         }
+        for(var i5=41;i5<=50;i5++){
+            unit_stats[id].def[i5] = unit_stats[id].def[40]+(i5-40)
+        }
+        if(rare === 5){
+            for(var i51=51;i51<=60;i51++){
+                unit_stats[id].def[i51] = unit_stats[id].def[50] + (1.6*(i51-50))
+            }
+        }
+        if(rare===4){
+            for(var i41=51;i41<=60;i41++){
+                unit_stats[id].def[i41] = unit_stats[id].def[50] + (2*(i41-50))
+            }
+        }
     }
+
     //7
     if(rare===7){
         //41~50
@@ -64,30 +133,76 @@ function set_protect_stats(id,def,rare){
             unit_stats[id].def[i7_2] = def+(i7_2+1)
         }
     }
+    //6,3,2,1
+    if(rare===6 || rare===3 || rare===2 || rare===1){
+        //41~50
+        for(var i6=41;i6<=50;i6++){
+            unit_stats[id].def[i6] = def+i6;
+        }
+        if(rare===6){
+            for(var i61=51;i61<=60;i61++){
+                unit_stats[id].def[i61] = unit_stats[id].def[50] + (1.6*(i61-50))
+            }
+        }
+        if(rare===3||rare===2||rare===1){
+            for(var i31=51;i31<=60;i31++){
+                unit_stats[id].def[i31] = unit_stats[id].def[50] + (2.2*(i31-50))
+            }
+        }
+    }
 }
 //✪8
-//レクレール
-stats_set('lecerl',"レクレールアーマ",0,0,4,4,4,0.05,16.5);
-set_protect_stats('lecerl',35,7);
-//エイジャクス
-stats_set('eizyax',"エイジャクスアーマ",30,5,3.5,3.5,3.5,0.05,6.5);
-set_protect_stats('eizyax',41,7);
-//エフィタス（aru,tuv,ber)
-//アルガ
-stats_set('efiaru',"エフィタスアーマ・アルガ",30,4,3,3,0,0.05,5.5);
-set_protect_stats('efiaru',39,7);
-//ベルタ
-stats_set('efiber',"エフィタスアーマ・ベルタ",30,4,0,3,3,0.05,5.5);
-set_protect_stats('efiber',39,7);
-//ツェザ
-stats_set('efituv',"エフィタスアーマ・ツェザ",30,4,3,0,3,0.05,5.5);
-set_protect_stats('efituv',39,7);
-//エンフィタス
-//ヴィダ
-stats_set('enfida',"エンフィタスアーマ・ヴィダ",55,0,3,3,3,0.05,6.5);
-set_protect_stats('enfida',40,7);
-//ヴィオ
-stats_set('enfivi',"エンフィタスアーマ・ヴィオ",0,10,3,3,3,0.05,2);
-set_protect_stats('enfivi',40,7)
 
+set_protect_stats('EclaireurArmor',35,7);
+set_protect_stats('AjaxArmor',41,7);
+set_protect_stats('EfitusArmorArga',39,7);
+set_protect_stats('EfitusArmorBelta',39,7);
+set_protect_stats('EfitusArmorSheza',39,7);
+set_protect_stats('EptizeArmorVida',40,7);
+set_protect_stats('EptizeArmorVio',40,7)
+
+//星6
+set_protect_stats('BehlgrenArmor',26,6)
+set_protect_stats('SestatoArmorSheza',20,6)
+set_protect_stats('SestatoArmorBelta',20,6)
+set_protect_stats('SestatoArmorArga',20,6)
+set_protect_stats('SestatoArmor',21,6)
+set_protect_stats('DefrozzisArmor',20,6)
+set_protect_stats('DefrozzaArmor',22,6)
+
+//星５
+//set_protect_stats('',,)
+
+set_protect_stats('SchwarzestArmor',20,5)
+set_protect_stats('SchwarzgardeArmor',20,5)
+set_protect_stats('SchwarzrossoArmor',20,5)
+set_protect_stats('VijfArmorArga',18,5)
+set_protect_stats('VijfArmorBelta',18,5)
+set_protect_stats('VijfArmorSheza',18,5)
+set_protect_stats('GreasArmor',21,5)
+set_protect_stats('VioselArmor',10,5)
+set_protect_stats('VidalunArmor',22,5)
+set_protect_stats('ViosArmor',15,5)
+set_protect_stats('VidalArmor',22,5)
+set_protect_stats('VijfArmor',17,5)
+
+//星４
+set_protect_stats('QualDeArmor',8,4)
+set_protect_stats('GeantArmor',15,4)
+set_protect_stats('VialtoArmorSheza',16,4)
+set_protect_stats('VialtoArmorBelta',16,4)
+set_protect_stats('VialtoArmorArga',16,4)
+set_protect_stats('QualDeArmorSheza',13,4)
+set_protect_stats('QualDeArmorBelta',13,4)
+set_protect_stats('QualDeArmorArga',13,4)
+set_protect_stats('VialtoArmor',14,4)
+
+//✪3～１
+set_protect_stats('GoldPrimmArmor',10,3)
+set_protect_stats('TheseusArmor',10,3)
+set_protect_stats('RenaissaArmor',10,3)
+set_protect_stats('NEXPArmor',9,2)
+set_protect_stats('SilverPrimmArmor',9,2)
+set_protect_stats('TzviaArmor',9,2)
+set_protect_stats('PrimmArmor',8,1)
 export default unit_stats;

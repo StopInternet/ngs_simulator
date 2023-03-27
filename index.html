@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>NCC - NGS Combat Clac</title>
+        <title>NCC - NGS Combat Calc</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="img/icon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -63,11 +63,7 @@
         基本的に、クラスの選択、クラススキルの習得数、武器の選択、防具の選択から行ってください<br>
         最初からレベルなどを設定すると反映されません。<br><br>
 
-        <h3>３：特殊能力ｈレベルの設定には気を付けてください。</h3>
-        レベルが１、レベルがないものは共通で「１」で設定を行ってください<br>
-        最大レベルが3や2、1等の特殊能力がある場合は計算が出来なくなる可能性があります。（ウィーカー系等）<br>
-        <br><br>
-        <h3>４：各設定のミスにも気を付けてください</h3>
+        <h3>３：各設定のミスにも気を付けてください</h3>
         クラス名、レベル、体力、攻撃力、防御力、クラススキル習得数、潜在レベル、防具名、防御力値が<br>
         表示されていれば設定されています<br>
         <p style="color:red">「NaN」や「undefined」と表示された場合は、設定が間違えてる可能性が高いです。</p><br>
@@ -83,11 +79,11 @@
         クラスの選択：
         <select id="class-select">
           <option value="">--クラスを選択してください--</option>
-        </select><br>
-        クラスレベル（1~70）：
-        <input type="number" min="1" max="70" value="1" id="class_level"><br>
+        </select><br><br>
+        クラスレベル1~70（メインクラスのみ）：
+        <input type="number" min="1" max="70" value="1" id="class_level"><br><br>
 
-        クラススキル習得数（メイン・サブクラス含む1~94）：
+        スキル習得数1~94（メインとサブ含む）：
         <input type="number" min="1" max="94" value="1" id="skill"><br>
         <br><br>
         <h5>
@@ -108,12 +104,12 @@
         武器の選択：
         <select id="wepon-select">
             <option value="">--武器を選択してください--</option>
-          </select><br>
+          </select><br><br>
         強化値：
         <input type="number" min="0" max="60" value="0" id="plus_w"><br>
-        潜在レベル：
-        <input type="number" min="0" max="4" value="0" id="senzai"><br>
-        攻撃力：<div id="select_wepon_plus">未設定</div>
+        潜在Lv：
+        <input type="number" min="0" max="4" value="0" id="senzai"><br><br>
+        攻撃力：<div id="select_wepon_plus">未設定</div><br>
         潜在レベル：<div id="select_senzai">未設定</div><br>
         <!--武器の特殊能力設定-->
         特殊能力：１
@@ -155,11 +151,12 @@
         防具の選択（１）：
         <select id="unit1-select">
             <option value="">--防具（１）を選択してください--</option>
-          </select><br>
+          </select><br><br>
         強化値：
         <input type="number" min="0" max="60" value="0" id="plus_unit1"><br><br>
-        防具名：<div id="select_unit1_name">未設定</div>
+        防具名：<div id="select_unit1_name">未設定</div><br>
         防御力値：<div id="select_unit1_plus">未設定</div><br>
+        <br>
         <!--防具１の特殊能力設定-->
         特殊能力：１<br>
         <input type="text" id="search-input_u11" placeholder="検索...(カタカナで検索)">
@@ -199,10 +196,10 @@
         防具の選択（２）：
         <select id="unit2-select">
             <option value="">--防具（２）を選択してください--</option>
-          </select><br>
+          </select><br><br>
         強化値：
           <input type="number" min="0" max="60" value="0" id="plus_unit2"><br><br>
-          防具名：<div id="select_unit2_name">未設定</div>
+          防具名：<div id="select_unit2_name">未設定</div><br>
           防御力値：<div id="select_unit2_plus">未設定</div><br>
 
         <!--防具2の特殊能力設定-->
@@ -245,11 +242,11 @@
         防具の選択（３）：
         <select id="unit3-select">
             <option value="">--防具（３）を選択してください--</option>
-          </select><br>
+          </select><br><br>
         強化値：
         <input type="number" min="0" max="60" value="0" id="plus_unit3"><br><br>
-        防具名：<div id="select_unit3_name">未設定</div>
-        防御力値：<div id="select_unit3_plus"></div>未設定<br><br>
+        防具名：<div id="select_unit3_name">未設定</div><br>
+        防御力値：<div id="select_unit3_plus">未設定</div><br><br>
         <!--防具3の特殊能力設定-->
         特殊能力：１<br>
         <input type="text" id="search-input_u13" placeholder="検索...(カタカナで検索)">
@@ -294,16 +291,18 @@
         <hr>
         戦闘力：
         <div id="result_sentou">0</div> 
-        <button id="myButton">戦闘力を計算</button></h2><br>
+        <button id="myButton">戦闘力を計算</button></h2><br><hr>
+        <br>
+        <br>
+          PHANTASY START ONLINE 2 公式サイト<br>
+          (c)SEGA<br>
+          <a href="https://pso2.jp/">https://pso2.jp/</a>
+  
+    </div>
             </div>
         </div>
-    </div>
     <br><br>
-    <div id="sub_main">
-        PHANTASY START ONLINE 2 公式サイト<br>
-        (c)SEGA<br>
-        <a href="https://pso2.jp/">https://pso2.jp/</a>
-    </div>
+    
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

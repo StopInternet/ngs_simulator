@@ -34,7 +34,7 @@ window.onload = function mains(){
         for(const unitKey in unit_stats){
             const option_u = document.createElement('option');
             option_u.value = unitKey;
-            option_u.text = unit_stats[unitKey].name[1];
+            option_u.text = unit_stats[unitKey].name;
             unitSelect.add(option_u);
         }
     }
@@ -188,16 +188,16 @@ var selectField_unit1 = document.getElementById("unit1-select");
 var select_unit1plus = document.getElementById("plus_unit1");
 
 selectField_unit1.addEventListener("change", function() {
-    const select_unit1Name = unit_stats[selectField_unit1.value].name[1];
-    def1_hp = unit_stats[selectField_unit1.value].hp[1];
-    def1_pp = unit_stats[selectField_unit1.value].pp[1];
+    const select_unit1Name = unit_stats[selectField_unit1.value].name;
+    def1_hp = unit_stats[selectField_unit1.value].hp;
+    def1_pp = unit_stats[selectField_unit1.value].pp;
     document.getElementById("select_unit1_name").innerHTML = select_unit1Name
 });
 //防具１の防御力
 select_unit1plus.addEventListener("input",function(){
     def_1 = unit_stats[selectField_unit1.value].def[select_unit1plus.value];
-    add_1 = unit_stats[selectField_unit1.value].a_plus[1];
-    document.getElementById("select_unit1_plus").innerHTML = def_1
+    add_1 = unit_stats[selectField_unit1.value].plus;
+    document.getElementById("select_unit1_plus").innerHTML = Math.floor(def_1)
 })
 
 //防具2の表示設定
@@ -205,16 +205,16 @@ var selectField_unit2 = document.getElementById("unit2-select");
 var select_unit2plus = document.getElementById("plus_unit2");
 
 selectField_unit2.addEventListener("change", function() {
-    const select_unit2Name = unit_stats[selectField_unit2.value].name[1];
-    def2_hp = unit_stats[selectField_unit2.value].hp[1];
-    def2_pp = unit_stats[selectField_unit2.value].pp[1];
+    const select_unit2Name = unit_stats[selectField_unit2.value].name;
+    def2_hp = unit_stats[selectField_unit2.value].hp;
+    def2_pp = unit_stats[selectField_unit2.value].pp;
     document.getElementById("select_unit2_name").innerHTML = select_unit2Name
 });
 //防具２の防御力
 select_unit2plus.addEventListener("input",function(){
     def_2 = unit_stats[selectField_unit2.value].def[select_unit2plus.value];
-    add_2 = unit_stats[selectField_unit2.value].a_plus[1];
-    document.getElementById("select_unit2_plus").innerHTML = def_2
+    add_2 = unit_stats[selectField_unit2.value].plus;
+    document.getElementById("select_unit2_plus").innerHTML = Math.floor(def_2)
 })
 
 //防具3の表示設定
@@ -222,26 +222,26 @@ var selectField_unit3 = document.getElementById("unit3-select");
 var select_unit3plus = document.getElementById("plus_unit3");
 
 selectField_unit3.addEventListener("change", function() {
-    const select_unit3Name = unit_stats[selectField_unit3.value].name[1];
-    def3_hp = unit_stats[selectField_unit3.value].hp[1];
-    def3_pp = unit_stats[selectField_unit3.value].pp[1];
+    const select_unit3Name = unit_stats[selectField_unit3.value].name;
+    def3_hp = unit_stats[selectField_unit3.value].hp;
+    def3_pp = unit_stats[selectField_unit3.value].pp;
     document.getElementById("select_unit3_name").innerHTML = select_unit3Name
 });
 //防御力３の防御力
 select_unit3plus.addEventListener("input",function(){
     def_3 = unit_stats[selectField_unit3.value].def[select_unit3plus.value];
-    add_3 = unit_stats[selectField_unit3.value].a_plus[1];
-    document.getElementById("select_unit3_plus").innerHTML = def_3
+    add_3 = unit_stats[selectField_unit3.value].plus;
+    document.getElementById("select_unit3_plus").innerHTML = Math.floor(def_3)
 });
 
 //総計算
 const myButton = document.querySelector("#myButton");
 function calculateBattlePower(baseAttack, weaponAttack, damageUpperLimit, damageLowerLimit, weaponPotentialLevel, defense, specialCorrection, hpBoost, ppBoost, classSkillCount,addplus,all_value) {
     let battlePower = baseAttack
-  battlePower += weaponAttack * (damageUpperLimit + damageLowerLimit) / 2
+  battlePower += Math.floor(weaponAttack * (damageUpperLimit + damageLowerLimit) / 2)
   battlePower += weaponPotentialLevel * 10
-  battlePower += defense*0.5 + addplus + specialCorrection + hpBoost / 10
-  battlePower += ppBoost
+  battlePower += Math.floor(defense*0.5 + addplus + specialCorrection + hpBoost / 10)
+  battlePower += ppBoost 
   battlePower += classSkillCount * 3
   return battlePower;
   }

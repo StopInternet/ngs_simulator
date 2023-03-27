@@ -10,17 +10,66 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- 
- button {
-  background-color:rgba(110, 156, 201, 0.9);
+ /* セレクトボックスのスタイル */
+ input[type="number"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 5rem;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+select {
+  padding: 0.25rem;
   border: none;
-  color: white;
+  font-size: 16rem;
+  font-weight: bold;
+  text-align: left;
+  width: 20rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  color: #0c0c0c;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* セレクトボックスがフォーカスされた時のスタイル */
+select:focus {
+  outline: none;
+}
+
+/* セレクトボックスのオプションのスタイル */
+option {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+option :hover{
+
+  background-color: rgba(133, 180, 226, 0.9);
+}
+ button {
+  background-color:rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  border: none;
+  color: rgb(12, 12, 12);
   padding: 12px 24px;
   text-align: left;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  border-radius: 25px;
+  font-size: 16rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   outline: none; /* ボタンにフォーカスした際の枠線を削除 */

@@ -7,11 +7,18 @@
  * 30-40 : 4.6
  * 41-50 : 5
  * 51-60 : 6.2
+ * 60:692
+ * 51:637
+ * 50:631
+ * 40:591
+ * 30:556
+ * 1:526
  */
 
 const wepons = {
     //id　名前　ダメージ補正値　潜在レベル
     //8
+    Livider:{name:{},atk:{0:466},Variance:0,properties:{}},
     NeosAstraean:{name:{},atk:{0:535},Variance:0,properties:{}},
     NeosJustitean:{name:{},atk:{0:445},Variance:0,properties:{}},
     Gunblaze:{name:{},atk:{0:526},Variance:0,properties:{}},
@@ -20,6 +27,7 @@ const wepons = {
     Tenebrous:{name:{},atk:{0:448},Variance:0,properties:{}},
     Effulgent:{name:{},atk:{0:446},Variance:0,properties:{}},
     PrimmLibra:{name:{},atk:{0:436},Variance:0,properties:{}},
+
     //7
     Obsidia:{name:{},atk:{0:488},Variance:0,properties:{}},
     Kaizaar:{name:{},atk:{0:485},Variance:0,properties:{}},
@@ -273,6 +281,7 @@ stats_set("Trunkul","トランクール",8)
 stats_set("Tenebrous","セイガイン",8)
 stats_set("Effulgent","セイガヨウ",8)
 stats_set("PrimmLibra","プリムリブラ",8)
+stats_set("Livider","リヴィーター",8)
 //7
 stats_set("Obsidia","オブゾディア",7)
 stats_set("Kaizaar","カイゼラム",7)

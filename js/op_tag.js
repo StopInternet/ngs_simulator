@@ -409,6 +409,7 @@ const tag_op = {
     SezunAutomfevre:{name:"セズン・オートナルフィーヴ",level:1,value:10},
     SezunWintafiv:{name:"セズン・ヴィンターフィーヴ",level:1,value:10},
     SezunSpringfiv:{name:"セズン・スプリングフィーヴ",level:1,value:10},
+    SezunSecundaAnibafi:{name:"セズン・セクンダアニバフィー",level:1,value:10},
 }
 
 export default tag_op;

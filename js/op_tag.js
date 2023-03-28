@@ -410,6 +410,13 @@ const tag_op = {
     SezunWintafiv:{name:"セズン・ヴィンターフィーヴ",level:1,value:10},
     SezunSpringfiv:{name:"セズン・スプリングフィーヴ",level:1,value:10},
     SezunSecundaAnibafi:{name:"セズン・セクンダアニバフィー",level:1,value:10},
+
+    //デフィ
+    DefiHaumes_p1:{name:"デフィ・エリシス（予想値）",level:1,value:10},
+    DefiMakemes_p1:{name:"デフィ・セイレス（予想値）",level:1,value:10},
+    DefiPlutos_p1:{name:"デフィ・プルトス（予想値）",level:1,value:10},
+    DefiCeires_p1:{name:"デフィ・マケメス（予想値）",level:1,value:10},
+    DefiElysis_p1:{name:"デフィ・ハウメス（予想値）",level:1,value:10},
 }
 
 export default tag_op;

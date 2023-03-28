@@ -42,7 +42,7 @@ window.onload = function mains(){
         for(const opKey in tag_op){
             const option_op = document.createElement('option');
             option_op.value = opKey;
-            option_op.text = tag_op[opKey].name;
+            option_op.text = tag_op[opKey].name +" / "+tag_op[opKey].value;
             opSelect.add(option_op);
         }
     }

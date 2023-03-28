@@ -96,19 +96,21 @@
             <li>習得数：<div id="class_skill">未設定</div><br><li><br>
         </ul>
     </h5>
-    <p style="color:red">クラスを変えるときは必ず 「クラスレベル」 の再設定をしてください。</p>
+    <p style="color:red">クラスを変えるときは必ず 「クラスレベル」 の再設定をしてください。</p><p>
+    スレイヤーのステータスは 「予想値」 ですので実装後のステータスと異なる可能性が高いです。</p>
     <hr>
         <!--武器の設定-->
         <h3>武器</h3>
         <h5>
         武器の選択：
+        <input type="text" id="search-input_we" placeholder="検索...(カタカナで検索)"><br>
         <select id="wepon-select">
             <option value="">--武器を選択してください--</option>
           </select><br><br>
         強化値：
         <input type="number" min="0" max="60" value="0" id="plus_w"><br>
         潜在Lv：
-        <input type="number" min="0" max="4" value="0" id="senzai"><br><br>
+        <input type="number" min="0" max="5" value="0" id="senzai"><br><br>
         攻撃力：<div id="select_wepon_plus">未設定</div><br>
         潜在レベル：<div id="select_senzai">未設定</div><br>
         <!--武器の特殊能力設定-->
@@ -149,6 +151,7 @@
         <h3>防具（１）</h3>
         <h5>
         防具の選択（１）：
+        <input type="text" id="search-input_u1" placeholder="検索...(カタカナで検索)"><br>
         <select id="unit1-select">
             <option value="">--防具（１）を選択してください--</option>
           </select><br><br>
@@ -194,6 +197,7 @@
         <h3>防具（２）</h3>
         <h5>
         防具の選択（２）：
+        <input type="text" id="search-input_u2" placeholder="検索...(カタカナで検索)"><br>
         <select id="unit2-select">
             <option value="">--防具（２）を選択してください--</option>
           </select><br><br>
@@ -240,6 +244,7 @@
         <h3>防具（３）</h3>
         <h5>
         防具の選択（３）：
+        <input type="text" id="search-input_u3" placeholder="検索...(カタカナで検索)"><br>
         <select id="unit3-select">
             <option value="">--防具（３）を選択してください--</option>
           </select><br><br>

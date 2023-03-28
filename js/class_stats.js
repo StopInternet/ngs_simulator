@@ -20,6 +20,7 @@ const class_stats = {
     Br:{name:"ブレイバー(Br)",hp:{1:270},atk:{1:452},def:{1:302},skill:{1:1}},
     Bo:{name:"バウンサー(Bo)",hp:{1:275},atk:{1:453},def:{1:299},skill:{1:1}},
     Wa:{name:"ウェイカー(Wa)",hp:{1:255},atk:{1:451},def:{1:302},skill:{1:1}},
+    Sl:{name:"スレイヤー(Sl)(ステータスは予想の値です）",hp:{1:275},atk:{1:452},def:{1:302},skill:{1:1}},
 }
 function stats_calc(clas,level,hp,atk,def){
         class_stats[clas].hp[level] = Math.round(hp * Math.pow(1.05,(level-1)/5));
@@ -37,10 +38,11 @@ for(var i=2;i<=70;i++){
     stats_calc('Br',i,270,452,302);
     stats_calc('Bo',i,275,453,299);
     stats_calc('Wa',i,255,451,302);
+    stats_calc('Sl',i,275,452,302);
 }
 //クラススキル習得数の挿入
 const class_name = {
-    1:'Hu',2:'Fi',3:'Ra',4:'Gu',5:'Fo',6:'Te',7:'Br',8:'Bo',9:'Wa'
+    1:'Hu',2:'Fi',3:'Ra',4:'Gu',5:'Fo',6:'Te',7:'Br',8:'Bo',9:'Wa',10:'Sl'
 }
 for(var i=1;i<=Object.keys(class_name).length;i++){
     for(var j=2;j<=94;j++){

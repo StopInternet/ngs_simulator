@@ -173,7 +173,7 @@ const selectField_w = document.getElementById("wepon-select");
 const select_w1plus = document.getElementById("plus_w");
 select_w1plus.addEventListener("input",function(){
     atk_n = Math.floor(wepons[selectField_w.value].atk[select_w1plus.value])
-    damege_pro = wepons[selectField_w.value].Variance[1]
+    damege_pro = wepons[selectField_w.value].Variance
     document.getElementById("select_wepon_plus").innerHTML = atk_n
 })
 //武器の潜在レベル
@@ -473,7 +473,25 @@ function searchs(searchInput,select_target){
        } 
     });
 }
-//武器OPのっけんさ
+
+//武器と防具の検索
+document.getElementById('search-input_we').addEventListener('input',()=>{
+    searchs(document.getElementById('search-input_we'),document.getElementById('wepon-select'))
+});
+
+document.getElementById('search-input_u1').addEventListener('input',()=>{
+    searchs(document.getElementById('search-input_u1'),document.getElementById('unit1-select'))
+});
+
+document.getElementById('search-input_u2').addEventListener('input',()=>{
+    searchs(document.getElementById('search-input_u2'),document.getElementById('unit2-select'))
+});
+
+document.getElementById('search-input_u3').addEventListener('input',()=>{
+    searchs(document.getElementById('search-input_u3'),document.getElementById('unit3-select'))
+});
+
+//武器OPの検索機能
 //1
 searchInput_w1.addEventListener('input', () => {
     searchs(searchInput_w1,op_ui_w1_Select)

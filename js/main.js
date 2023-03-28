@@ -34,7 +34,7 @@ window.onload = function mains(){
         for(const unitKey in unit_stats){
             const option_u = document.createElement('option');
             option_u.value = unitKey;
-            option_u.text = unit_stats[unitKey].name;
+            option_u.text = unit_stats[unitKey].name + " / "+unit_stats[unitKey].plus;
             unitSelect.add(option_u);
         }
     }

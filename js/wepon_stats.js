@@ -103,7 +103,7 @@ function stats_set(id,name,rare){
      }
 
     //潜在レベルの設定
-    for(var i=0;i<=5;i++){
+    for(var i=0;i<=6;i++){
         wepons[id].properties[i] = i
     }
     

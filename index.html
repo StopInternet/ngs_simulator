@@ -290,15 +290,22 @@
     <hr>
         <br>
         <h3>詳細設定</h3><br>
-        <button id="li_all">武器の特殊能力を全て防具2と3にコピーする</button><br><br>
-       <button id="li_all1">防具の特殊能力を全て防具2と3にコピーする</button>
+        <button id="li_all">武器の特殊能力を全ての防具1,2,3にコピーする</button><br><br>
+       <button id="li_all1">防具1の特殊能力を全て防具2と3にコピーする</button>
         <br>
         <br>
         <h2>
         <hr>
         戦闘力：
         <div id="result_sentou">0</div> 
-        <button id="myButton">戦闘力を計算</button></h2><br><hr>
+        <button id="myButton">戦闘力を計算</button></h2>
+        <input type="text" id="result_sentou2" style="display:none">
+        <br><button id="Images">画像として出力</button><br>
+        <p>注意：必ず全ての設定（戦闘力を計算も含む）してから出力をしてください。<br>
+        どこか設定をしていないと、出力がされません。</p>
+        <br><hr>
+        
+        <div id="image-container"></div>
         <br>
         <br>
           PHANTASY START ONLINE 2 公式サイト<br>
@@ -309,7 +316,6 @@
             </div>
         </div>
     <br><br>
-    
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

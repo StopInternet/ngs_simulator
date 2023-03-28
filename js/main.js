@@ -116,6 +116,7 @@ var class_d =0;
 var class_h =0;
 var skill_c =0;
 //武器系
+var we_name=null;
 //攻撃力（強化値含む）
 var atk_n = 0;
 //ダメージ補正値
@@ -143,11 +144,11 @@ var add_2 = 0;
 var add_3 = 0;
 
 //クラスの表示設定
-const selectField_class = document.getElementById("class-select");
-const selectField_classL = document.getElementById("class_level");
-const select_class_skill = document.getElementById("skill");
+var selectField_class = document.getElementById("class-select");
+var selectField_classL = document.getElementById("class_level");
+var select_class_skill = document.getElementById("skill");
 selectField_class.addEventListener("input",function(){
-    const select_class = class_stats[selectField_class.value].name;
+    var select_class = class_stats[selectField_class.value].name;
     document.getElementById("class_name").innerHTML = select_class;
 });
 //クラスレベルとステータス
@@ -172,6 +173,7 @@ select_class_skill.addEventListener("input",function(){
 const selectField_w = document.getElementById("wepon-select");
 const select_w1plus = document.getElementById("plus_w");
 select_w1plus.addEventListener("input",function(){
+    we_name = wepons[selectField_w.value].name[0]
     atk_n = Math.floor(wepons[selectField_w.value].atk[select_w1plus.value])
     damege_pro = wepons[selectField_w.value].Variance
     document.getElementById("select_wepon_plus").innerHTML = atk_n
@@ -287,32 +289,37 @@ var op2su3 = 0;
 var op3su3 = 0;
 var op4su3 = 0;
 var op5su3 = 0;
-
 var opAllw = 0;
+
+var op1_name = null;
+var op2_name = null;
+var op3_name = null;
+var op4_name = null;
+var op5_name = null;
 //武器の特殊能力値の設定
 if(document.getElementById("wepon_op1_select").value != "null"){
     //武器の特殊能力１
-    var op1_name = document.getElementById("wepon_op1_select").value;
+    op1_name = document.getElementById("wepon_op1_select").value;
     op1sw = tag_op[op1_name].value;
 }
 if(document.getElementById("wepon_op2_select").value != "null"){
     //武器の特殊能力2
-    var op2_name = document.getElementById("wepon_op2_select").value;
+    op2_name = document.getElementById("wepon_op2_select").value;
     op2sw = tag_op[op2_name].value;
 }
 if(document.getElementById("wepon_op3_select").value != "null"){
     //武器の特殊能力3
-    var op3_name = document.getElementById("wepon_op3_select").value;
+    op3_name = document.getElementById("wepon_op3_select").value;
     op3sw = tag_op[op3_name].value;
 }
 if(document.getElementById("wepon_op4_select").value != "null"){
     //武器の特殊能力4
-    var op4_name = document.getElementById("wepon_op4_select").value;
+    op4_name = document.getElementById("wepon_op4_select").value;
     op4sw = tag_op[op4_name].value;
 }
 if(document.getElementById("wepon_op5_select").value != "null"){
     //武器の特殊能力5
-    var op5_name = document.getElementById("wepon_op5_select").value;
+    op5_name = document.getElementById("wepon_op5_select").value;
     op5sw = tag_op[op5_name].value;
 }
 
@@ -408,6 +415,7 @@ sp_op = opAllw + opAll1 + opAll2 + opAll3
 
 var result = calculateBattlePower(class_a, atk_n, 1,damege_pro,senzai,defA,sp_op,defhpA,defppA,skill_c,add_all,opAllw);
 document.getElementById("result_sentou").innerHTML = Math.floor(result)
+document.getElementById("result_sentou2").value = Math.floor(result)
 });
 //武器OPの検索機能
 const searchInput_w1 = document.getElementById('search-input_w1');
@@ -634,4 +642,76 @@ document.getElementById("li_all1").addEventListener('click',()=>{
     op_ui_u43_Select.value = op_ui_u41_Select.value
     op_ui_u53_Select.value = op_ui_u51_Select.value
 
+});
+
+function generateImage(text) {
+    // canvas要素を作成
+    var canvas = document.createElement('canvas');
+    canvas.width = 975;
+    canvas.height = 925;
+  
+    // canvasコンテキストを取得
+    var context = canvas.getContext('2d');
+  
+    // 背景色を設定
+    context.fillStyle = '#fff';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+  
+    // テキストを描画
+    context.fillStyle = '#000';
+    context.font = '20px Arial';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    var lines = text.split('\n');
+    var lineHeight = 30;
+    var x = canvas.width / 2;
+    var y = canvas.height / 2 - (lines.length - 1) * lineHeight / 2;
+    for (var i = 0; i < lines.length; i++) {
+      context.fillText(lines[i], x, y + i * lineHeight);
+    }
+  
+    // 画像を生成
+    var img = new Image();
+    img.src = canvas.toDataURL();
+  
+    // 画像を表示
+    var imageContainer = document.getElementById('image-container');
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(img);
+  }
+  
+
+
+document.getElementById("Images").addEventListener('click',()=>{
+    var img_class = "クラス名：" + class_stats[document.getElementById("class-select").value].name
+    var img_level = "\nクラスレベル：" + selectField_classL.value
+    var img_skill = "\nクラススキル習得数：" + select_class_skill.value
+    var img_hp = "\n体力："+class_h;
+    var img_atk = "\n攻撃力："+class_a;
+    var img_def = "\n防御力："+class_d+"\n";
+
+    var img_wepon = "\n武器名：\n"+we_name
+    var img_wepon_plus = "\n攻撃力:"+atk_n
+    var img_senzai = "\n潜在レベル:" + senzai +"\n"
+    var img_op_wepon = "\n特殊能力：\n"+tag_op[document.getElementById("wepon_op1_select").value].name + 
+                                   "\n" + tag_op[document.getElementById("wepon_op2_select").value].name + 
+                                   "\n" + tag_op[document.getElementById("wepon_op3_select").value].name +
+                                   "\n" + tag_op[document.getElementById("wepon_op4_select").value].name +
+                                   "\n" + tag_op[document.getElementById("wepon_op5_select").value].name + "\n"
+    
+    var img_unit1 = "\n\n防具１："+ unit_stats[document.getElementById("unit1-select").value].name + "｜防具２："+ unit_stats[document.getElementById("unit2-select").value].name + "｜防具３："+ unit_stats[document.getElementById("unit3-select").value].name;
+    var img_u1plus = "\n防御力："+ unit_stats[document.getElementById("unit1-select").value].def[document.getElementById("plus_unit1").value] + "｜防御力："+ unit_stats[document.getElementById("unit2-select").value].def[document.getElementById("plus_unit2").value] +"｜防御力："+ unit_stats[document.getElementById("unit3-select").value].def[document.getElementById("plus_unit3").value];
+    var img_op_u0 =  "\n特殊能力："+"｜特殊能力："+"｜特殊能力：\n"
+    var img_op_u1 = tag_op[document.getElementById("unit1_op1_select").value].name + "｜" + tag_op[document.getElementById("unit2_op1_select").value].name + "｜" + tag_op[document.getElementById("unit3_op1_select").value].name + "\n"
+    var img_op_u2 = tag_op[document.getElementById("unit1_op2_select").value].name + "｜" + tag_op[document.getElementById("unit2_op2_select").value].name + "｜" + tag_op[document.getElementById("unit3_op2_select").value].name + "\n"
+    var img_op_u3 = tag_op[document.getElementById("unit1_op3_select").value].name + "｜" + tag_op[document.getElementById("unit2_op3_select").value].name + "｜" + tag_op[document.getElementById("unit3_op3_select").value].name + "\n"
+    var img_op_u4 = tag_op[document.getElementById("unit1_op4_select").value].name + "｜" + tag_op[document.getElementById("unit2_op4_select").value].name + "｜" + tag_op[document.getElementById("unit3_op4_select").value].name + "\n"
+    var img_op_u5 = tag_op[document.getElementById("unit1_op5_select").value].name + "｜" + tag_op[document.getElementById("unit2_op5_select").value].name + "｜" + tag_op[document.getElementById("unit3_op5_select").value].name + "\n"
+    
+
+    var stats_alls = img_class+img_level+img_skill+img_hp+img_atk+img_def+
+    img_wepon+img_wepon_plus+img_senzai+img_op_wepon+
+    img_unit1 + img_u1plus +img_op_u0 + img_op_u1 + img_op_u2 + img_op_u3 + img_op_u4 + img_op_u5 + "\n戦闘力："+document.getElementById("result_sentou2").value
+
+    generateImage(stats_alls)
 });

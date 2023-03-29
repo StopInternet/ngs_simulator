@@ -311,6 +311,7 @@ const tag_op = {
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4},
+    FomidoFusia:{name:"フォミド・フュージア(予想値)",level:1,value:6},
 
     //ウィーカー系
     Fire_Exploit_1:{name:"フレイムウィーカーI",level:1,value:6},

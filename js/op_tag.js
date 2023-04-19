@@ -1,5 +1,5 @@
 const tag_op = {
-    //パワー系
+    //パワー系だよ
     Might_1:{name:"パワーI",level:1,value:4},
     Might_2:{name:"パワーII",level:2,value:5},
     Might_3:{name:"パワーIII",level:3,value:6},

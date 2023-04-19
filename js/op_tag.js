@@ -420,11 +420,11 @@ const tag_op = {
     SezunSecundaAnibafi:{name:"セズン・セクンダアニバフィー",level:1,value:10},
 
     //デフィ
-    DefiHaumes_p1:{name:"デフィ・エリシス（予想値）",level:1,value:10},
-    DefiMakemes_p1:{name:"デフィ・セイレス（予想値）",level:1,value:10},
-    DefiPlutos_p1:{name:"デフィ・プルトス（予想値）",level:1,value:10},
-    DefiCeires_p1:{name:"デフィ・マケメス（予想値）",level:1,value:10},
-    DefiElysis_p1:{name:"デフィ・ハウメス（予想値）",level:1,value:10},
+    DefiHaumes_p1:{name:"デフィ・エリシスP.01",level:1,value:5},
+    DefiMakemes_p1:{name:"デフィ・セイレスP.01",level:1,value:5},
+    DefiPlutos_p1:{name:"デフィ・プルトスP.01",level:1,value:5},
+    DefiCeires_p1:{name:"デフィ・マケメスP.01",level:1,value:5},
+    DefiElysis_p1:{name:"デフィ・ハウメスP.01",level:1,value:5},
 }
 
 export default tag_op;

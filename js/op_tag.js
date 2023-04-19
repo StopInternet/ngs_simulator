@@ -59,6 +59,7 @@ const tag_op = {
     Ratech_Dualble_4:{name:"シャホウ・ディアブルIV",level:4,value:7},
 
     Triplble:{name:"トリアブル",level:1,value:8},
+    Tirplble2:{name:"トリアブルII",level:1,value:10},
 
     //アーム系、ガード系
     Deftness_1:{name:"アームI",level:1,value:3},
@@ -302,6 +303,7 @@ const tag_op = {
     agura_gigasu:{name:"ギガス・アグライ",level:1,value:11},
     euteli_gigasu:{name:"ギガス・エウティ",level:1,value:11},
     taria_gigasu:{name:"ギガス・タリアー",level:1,value:11},
+    maesu_gigasu:{name:"ギガス・マエスティ",level:1,value:12},
     
     //ドレド系
     Dread_Keeper_1:{name:"ドレド・キーパI",level:1,value:7},
@@ -338,7 +340,12 @@ const tag_op = {
     gardroda_toria:{name:"トリア・ガーディロダ",level:1,value:6},
     gardrosya_toria:{name:"トリア・ガーディロシャ",level:1,value:6},
     gard_rohou_toria:{name:"トリア・ガーディロホウ",level:1,value:6},
-
+    
+    sutamu_toriaburu:{name:"スタム・トリアブル",level:1,value:8},
+    supire_toriaburu:{name:"スピレ・トリアブル",level:1,value:8},
+    arumu_toriaburu:{name:"アルム・トリアブル",level:1,value:8},
+    gard_toriaburu:{name:"ガーディ・トリアブル",level:1,value:8},
+    
     //シュペル
     SuperMight:{name:"シュペル・パワー",level:1,value:8},
     SuperStamel:{name:"シュペル・スタムダ",level:1,value:8},

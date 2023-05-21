@@ -1,5 +1,5 @@
 const tag_op = {
-    //パワー系だよ
+    //パワー系
     Might_1:{name:"パワーI",level:1,value:4},
     Might_2:{name:"パワーII",level:2,value:5},
     Might_3:{name:"パワーIII",level:3,value:6},
@@ -58,6 +58,7 @@ const tag_op = {
     Ratech_Dualble_3:{name:"シャホウ・ディアブルIII",level:3,value:6},
     Ratech_Dualble_4:{name:"シャホウ・ディアブルIV",level:4,value:7},
 
+    //トリアブル
     Triplble:{name:"トリアブル",level:1,value:8},
     Tirplble2:{name:"トリアブルII",level:1,value:10},
 
@@ -249,7 +250,7 @@ const tag_op = {
     kuvaru_noteC:{name:"クヴァル・ノートC",level:1,value:4},
     kuvaru_noteD:{name:"クヴァル・ノートD",level:1,value:4},
 
-    berugun_note:{name:"	ベルガン・ノート",level:1,value:5},
+    berugun_note:{name:"ベルガン・ノート",level:1,value:5},
     rosutora_note:{name:"ロストラ・ノート",level:1,value:5},
 
     //スティラノート
@@ -303,8 +304,8 @@ const tag_op = {
     agura_gigasu:{name:"ギガス・アグライ",level:1,value:11},
     euteli_gigasu:{name:"ギガス・エウティ",level:1,value:11},
     taria_gigasu:{name:"ギガス・タリアー",level:1,value:11},
-    maesu_gigasu:{name:"ギガス・マエスティ",level:1,value:12},
-    
+    maesu_gigasu:{name:"ギガス・マエスティ",level:1,value:13},
+
     //ドレド系
     Dread_Keeper_1:{name:"ドレド・キーパI",level:1,value:7},
     Dread_Keeper_2:{name:"ドレド・キーパII",level:2,value:7.5},
@@ -313,7 +314,7 @@ const tag_op = {
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4},
-    FomidoFusia:{name:"フォミド・フュージア(予想値)",level:1,value:6},
+    FomidoFusia:{name:"フォミド・フュージア",level:1,value:6},
 
     //ウィーカー系
     Fire_Exploit_1:{name:"フレイムウィーカーI",level:1,value:6},
@@ -340,12 +341,7 @@ const tag_op = {
     gardroda_toria:{name:"トリア・ガーディロダ",level:1,value:6},
     gardrosya_toria:{name:"トリア・ガーディロシャ",level:1,value:6},
     gard_rohou_toria:{name:"トリア・ガーディロホウ",level:1,value:6},
-    
-    sutamu_toriaburu:{name:"スタム・トリアブル",level:1,value:8},
-    supire_toriaburu:{name:"スピレ・トリアブル",level:1,value:8},
-    arumu_toriaburu:{name:"アルム・トリアブル",level:1,value:8},
-    gard_toriaburu:{name:"ガーディ・トリアブル",level:1,value:8},
-    
+
     //シュペル
     SuperMight:{name:"シュペル・パワー",level:1,value:8},
     SuperStamel:{name:"シュペル・スタムダ",level:1,value:8},
@@ -419,12 +415,68 @@ const tag_op = {
     SezunSpringfiv:{name:"セズン・スプリングフィーヴ",level:1,value:10},
     SezunSecundaAnibafi:{name:"セズン・セクンダアニバフィー",level:1,value:10},
 
+    //トリア
+    sutamu_toriaburu:{name:"スタム・トリアブル",level:1,value:10},
+    supire_toriaburu:{name:"スピレ・トリアブル",level:1,value:10},
+    arumu_toriaburu:{name:"アルム・トリアブル",level:1,value:10},
+    gard_toriaburu:{name:"ガーディ・トリアブル",level:1,value:10},
+
     //デフィ
     DefiHaumes_p1:{name:"デフィ・エリシスP.01",level:1,value:5},
     DefiMakemes_p1:{name:"デフィ・セイレスP.01",level:1,value:5},
     DefiPlutos_p1:{name:"デフィ・プルトスP.01",level:1,value:5},
     DefiCeires_p1:{name:"デフィ・マケメスP.01",level:1,value:5},
     DefiElysis_p1:{name:"デフィ・ハウメスP.01",level:1,value:5},
+
+    //エディ・スタ
+    stamda_ede:{name:"エディ・スタムダ",level:1,value:12},
+    stamsya_ede:{name:"エディ・スタムシャ",level:1,value:12},
+    stamhou_ede:{name:"エィ・スタムホウ",level:1,value:12},
+    stadasya_ede:{name:"エディ・スタダシャ",level:1,value:15},
+    stadahou_ede:{name:"エディ・スタダホウ",level:1,value:15},
+    stasyahou_ede:{name:"エディ・スタシャホウ",level:1,value:15},
+
+    //エディ・スピ
+    supireda_ede:{name:"エディ・スピレダ",level:1,value:12},
+    supisya_ede:{name:"エディ・スピレシャ",level:1,value:12},
+    supihou_ede:{name:"エディ・スピレホウ",level:1,value:12},
+    supidasya_ede:{name:"エディ・スピダシャ",level:1,value:15},
+    supidahou_ede:{name:"エディ・スピダホウ",level:1,value:15},
+    supisyahou_ede:{name:"エディ・スピシャホウ",level:1,value:15},
+
+    //エディ・スタピ
+    stabida_ede:{name:"エディ・スタピダ",level:1,value:12},
+    stapisya_ede:{name:"エディ・スタピシャ",level:1,value:12},
+    stapihou_ede:{name:"エディ・スタピホウ",level:1,value:12},
+    stapidasya_ede:{name:"エディ・スタピダシャ",level:1,value:15},
+    stapidahou_ede:{name:"エディ・スタピダホウ",level:1,value:15},
+    stapisyahou_ede:{name:"エディ・スタピシャホウ",level:1,value:15},
+
+    //エディ・アルム
+    arumda_ede:{name:"エディ・アルムダ",level:1,value:12},
+    arumsya_ede:{name:"エディ・アルムシャ",level:1,value:12},
+    arumhou_ede:{name:"エディ・アルムホウ",level:1,value:12},
+    arumdasya_ede:{name:"エディ・アムダシャ",level:1,value:15},
+    arumdahou_ede:{name:"エディ・アムダホウ",level:1,value:15},
+    arumsyahou_ede:{name:"エディ・アムシャホウ",level:1,value:15},
+
+    //エディ・ガーディ
+    gardda_ede:{name:"エディ・ガーディダ",level:1,value:12},
+    gardsya_ede:{name:"エディ・ガーディシャ",level:1,value:12},
+    gardhou_ede:{name:"エディ・ガーディホウ",level:1,value:12},
+    garddasya_ede:{name:"エディ・ガディダシャ",level:1,value:15},
+    garddahou_ede:{name:"エディ・ガディダホウ",level:1,value:15},
+    gardsyahou_ede:{name:"エディ・ガディシャホウ",level:1,value:15},
+
+    //エディ・レジリ
+    rezirida_ede:{name:"エディ・レジリダ",level:1,value:12},
+    rezirisya_ede:{name:"エディ・レジリシャ",level:1,value:12},
+    rezirihou_ede:{name:"エディ・レジリホウ",level:1,value:12},
+
+    //エディレジダ
+    rezidasya_ede:{name:"エディ・レジダシャ",level:1,value:15},
+    rezidahou_ede:{name:"エディ・レジダホウ",level:1,value:15},
+    rezisyahou_ede:{name:"エディ・レジシャホウ",level:1,value:15},
 }
 
 export default tag_op;

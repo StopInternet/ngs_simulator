@@ -28,7 +28,7 @@ function stats_calc(clas,level,hp,atk,def){
         class_stats[clas].def[level] = Math.round(300 * Math.pow(1.08, (level-1)/5) + (def-300));
 }
 //ステータス生成
-for(var i=2;i<=70;i++){
+for(var i=2;i<=75;i++){
     stats_calc('Hu',i,300,450,304);
     stats_calc('Fi',i,280,454,301);
     stats_calc('Ra',i,240,448,300);

@@ -477,6 +477,10 @@ const tag_op = {
     rezidasya_ede:{name:"エディ・レジダシャ",level:1,value:15},
     rezidahou_ede:{name:"エディ・レジダホウ",level:1,value:15},
     rezisyahou_ede:{name:"エディ・レジシャホウ",level:1,value:15},
+    
+    //スタロ
+    rezisyahou_ede:{name:"スタロ・ソール(予想)",level:1,value:13},
+    
 }
 
 export default tag_op;

@@ -225,6 +225,9 @@ const tag_op = {
     EuphroySoulX:{name:"エウティ・ソールX",level:1,value:11},
     ThaliSoulX:{name:"タリアー・ソールX",level:1,value:11},
 
+    //スタロ
+    Staro_Soul:{name:"スタロ・ソール(予想)",level:1,value:13},
+
     //ノート系
     //エアルノート
     earu_noteA:{name:"エアル・ノートA",level:1,value:5},
@@ -314,7 +317,8 @@ const tag_op = {
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4},
-    FomidoFusia:{name:"フォミド・フュージア",level:1,value:6},
+    FomidoFusia:{name:"フォミド・フュージア",level:2,value:6},
+    DelieraFusia:{name:"ディエラ・フュージア(予想）",level:3,value:8},
 
     //ウィーカー系
     Fire_Exploit_1:{name:"フレイムウィーカーI",level:1,value:6},
@@ -427,6 +431,11 @@ const tag_op = {
     DefiPlutos_p1:{name:"デフィ・プルトスP.01",level:1,value:5},
     DefiCeires_p1:{name:"デフィ・マケメスP.01",level:1,value:5},
     DefiElysis_p1:{name:"デフィ・ハウメスP.01",level:1,value:5},
+    DefiHaumes_p2:{name:"デフィ・エリシスP.02(予想)",level:1,value:8},
+    DefiMakemes_p2:{name:"デフィ・セイレスP.02(予想)",level:1,value:8},
+    DefiPlutos_p2:{name:"デフィ・プルトスP.02(予想)",level:1,value:8},
+    DefiCeires_p2:{name:"デフィ・マケメスP.02(予想)",level:1,value:8},
+    DefiElysis_p2:{name:"デフィ・ハウメスP.02(予想)",level:1,value:8},
 
     //エディ・スタ
     stamda_ede:{name:"エディ・スタムダ",level:1,value:12},
@@ -478,9 +487,11 @@ const tag_op = {
     rezidahou_ede:{name:"エディ・レジダホウ",level:1,value:15},
     rezisyahou_ede:{name:"エディ・レジシャホウ",level:1,value:15},
     
-    //スタロ
-    rezisyahou_ede:{name:"スタロ・ソール(予想)",level:1,value:13},
-    
+    //ソブリナ
+    Earu_Sbrina:{name:"エアル・ソブリナ(予想)",level:1,value:13},
+    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:13},
+    Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:13},
+    Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:13},
 }
 
 export default tag_op;

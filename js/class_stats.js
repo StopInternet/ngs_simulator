@@ -11,16 +11,16 @@
  */
 
 const class_stats = {
-    Hu:{name:"ハンター(Hu)",hp:{1:300},atk:{1:450},def:{1:304},skill:{1:1}},
-    Fi:{name:"ファイター(Fi)",hp:{1:280},atk:{1:454},def:{1:301},skill:{1:1}},
-    Ra:{name:"レンジャー(Ra)",hp:{1:240},atk:{1:448},def:{1:300},skill:{1:1}},
-    Gu:{name:"ガンナー(Gu)",hp:{1:250},atk:{1:451},def:{1:297},skill:{1:1}},
-    Fo:{name:"フォース(Fo)",hp:{1:235},atk:{1:453},def:{1:296},skill:{1:1}},
-    Te:{name:"テクター(Te)",hp:{1:260},atk:{1:446},def:{1:303},skill:{1:1}},
-    Br:{name:"ブレイバー(Br)",hp:{1:270},atk:{1:452},def:{1:302},skill:{1:1}},
-    Bo:{name:"バウンサー(Bo)",hp:{1:275},atk:{1:453},def:{1:299},skill:{1:1}},
-    Wa:{name:"ウェイカー(Wa)",hp:{1:255},atk:{1:451},def:{1:302},skill:{1:1}},
-    Sl:{name:"スレイヤー(Sl)",hp:{1:220},atk:{1:455},def:{1:296},skill:{1:1}},
+    Hu:{name:"ハンター(Hu)",hp:{1:300},atk:{1:450},def:{1:304},skill:{1:1},img:'<img src="img/class_img/Hu.png">'},
+    Fi:{name:"ファイター(Fi)",hp:{1:280},atk:{1:454},def:{1:301},skill:{1:1},img:'<img src="img/class_img/Fi.png">'},
+    Ra:{name:"レンジャー(Ra)",hp:{1:240},atk:{1:448},def:{1:300},skill:{1:1},img:'<img src="img/class_img/Ra.png">'},
+    Gu:{name:"ガンナー(Gu)",hp:{1:250},atk:{1:451},def:{1:297},skill:{1:1},img:'<img src="img/class_img/Gu.png">'},
+    Fo:{name:"フォース(Fo)",hp:{1:235},atk:{1:453},def:{1:296},skill:{1:1},img:'<img src="img/class_img/Fo.png">'},
+    Te:{name:"テクター(Te)",hp:{1:260},atk:{1:446},def:{1:303},skill:{1:1},img:'<img src="img/class_img/Te.png">'},
+    Br:{name:"ブレイバー(Br)",hp:{1:270},atk:{1:452},def:{1:302},skill:{1:1},img:'<img src="img/class_img/Br.png">'},
+    Bo:{name:"バウンサー(Bo)",hp:{1:275},atk:{1:453},def:{1:299},skill:{1:1},img:'<img src="img/class_img/Bo.png">'},
+    Wa:{name:"ウェイカー(Wa)",hp:{1:255},atk:{1:451},def:{1:302},skill:{1:1},img:'<img src="img/class_img/Wa.png">'},
+    Sl:{name:"スレイヤー(Sl)",hp:{1:220},atk:{1:455},def:{1:296},skill:{1:1},img:'<img src="img/class_img/Sl.png">'},
 }
 function stats_calc(clas,level,hp,atk,def){
         class_stats[clas].hp[level] = Math.round(hp * Math.pow(1.05,(level-1)/5));

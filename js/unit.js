@@ -8,21 +8,147 @@
 const unit_stats = {
     //{name:""",hp:0,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
     //星７
-    EclaireurArmor:{name:"レクレールアーマ",hp:0,pp:0,power:4,shoot:4,magic:4,damege_protect:-5,def:{},rare:7,plus:16.5},
-    AjaxArmor:{name:"エイジャクスアーマ",hp:30,pp:5,power:3.5,shoot:3.5,magic:3.5,damege_protect:1,def:{},rare:7,plus:6.5},
-    EptizeArmorVio:{name:"エンフィタスアーマ・ヴィオ",hp:0,pp:30,power:3,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:2},
-    EptizeArmorVida:{name:"エンフィタスアーマ・ヴィダ",hp:55,pp:0,power:3,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:6.5},
-    EfitusArmorArga:{name:"エフィタスアーマ・アルガ",hp:30,pp:4,power:3,shoot:3,magic:0,damege_protect:0,def:{},rare:7,plus:5.5},
-    EfitusArmorBelta:{name:"エフィタスアーマ・ベルタ",hp:30,pp:4,power:0,shoot:3,magic:3,damege_protect:0,def:{},rare:7,plus:5.5},
-    EfitusArmorSheza:{name:"エフィタスアーマ・ツェザ",hp:30,pp:4,power:3,shoot:0,magic:3,damege_protect:0,def:{},rare:7,plus:5.5},
+
+    //レクレールアーマ
+    EclaireurArmor:{
+        name:"レクレールアーマ",
+        hp:0,
+        pp:0,
+        power:4,shoot:4,magic:4,
+        damege_protect:-5,
+        def:{},
+        rare:7,plus:16.5},
+
+    //エイジャクスアーマ
+    AjaxArmor:{
+        name:"エイジャクスアーマ",
+        hp:30,
+        pp:5,
+        power:3.5,shoot:3.5,magic:3.5,
+        damege_protect:1,
+        def:{},
+        rare:7,plus:6.5},
+    
+    //エンフィタスアーマ・ヴィオ
+    EptizeArmorVio:{
+        name:"エンフィタスアーマ・ヴィオ",
+        hp:0,pp:30,
+        power:3,shoot:3,magic:3,
+        damege_protect:0,
+        def:{},
+        rare:7,plus:2},
+    
+    //エンフィタスアーマ・ヴィダ
+    EptizeArmorVida:{
+        name:"エンフィタスアーマ・ヴィダ",
+        hp:55,
+        pp:0,
+        power:3,shoot:3,magic:3,
+        damege_protect:0,
+        def:{},
+        rare:7,plus:6.5},
+    
+    //エフィタスアーマ・アルガ
+    EfitusArmorArga:{
+        name:"エフィタスアーマ・アルガ",
+        hp:30,
+        pp:4,
+        power:3,shoot:3,magic:0,
+        damege_protect:0,
+        def:{},
+        rare:7,plus:5.5},
+    
+    //エフィタスアーマ・ベルタ
+    EfitusArmorBelta:{
+        name:"エフィタスアーマ・ベルタ",
+        hp:30,
+        pp:4,
+        power:0,shoot:3,magic:3,
+        damege_protect:0,
+        def:{},
+        rare:7,plus:5.5},
+    
+    //エフィタスアーマ・ツェザ
+    EfitusArmorSheza:{
+        name:"エフィタスアーマ・ツェザ",
+        hp:30,
+        pp:4,
+        power:3,shoot:0,magic:3,
+        damege_protect:0,
+        def:{},
+        rare:7,plus:5.5},
+
     //星６
-    BehlgrenArmor:{name:"ベルグリンアーマ",hp:-40,pp:13,power:2.75,shoot:2.75,magic:2.75,damege_protect:0,def:{},rare:6,plus:2},
-    SestatoArmorSheza:{name:"セスタトアーマ・ツェザ",hp:30,pp:4,power:2.25,shoot:0,magic:2.25,damege_protect:0,def:{},rare:6,plus:4},
-    SestatoArmorBelta:{name:"セスタアーマ・ベルタ",hp:30,pp:4,power:0,shoot:2.25,magic:2.25,damege_protect:0,def:{},rare:6,plus:4},
-    SestatoArmorArga:{name:"セスタトアーマ・アルガ",hp:30,pp:4,power:2.25,shoot:2.25,magic:0,damege_protect:0,def:{},rare:6,plus:4},
-    SestatoArmor:{name:"セスタトアーマ",hp:35,pp:5,power:1.5,shoot:1.5,magic:1.5,damege_protect:0,def:{},rare:6,plus:1},
-    DefrozzisArmor:{name:"ディフロージスアーマ",hp:0,pp:9,power:2,shoot:2,magic:2,damege_protect:0,def:{},rare:6,plus:1},
-    DefrozzaArmor:{name:"ディフローザアーマ",hp:50,pp:0,power:1,shoot:1,magic:1,damege_protect:1,def:{},rare:6,plus:4},
+
+    //ベルグリンアーマ
+    BehlgrenArmor:{
+        name:"ベルグリンアーマ",
+        hp:-40,
+        pp:13,
+        power:2.75,shoot:2.75,magic:2.75,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:2},
+
+    //セスタトアーマ・ツェザ
+    SestatoArmorSheza:{
+        name:"セスタトアーマ・ツェザ",
+        hp:30,
+        pp:4,
+        power:2.25,shoot:0,magic:2.25,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:4},
+    
+    //セスタトアーマ・ベルタ    
+    SestatoArmorBelta:{
+        name:"セスタアーマ・ベルタ",
+        hp:30,
+        pp:4,
+        power:0,shoot:2.25,magic:2.25,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:4},
+    
+    //セスタトアーマ・アルガ
+    SestatoArmorArga:{
+        name:"セスタトアーマ・アルガ",
+        hp:30,
+        pp:4,
+        power:2.25,shoot:2.25,magic:0,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:4},
+    
+    //セスタトアーマ
+    SestatoArmor:{
+        name:"セスタトアーマ",
+        hp:35,
+        pp:5,
+        power:1.5,shoot:1.5,magic:1.5,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:1},
+    
+    //ディフロージスアーマ
+    DefrozzisArmor:{
+        name:"ディフロージスアーマ",
+        hp:0,
+        pp:9,
+        power:2,shoot:2,magic:2,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:1},
+    
+    //ディフロージスアーマ
+    DefrozzaArmor:{
+        name:"ディフローザアーマ",
+        hp:50,
+        pp:0,
+        power:1,shoot:1,magic:1,
+        damege_protect:1,
+        def:{},
+        rare:6,plus:4},
 
     //星５
     SchwarzestArmor:{name:"シュヴァルゼストアーマ",hp:-25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},

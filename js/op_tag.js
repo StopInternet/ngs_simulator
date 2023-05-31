@@ -438,12 +438,12 @@ const tag_op = {
     DefiElysis_p2:{name:"デフィ・ハウメスP.02(予想)",level:1,value:8},
 
     //エディ・スタ
-    stamda_ede:{name:"エディ・スタムダ",level:1,value:12},
-    stamsya_ede:{name:"エディ・スタムシャ",level:1,value:12},
-    stamhou_ede:{name:"エィ・スタムホウ",level:1,value:12},
-    stadasya_ede:{name:"エディ・スタダシャ",level:1,value:15},
-    stadahou_ede:{name:"エディ・スタダホウ",level:1,value:15},
-    stasyahou_ede:{name:"エディ・スタシャホウ",level:1,value:15},
+    stamda_ede:{name:"エディ・スタムダ(予想)",level:1,value:12},
+    stamsya_ede:{name:"エディ・スタムシャ(予想)",level:1,value:12},
+    stamhou_ede:{name:"エィ・スタムホウ(予想)",level:1,value:12},
+    stadasya_ede:{name:"エディ・スタダシャ(予想)",level:1,value:15},
+    stadahou_ede:{name:"エディ・スタダホウ(予想)",level:1,value:15},
+    stasyahou_ede:{name:"エディ・スタシャホウ(予想)",level:1,value:15},
 
     //エディ・スピ
     supireda_ede:{name:"エディ・スピレダ",level:1,value:12},
@@ -454,38 +454,38 @@ const tag_op = {
     supisyahou_ede:{name:"エディ・スピシャホウ",level:1,value:15},
 
     //エディ・スタピ
-    stabida_ede:{name:"エディ・スタピダ",level:1,value:12},
-    stapisya_ede:{name:"エディ・スタピシャ",level:1,value:12},
-    stapihou_ede:{name:"エディ・スタピホウ",level:1,value:12},
-    stapidasya_ede:{name:"エディ・スタピダシャ",level:1,value:15},
-    stapidahou_ede:{name:"エディ・スタピダホウ",level:1,value:15},
-    stapisyahou_ede:{name:"エディ・スタピシャホウ",level:1,value:15},
+    stabida_ede:{name:"エディ・スタピダ(予想)",level:1,value:12},
+    stapisya_ede:{name:"エディ・スタピシャ(予想)",level:1,value:12},
+    stapihou_ede:{name:"エディ・スタピホウ(予想)",level:1,value:12},
+    stapidasya_ede:{name:"エディ・スタピダシャ(予想)",level:1,value:15},
+    stapidahou_ede:{name:"エディ・スタピダホウ(予想)",level:1,value:15},
+    stapisyahou_ede:{name:"エディ・スタピシャホウ(予想)",level:1,value:15},
 
     //エディ・アルム
-    arumda_ede:{name:"エディ・アルムダ",level:1,value:12},
-    arumsya_ede:{name:"エディ・アルムシャ",level:1,value:12},
-    arumhou_ede:{name:"エディ・アルムホウ",level:1,value:12},
-    arumdasya_ede:{name:"エディ・アムダシャ",level:1,value:15},
-    arumdahou_ede:{name:"エディ・アムダホウ",level:1,value:15},
-    arumsyahou_ede:{name:"エディ・アムシャホウ",level:1,value:15},
+    arumda_ede:{name:"エディ・アルムダ(予想)",level:1,value:12},
+    arumsya_ede:{name:"エディ・アルムシャ(予想)",level:1,value:12},
+    arumhou_ede:{name:"エディ・アルムホウ(予想)",level:1,value:12},
+    arumdasya_ede:{name:"エディ・アムダシャ(予想)",level:1,value:15},
+    arumdahou_ede:{name:"エディ・アムダホウ(予想)",level:1,value:15},
+    arumsyahou_ede:{name:"エディ・アムシャホウ(予想)",level:1,value:15},
 
     //エディ・ガーディ
-    gardda_ede:{name:"エディ・ガーディダ",level:1,value:12},
-    gardsya_ede:{name:"エディ・ガーディシャ",level:1,value:12},
-    gardhou_ede:{name:"エディ・ガーディホウ",level:1,value:12},
-    garddasya_ede:{name:"エディ・ガディダシャ",level:1,value:15},
-    garddahou_ede:{name:"エディ・ガディダホウ",level:1,value:15},
-    gardsyahou_ede:{name:"エディ・ガディシャホウ",level:1,value:15},
+    gardda_ede:{name:"エディ・ガーディダ(予想)",level:1,value:12},
+    gardsya_ede:{name:"エディ・ガーディシャ(予想)",level:1,value:12},
+    gardhou_ede:{name:"エディ・ガーディホウ(予想)",level:1,value:12},
+    garddasya_ede:{name:"エディ・ガディダシャ(予想)",level:1,value:15},
+    garddahou_ede:{name:"エディ・ガディダホウ(予想)",level:1,value:15},
+    gardsyahou_ede:{name:"エディ・ガディシャホウ(予想)",level:1,value:15},
 
     //エディ・レジリ
-    rezirida_ede:{name:"エディ・レジリダ",level:1,value:12},
-    rezirisya_ede:{name:"エディ・レジリシャ",level:1,value:12},
-    rezirihou_ede:{name:"エディ・レジリホウ",level:1,value:12},
+    rezirida_ede:{name:"エディ・レジリダ(予想)",level:1,value:12},
+    rezirisya_ede:{name:"エディ・レジリシャ(予想)",level:1,value:12},
+    rezirihou_ede:{name:"エディ・レジリホウ(予想)",level:1,value:12},
 
     //エディレジダ
-    rezidasya_ede:{name:"エディ・レジダシャ",level:1,value:15},
-    rezidahou_ede:{name:"エディ・レジダホウ",level:1,value:15},
-    rezisyahou_ede:{name:"エディ・レジシャホウ",level:1,value:15},
+    rezidasya_ede:{name:"エディ・レジダシャ(予想)",level:1,value:15},
+    rezidahou_ede:{name:"エディ・レジダホウ(予想)",level:1,value:15},
+    rezisyahou_ede:{name:"エディ・レジシャホウ(予想)",level:1,value:15},
     
     //ソブリナ
     Earu_Sbrina:{name:"エアル・ソブリナ(予想)",level:1,value:13},

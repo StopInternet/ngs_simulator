@@ -42,7 +42,14 @@ window.onload = function mains(){
         for(const opKey in tag_op){
             const option_op = document.createElement('option');
             option_op.value = opKey;
-            option_op.text = tag_op[opKey].name +" / "+tag_op[opKey].value;
+            option_op.text = tag_op[opKey].name +
+            " |打撃威力:"+Math.floor((tag_op[opKey].power-1)*100)+"%,"+
+            " |射撃威力："+Math.floor((tag_op[opKey].shoot-1)*100)+"%,"+
+            " |法撃威力："+Math.floor((tag_op[opKey].magic-1)*100)+"%,"+
+            " |下限補正:"+Math.floor((tag_op[opKey].floor_Increase-1)*100)+"%,"+
+            " |HP:"+tag_op[opKey].hp+
+            " |PP:"+tag_op[opKey].pp+
+            " |戦闘力値：+"+tag_op[opKey].value
             opSelect.add(option_op);
         }
     }
@@ -150,11 +157,32 @@ var def3_hp = 0;
 var def1_pp = 0;
 var def2_pp = 0;
 var def3_pp = 0;
+//打撃補正
+var Ata1 = 0;
+var Ata2 = 0;
+var Ata3 = 0;
+//射撃補正
+var ShootU1 =0;
+var ShootU2 =0;
+var ShootU3 =0;
+//砲撃補正
+var MagicU1 = 0;
+var MagicU2 = 0;
+var MagicU3 = 0; 
 //追加補正
 var add_1 = 0;
 var add_2 = 0;
 var add_3 = 0;
-
+var alluPower = 0;
+var alluShoot = 0;
+var alluMagic =0;
+//威力倍率
+var All_Power = 0;
+var All_Shoot = 0;
+var All_Magic = 0;
+var All_floor_Increase = 0;
+var All_Hp = 0;
+var All_pp = 0;
 //クラスの表示設定
 var selectField_class = document.getElementById("class-select");
 var selectField_classL = document.getElementById("class_level");
@@ -162,6 +190,7 @@ var select_class_skill = document.getElementById("skill");
 selectField_class.addEventListener("input",function(){
     var select_class = class_stats[selectField_class.value].name;
     document.getElementById("class_name").innerHTML = class_stats[selectField_class.value].img+" "+select_class;
+    document.getElementById("all_class_select").innerHTML = class_stats[selectField_class.value].img+" "+select_class;
 });
 //クラスレベルとステータス
 selectField_classL.addEventListener("input",function(){
@@ -171,8 +200,13 @@ selectField_classL.addEventListener("input",function(){
     class_d = class_stats[selectField_class.value].def[select_classL];
     document.getElementById("class_level_c").innerHTML = select_classL;
     document.getElementById("class_hp").innerHTML = class_h;
+    document.getElementById("all_stats_hp").innerHTML = class_h;
     document.getElementById("class_atk").innerHTML = class_a;
     document.getElementById("class_def").innerHTML = class_d;
+    document.getElementById("all_stats_level").innerHTML = select_classL;
+    document.getElementById("all_stats_damage").innerHTML = class_a
+    document.getElementById("all_stats_def").innerHTML = class_d
+
     
 });
 //クラススキル習得数
@@ -203,6 +237,9 @@ var select_unit1plus = document.getElementById("plus_unit1");
 
 selectField_unit1.addEventListener("change", function() {
     const select_unit1Name = unit_stats[selectField_unit1.value].name;
+    Ata1 = unit_stats[selectField_unit1.value].power
+    ShootU1 = unit_stats[selectField_unit1.value].shoot
+    MagicU1 = unit_stats[selectField_unit1.value].magic
     def1_hp = unit_stats[selectField_unit1.value].hp;
     def1_pp = unit_stats[selectField_unit1.value].pp;
     document.getElementById("select_unit1_name").innerHTML = select_unit1Name
@@ -220,6 +257,9 @@ var select_unit2plus = document.getElementById("plus_unit2");
 
 selectField_unit2.addEventListener("change", function() {
     const select_unit2Name = unit_stats[selectField_unit2.value].name;
+    Ata2 = unit_stats[selectField_unit2.value].power
+    ShootU2 = unit_stats[selectField_unit2.value].shoot
+    MagicU2 = unit_stats[selectField_unit2.value].magic
     def2_hp = unit_stats[selectField_unit2.value].hp;
     def2_pp = unit_stats[selectField_unit2.value].pp;
     document.getElementById("select_unit2_name").innerHTML = select_unit2Name
@@ -237,6 +277,9 @@ var select_unit3plus = document.getElementById("plus_unit3");
 
 selectField_unit3.addEventListener("change", function() {
     const select_unit3Name = unit_stats[selectField_unit3.value].name;
+    Ata3 = unit_stats[selectField_unit3.value].power
+    ShootU3 = unit_stats[selectField_unit3.value].shoot
+    MagicU3 = unit_stats[selectField_unit3.value].magic
     def3_hp = unit_stats[selectField_unit3.value].hp;
     def3_pp = unit_stats[selectField_unit3.value].pp;
     document.getElementById("select_unit3_name").innerHTML = select_unit3Name
@@ -249,7 +292,9 @@ select_unit3plus.addEventListener("input",function(){
 });
 
 //総計算
+
 const myButton = document.querySelector("#myButton");
+
 function calculateBattlePower(baseAttack, weaponAttack, damageUpperLimit, damageLowerLimit, weaponPotentialLevel, defense, specialCorrection, hpBoost, ppBoost, classSkillCount,addplus,all_value) {
     let battlePower = baseAttack
   battlePower += Math.floor(weaponAttack * (damageUpperLimit + damageLowerLimit) / 2)
@@ -259,6 +304,53 @@ function calculateBattlePower(baseAttack, weaponAttack, damageUpperLimit, damage
   battlePower += classSkillCount * 3
   return battlePower;
   }
+
+  //能力値の合計
+//ステータス計算
+function calculaterStats(power1,power2,power3,power4,shoot1,shoot2,shoot3,shoot4,magic1,magic2,magic3,magic4,kagen1,kagen2,kagen3,kagen4,kagen5,hp1,hp2,hp3,hp4,hp5,hp6,hp7,pp1,pp2,pp3,pp4,pp5,pp6,pp7,UnitPower,UnitShoot,UnitMagic){
+    //打撃威力
+    All_Power = Math.floor((((UnitPower*power1*power2*power3*power4)-1)*100)*10)/10;
+    //射撃威力
+    All_Shoot = Math.floor((((UnitShoot*shoot1*shoot2*shoot3*shoot4)-1)*100)*10)/10;
+    //法撃威力
+    All_Magic = Math.floor((((UnitMagic*magic1*magic2*magic3*magic4)-1)*100)*10)/10;
+    //下限補正
+    All_floor_Increase = Math.floor((kagen5*100)*(kagen1*kagen2*kagen3*kagen4)*10)/10;
+    //HP上昇値(特殊能力+防具)
+    All_Hp = hp1+hp2+hp3+hp4+hp5+hp6+hp7;
+    //PP上昇値（特殊能力+防具)
+    All_pp = pp1+pp2+pp3+pp4+pp5+pp6+pp7;
+    return All_Power,All_Shoot+All_Magic,All_floor_Increase,All_Hp,All_pp;
+}
+//クッキー保存（仮）
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1, c.length);
+      }
+      if (c.indexOf(nameEQ) == 0) {
+        return c.substring(nameEQ.length, c.length);
+      }
+    }
+    return null;
+}
+  
+var storedValue = getCookie("myCookie");
+// Cookieに保存された値を表示
+
 
 myButton.addEventListener("click", function() {
 /**
@@ -271,12 +363,17 @@ myButton.addEventListener("click", function() {
   装備本体によるPP上昇値+
   クラススキル習得数*3
  */
+alluPower = Ata1*Ata2*Ata3;
+alluShoot = ShootU1*ShootU2*ShootU3;
+alluMagic = MagicU1*MagicU2*MagicU3;
 var sent_va = 0;
 var defA = class_d+def_1+def_2+def_3;
 var defhpA = def1_hp + def2_hp + def3_hp;
 var defppA = def1_pp + def2_pp + def3_pp;
 var add_all = add_1 + add_2 + add_3;
 var sp_op = 0;
+
+
 //武器の特殊能力値
 var op1sw = 0;
 var op2sw = 0;
@@ -284,6 +381,12 @@ var op3sw = 0;
 var op4sw = 0;
 var op5sw = 0;
 var op6sw = 0;
+var W_Power = 1.0;
+var W_Shoot = 1.0;
+var W_Magic = 1.0;
+var W_floor_Increase = 1.0;
+var W_Hp = 0;
+var W_pp = 0;
 //防具１の特殊能力値
 var op1su1 = 0;
 var op2su1 = 0;
@@ -291,6 +394,12 @@ var op3su1 = 0;
 var op4su1 = 0;
 var op5su1 = 0;
 var op6su1 = 0;
+var U1_Power = 1.0;
+var U1_Shoot = 1.0;
+var U1_Magic = 1.0;
+var U1_floor_Increase = 1.0;
+var U1_Hp = 0;
+var U1_pp = 0;
 //防具２の特殊能力値
 var op1su2 = 0;
 var op2su2 = 0;
@@ -298,6 +407,12 @@ var op3su2 = 0;
 var op4su2 = 0;
 var op5su2 = 0;
 var op6su2 = 0;
+var U2_Power = 1.0;
+var U2_Shoot = 1.0;
+var U2_Magic = 1.0;
+var U2_floor_Increase = 1.0;
+var U2_Hp = 0;
+var U2_pp = 0;
 //防具３の特殊能力値
 var op1su3 = 0;
 var op2su3 = 0;
@@ -305,45 +420,94 @@ var op3su3 = 0;
 var op4su3 = 0;
 var op5su3 = 0;
 var op6su3 = 0;
+var U3_Power = 1.0;
+var U3_Shoot = 1.0;
+var U3_Magic = 1.0;
+var U3_floor_Increase = 1.0;
+var U3_Hp = 0;
+var U3_pp = 0;
+//合算
 var opAllw = 0;
-
 var op1_name = null;
 var op2_name = null;
 var op3_name = null;
 var op4_name = null;
 var op5_name = null;
 var op6_name = null;
+
 //武器の特殊能力値の設定
 if(document.getElementById("wepon_op1_select").value != "null"){
     //武器の特殊能力１
     op1_name = document.getElementById("wepon_op1_select").value;
     op1sw = tag_op[op1_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op1_name].power;
+    W_Shoot *= tag_op[op1_name].shoot;
+    W_Magic *= tag_op[op1_name].magic;
+    W_floor_Increase *= tag_op[op1_name].floor_Increase;
+    W_Hp += tag_op[op1_name].hp;
+    W_pp += tag_op[op1_name].pp;
 }
 if(document.getElementById("wepon_op2_select").value != "null"){
     //武器の特殊能力2
     op2_name = document.getElementById("wepon_op2_select").value;
     op2sw = tag_op[op2_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op2_name].power;
+    W_Shoot *= tag_op[op2_name].shoot;
+    W_Magic *= tag_op[op2_name].magic;
+    W_floor_Increase *= tag_op[op2_name].floor_Increase;
+    W_Hp += tag_op[op2_name].hp;
+    W_pp += tag_op[op2_name].pp;
 }
 if(document.getElementById("wepon_op3_select").value != "null"){
     //武器の特殊能力3
     op3_name = document.getElementById("wepon_op3_select").value;
     op3sw = tag_op[op3_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op3_name].power;
+    W_Shoot *= tag_op[op3_name].shoot;
+    W_Magic *= tag_op[op3_name].magic;
+    W_floor_Increase *= tag_op[op3_name].floor_Increase;
+    W_Hp += tag_op[op3_name].hp;
+    W_pp += tag_op[op3_name].pp;
 }
 if(document.getElementById("wepon_op4_select").value != "null"){
     //武器の特殊能力4
     op4_name = document.getElementById("wepon_op4_select").value;
     op4sw = tag_op[op4_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op4_name].power;
+    W_Shoot *= tag_op[op4_name].shoot;
+    W_Magic *= tag_op[op4_name].magic;
+    W_floor_Increase *= tag_op[op4_name].floor_Increase;
+    W_Hp += tag_op[op4_name].hp;
+    W_pp += tag_op[op4_name].pp;
 }
 if(document.getElementById("wepon_op5_select").value != "null"){
     //武器の特殊能力5
     op5_name = document.getElementById("wepon_op5_select").value;
     op5sw = tag_op[op5_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op5_name].power;
+    W_Shoot *= tag_op[op5_name].shoot;
+    W_Magic *= tag_op[op5_name].magic;
+    W_floor_Increase *= tag_op[op5_name].floor_Increase;
+    W_Hp += tag_op[op5_name].hp;
+    W_pp += tag_op[op5_name].pp;
 }
 
 if(document.getElementById("wepon_op6_select").value != "null"){
     //武器の特殊能力6
     op6_name = document.getElementById("wepon_op6_select").value;
     op6sw = tag_op[op6_name].value;
+    //威力上昇値
+    W_Power *= tag_op[op6_name].power;
+    W_Shoot *= tag_op[op6_name].shoot;
+    W_Magic *= tag_op[op6_name].magic;
+    W_floor_Increase *= tag_op[op6_name].floor_Increase;
+    W_Hp += tag_op[op6_name].hp;
+    W_pp += tag_op[op6_name].pp;
 }
 
 //防具１の特殊能力値の設定
@@ -351,32 +515,74 @@ if(document.getElementById("unit1_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u1_name = document.getElementById("unit1_op1_select").value;
     op1su1 = tag_op[op1u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op1u1_name].power;
+    U1_Shoot *= tag_op[op1u1_name].shoot;
+    U1_Magic *= tag_op[op1u1_name].magic;
+    U1_floor_Increase *= tag_op[op1u1_name].floor_Increase;
+    U1_Hp += tag_op[op1u1_name].hp;
+    U1_pp += tag_op[op1u1_name].pp;
 }
 if(document.getElementById("unit1_op2_select").value != "null"){
     //防具1の特殊能力2
     var op2u1_name = document.getElementById("unit1_op2_select").value;
     op2su1 = tag_op[op2u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op2u1_name].power;
+    U1_Shoot *= tag_op[op2u1_name].shoot;
+    U1_Magic *= tag_op[op2u1_name].magic;
+    U1_floor_Increase *= tag_op[op2u1_name].floor_Increase;
+    U1_Hp += tag_op[op2u1_name].hp;
+    U1_pp += tag_op[op2u1_name].pp;
 }
 if(document.getElementById("unit1_op3_select").value != "null"){
     //防具1の特殊能力3
     var op3u1_name = document.getElementById("unit1_op3_select").value;
     op3su1 = tag_op[op3u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op3u1_name].power;
+    U1_Shoot *= tag_op[op3u1_name].shoot;
+    U1_Magic *= tag_op[op3u1_name].magic;
+    U1_floor_Increase *= tag_op[op3u1_name].floor_Increase;
+    U1_Hp += tag_op[op3u1_name].hp;
+    U1_pp += tag_op[op3u1_name].pp;
 }
 if(document.getElementById("unit1_op4_select").value != "null"){
     //防具1の特殊能力4
     var op4u1_name = document.getElementById("unit1_op4_select").value;
     op4su1 = tag_op[op4u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op4u1_name].power;
+    U1_Shoot *= tag_op[op4u1_name].shoot;
+    U1_Magic *= tag_op[op4u1_name].magic;
+    U1_floor_Increase *= tag_op[op4u1_name].floor_Increase;
+    U1_Hp += tag_op[op4u1_name].hp;
+    U1_pp += tag_op[op4u1_name].pp;
 }
 if(document.getElementById("unit1_op5_select").value != "null"){
     //防具1の特殊能力5
     var op5u1_name = document.getElementById("unit1_op5_select").value;
     op5su1 = tag_op[op5u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op5u1_name].power;
+    U1_Shoot *= tag_op[op5u1_name].shoot;
+    U1_Magic *= tag_op[op5u1_name].magic;
+    U1_floor_Increase *= tag_op[op5u1_name].floor_Increase;
+    U1_Hp += tag_op[op5u1_name].hp;
+    U1_pp += tag_op[op5u1_name].pp;
 }
 
 if(document.getElementById("unit1_op6_select").value != "null"){
     //防具1の特殊能力6
     var op6u1_name = document.getElementById("unit1_op6_select").value;
     op6su1 = tag_op[op6u1_name].value;
+    //威力上昇値
+    U1_Power *= tag_op[op6u1_name].power;
+    U1_Shoot *= tag_op[op6u1_name].shoot;
+    U1_Magic *= tag_op[op6u1_name].magic;
+    U1_floor_Increase *= tag_op[op6u1_name].floor_Increase;
+    U1_Hp += tag_op[op6u1_name].hp;
+    U1_pp += tag_op[op6u1_name].pp;
 }
 
 //防具2の特殊能力値の設定
@@ -384,32 +590,75 @@ if(document.getElementById("unit2_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u2_name = document.getElementById("unit2_op1_select").value;
     op1su2 = tag_op[op1u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op1u2_name].power;
+    U2_Shoot *= tag_op[op1u2_name].shoot;
+    U2_Magic *= tag_op[op1u2_name].magic;
+    U2_floor_Increase *= tag_op[op1u2_name].floor_Increase;
+    U2_Hp += tag_op[op1u2_name].hp;
+    U2_pp += tag_op[op1u2_name].pp;
+    
 }
 if(document.getElementById("unit2_op2_select").value != "null"){
     //防具２の特殊能力2
     var op2u2_name = document.getElementById("unit2_op2_select").value;
     op2su2 = tag_op[op2u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op2u2_name].power;
+    U2_Shoot *= tag_op[op2u2_name].shoot;
+    U2_Magic *= tag_op[op2u2_name].magic;
+    U2_floor_Increase *= tag_op[op2u2_name].floor_Increase;
+    U2_Hp += tag_op[op2u2_name].hp;
+    U2_pp += tag_op[op2u2_name].pp;
 }
 if(document.getElementById("unit2_op3_select").value != "null"){
     //防具３の特殊能力3
     var op3u2_name = document.getElementById("unit2_op3_select").value;
     op3su2 = tag_op[op3u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op3u2_name].power;
+    U2_Shoot *= tag_op[op3u2_name].shoot;
+    U2_Magic *= tag_op[op3u2_name].magic;
+    U2_floor_Increase *= tag_op[op3u2_name].floor_Increase;
+    U2_Hp += tag_op[op3u2_name].hp;
+    U2_pp += tag_op[op3u2_name].pp;
 }
 if(document.getElementById("unit2_op4_select").value != "null"){
     //防具４の特殊能力4
     var op4u2_name = document.getElementById("unit2_op4_select").value;
     op4su2 = tag_op[op4u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op4u2_name].power;
+    U2_Shoot *= tag_op[op4u2_name].shoot;
+    U2_Magic *= tag_op[op4u2_name].magic;
+    U2_floor_Increase *= tag_op[op4u2_name].floor_Increase;
+    U2_Hp += tag_op[op4u2_name].hp;
+    U2_pp += tag_op[op4u2_name].pp;
 }
 if(document.getElementById("unit2_op5_select").value != "null"){
     //防具５の特殊能力5
     var op5u2_name = document.getElementById("unit2_op5_select").value;
     op5su2 = tag_op[op5u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op5u2_name].power;
+    U2_Shoot *= tag_op[op5u2_name].shoot;
+    U2_Magic *= tag_op[op5u2_name].magic;
+    U2_floor_Increase *= tag_op[op5u2_name].floor_Increase;
+    U2_Hp += tag_op[op5u2_name].hp;
+    U2_pp += tag_op[op5u2_name].pp;
 }
 
 if(document.getElementById("unit2_op6_select").value != "null"){
     //防具５の特殊能力6
     var op6u2_name = document.getElementById("unit2_op6_select").value;
     op6su2 = tag_op[op6u2_name].value;
+    //威力上昇値
+    U2_Power *= tag_op[op6u2_name].power;
+    U2_Shoot *= tag_op[op6u2_name].shoot;
+    U2_Magic *= tag_op[op6u2_name].magic;
+    U2_floor_Increase *= tag_op[op6u2_name].floor_Increase;
+    U2_Hp += tag_op[op6u2_name].hp;
+    U2_pp += tag_op[op6u2_name].pp;
 }
 
 //防具3の特殊能力値の設定
@@ -417,35 +666,79 @@ if(document.getElementById("unit3_op1_select").value != "null"){
     //防具１の特殊能力１
     var op1u3_name = document.getElementById("unit3_op1_select").value;
     op1su3 = tag_op[op1u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op1u3_name].power;
+    U3_Shoot *= tag_op[op1u3_name].shoot;
+    U3_Magic *= tag_op[op1u3_name].magic;
+    U3_floor_Increase *= tag_op[op1u3_name].floor_Increase;
+    U3_Hp += tag_op[op1u3_name].hp;
+    U3_pp += tag_op[op1u3_name].pp;
 }
 if(document.getElementById("unit3_op2_select").value != "null"){
     //防具２の特殊能力2
     var op2u3_name = document.getElementById("unit3_op2_select").value;
     op2su3 = tag_op[op2u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op2u3_name].power;
+    U3_Shoot *= tag_op[op2u3_name].shoot;
+    U3_Magic *= tag_op[op2u3_name].magic;
+    U3_floor_Increase *= tag_op[op2u3_name].floor_Increase;
+    U3_Hp += tag_op[op2u3_name].hp;
+    U3_pp += tag_op[op2u3_name].pp;
+    
 }
 if(document.getElementById("unit3_op3_select").value != "null"){
     //防具３の特殊能力3
     var op3u3_name = document.getElementById("unit3_op3_select").value;
     op3su3 = tag_op[op3u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op3u3_name].power;
+    U3_Shoot *= tag_op[op3u3_name].shoot;
+    U3_Magic *= tag_op[op3u3_name].magic;
+    U3_floor_Increase *= tag_op[op3u3_name].floor_Increase;
+    U3_Hp += tag_op[op3u3_name].hp;
+    U3_pp += tag_op[op3u3_name].pp;
 }
 if(document.getElementById("unit3_op4_select").value != "null"){
     //防具４の特殊能力4
     var op4u3_name = document.getElementById("unit3_op4_select").value;
     op4su3 = tag_op[op4u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op4u3_name].power;
+    U3_Shoot *= tag_op[op4u3_name].shoot;
+    U3_Magic *= tag_op[op4u3_name].magic;
+    U3_floor_Increase *= tag_op[op4u3_name].floor_Increase;
+    U3_Hp += tag_op[op4u3_name].hp;
+    U3_pp += tag_op[op4u3_name].pp;
 }
 if(document.getElementById("unit3_op5_select").value != "null"){
     //防具５の特殊能力5
     var op5u3_name = document.getElementById("unit3_op5_select").value;
     op5su3 = tag_op[op5u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op5u3_name].power;
+    U3_Shoot *= tag_op[op5u3_name].shoot;
+    U3_Magic *= tag_op[op5u3_name].magic;
+    U3_floor_Increase *= tag_op[op5u3_name].floor_Increase;
+    U3_Hp += tag_op[op5u3_name].hp;
+    U3_pp += tag_op[op5u3_name].pp;
 }
 
 if(document.getElementById("unit3_op6_select").value != "null"){
     //防具５の特殊能力5
     var op6u3_name = document.getElementById("unit3_op6_select").value;
     op6su3 = tag_op[op6u3_name].value;
+    //威力上昇値
+    U3_Power *= tag_op[op6u3_name].power;
+    U3_Shoot *= tag_op[op6u3_name].shoot;
+    U3_Magic *= tag_op[op6u3_name].magic;
+    U3_floor_Increase *= tag_op[op6u3_name].floor_Increase;
+    U3_Hp += tag_op[op6u3_name].hp;
+    U3_pp += tag_op[op6u3_name].pp;
 }
 
-//能力値の合計
+
+
 //武器
 opAllw = op1sw + op2sw + op3sw + op4sw + op5sw + op6sw
 //防具
@@ -455,8 +748,24 @@ var opAll3 = op1su3 + op2su3 + op3su3 + op4su3 + op5su3 + op6su3
 sp_op = opAllw + opAll1 + opAll2 + opAll3
 
 var result = calculateBattlePower(class_a, atk_n, 1,damege_pro,senzai,defA,sp_op,defhpA,defppA,skill_c,add_all,opAllw);
-document.getElementById("result_sentou").innerHTML = Math.floor(result)
-document.getElementById("result_sentou2").value = Math.floor(result)
+calculaterStats(
+    W_Power,U1_Power,U2_Power,U3_Power,
+    W_Shoot,U1_Shoot,U2_Shoot,U3_Shoot,
+    W_Magic,U1_Magic,U2_Magic,U3_Magic,
+    W_floor_Increase,U1_floor_Increase,U2_floor_Increase,U3_floor_Increase,damege_pro,
+    W_Hp,U1_Hp,U2_Hp,U3_Hp,def1_hp,def2_hp,def3_hp,
+    W_pp,U1_pp,U2_pp,U3_pp,def1_pp,def2_pp,def3_pp,
+    alluPower,alluShoot,alluMagic
+    );
+document.getElementById("all_stats_hp").innerHTML = class_h+All_Hp; 
+document.getElementById("all_stats_pp").innerHTML = 100+All_pp;
+document.getElementById("all_stats_damage").innerHTML = class_a+atk_n;
+document.getElementById("all_stats_def").innerHTML = class_d + def_1+def_2+def_3;
+document.getElementById("All_Power").innerHTML = All_Power+"%";
+document.getElementById("All_Shoot").innerHTML = All_Shoot+"%";
+document.getElementById("All_Magic").innerHTML = All_Magic+"%";
+document.getElementById("all_floor_kagen").innerHTML = All_floor_Increase+"%";
+document.getElementById("sentouryokudayo").innerHTML = Math.floor(result);
 });
 //武器OPの検索機能
 const searchInput_w1 = document.getElementById('search-input_w1');
@@ -518,6 +827,8 @@ const op_ui_u43_Select = document.getElementById('unit3_op4_select');
 const op_ui_u53_Select = document.getElementById('unit3_op5_select');
 const op_ui_u63_Select = document.getElementById('unit3_op6_select');
 
+
+  
 function searchs(searchInput,select_target){
     const searchValue = searchInput.value.toLowerCase();
     Array.from(select_target.options).forEach((option) => {
@@ -757,7 +1068,7 @@ function generateImage(text) {
 
 
 document.getElementById("Images").addEventListener('click',()=>{
-    var img_class = "クラス名：" +class_stats[document.getElementById("class-select").value].name
+    var img_class = "クラス名：" +document.write(class_stats[document.getElementById("class-select").value].img)+class_stats[document.getElementById("class-select").value].name
     var img_level = "\nクラスレベル：" + selectField_classL.value
     var img_skill = "\nクラススキル習得数：" + select_class_skill.value
     var img_hp = "\n体力："+class_h;

@@ -6,7 +6,7 @@
 
 
 const unit_stats = {
-    //{name:""",hp:0,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    //{name:""",hp:0,pp:0,power:1.0,shoot:1.0,magic:1.0,damege_protect:0,def:{},rare:0,plus:0},
     //星７
 
     //レクレールアーマ
@@ -14,7 +14,7 @@ const unit_stats = {
         name:"レクレールアーマ",
         hp:0,
         pp:0,
-        power:4,shoot:4,magic:4,
+        power:1.04,shoot:1.04,magic:1.04,
         damege_protect:-5,
         def:{},
         rare:7,plus:16.5},
@@ -24,7 +24,7 @@ const unit_stats = {
         name:"エイジャクスアーマ",
         hp:30,
         pp:5,
-        power:3.5,shoot:3.5,magic:3.5,
+        power:1.035,shoot:1.035,magic:1.035,
         damege_protect:1,
         def:{},
         rare:7,plus:6.5},
@@ -33,7 +33,7 @@ const unit_stats = {
     EptizeArmorVio:{
         name:"エンフィタスアーマ・ヴィオ",
         hp:0,pp:30,
-        power:3,shoot:3,magic:3,
+        power:1.03,shoot:3,magic:3,
         damege_protect:0,
         def:{},
         rare:7,plus:2},
@@ -43,7 +43,7 @@ const unit_stats = {
         name:"エンフィタスアーマ・ヴィダ",
         hp:55,
         pp:0,
-        power:3,shoot:3,magic:3,
+        power:1.03,shoot:1.03,magic:1.03,
         damege_protect:0,
         def:{},
         rare:7,plus:6.5},
@@ -53,7 +53,7 @@ const unit_stats = {
         name:"エフィタスアーマ・アルガ",
         hp:30,
         pp:4,
-        power:3,shoot:3,magic:0,
+        power:1.03,shoot:1.03,magic:1.0,
         damege_protect:0,
         def:{},
         rare:7,plus:5.5},
@@ -63,7 +63,7 @@ const unit_stats = {
         name:"エフィタスアーマ・ベルタ",
         hp:30,
         pp:4,
-        power:0,shoot:3,magic:3,
+        power:1.0,shoot:1.03,magic:1.03,
         damege_protect:0,
         def:{},
         rare:7,plus:5.5},
@@ -73,7 +73,7 @@ const unit_stats = {
         name:"エフィタスアーマ・ツェザ",
         hp:30,
         pp:4,
-        power:3,shoot:0,magic:3,
+        power:1.03,shoot:1.0,magic:1.03,
         damege_protect:0,
         def:{},
         rare:7,plus:5.5},
@@ -85,7 +85,7 @@ const unit_stats = {
         name:"ベルグリンアーマ",
         hp:-40,
         pp:13,
-        power:2.75,shoot:2.75,magic:2.75,
+        power:1.0275,shoot:1.0275,magic:1.0275,
         damege_protect:0,
         def:{},
         rare:6,plus:2},
@@ -95,7 +95,7 @@ const unit_stats = {
         name:"セスタトアーマ・ツェザ",
         hp:30,
         pp:4,
-        power:2.25,shoot:0,magic:2.25,
+        power:1.0225,shoot:1.0,magic:1.0225,
         damege_protect:0,
         def:{},
         rare:6,plus:4},
@@ -105,7 +105,7 @@ const unit_stats = {
         name:"セスタアーマ・ベルタ",
         hp:30,
         pp:4,
-        power:0,shoot:2.25,magic:2.25,
+        power:1.0,shoot:1.0225,magic:1.0225,
         damege_protect:0,
         def:{},
         rare:6,plus:4},
@@ -115,7 +115,7 @@ const unit_stats = {
         name:"セスタトアーマ・アルガ",
         hp:30,
         pp:4,
-        power:2.25,shoot:2.25,magic:0,
+        power:1.0225,shoot:1.0225,magic:1.0,
         damege_protect:0,
         def:{},
         rare:6,plus:4},
@@ -125,7 +125,7 @@ const unit_stats = {
         name:"セスタトアーマ",
         hp:35,
         pp:5,
-        power:1.5,shoot:1.5,magic:1.5,
+        power:1.015,shoot:1.015,magic:1.015,
         damege_protect:0,
         def:{},
         rare:6,plus:1},
@@ -135,7 +135,7 @@ const unit_stats = {
         name:"ディフロージスアーマ",
         hp:0,
         pp:9,
-        power:2,shoot:2,magic:2,
+        power:1.02,shoot:1.02,magic:1.02,
         damege_protect:0,
         def:{},
         rare:6,plus:1},
@@ -145,43 +145,272 @@ const unit_stats = {
         name:"ディフローザアーマ",
         hp:50,
         pp:0,
-        power:1,shoot:1,magic:1,
+        power:1.0,shoot:1.0,magic:1.0,
         damege_protect:1,
         def:{},
         rare:6,plus:4},
 
     //星５
-    SchwarzestArmor:{name:"シュヴァルゼストアーマ",hp:-25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    SchwarzgardeArmor:{name:"シュヴァルガルデアーマ",hp:25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    SchwarzrossoArmor:{name:"シュヴァルロッゾアーマ",hp:25,pp:3,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VijfArmorArga:{name:"ヴェフスアーマ・アルガ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VijfArmorBelta:{name:"ヴェフスアーマ・ベルタ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VijfArmorSheza:{name:"ヴェフスアーマ・ツェザ",hp:20,pp:7,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    GreasArmor:{name:"グライアスアーマ",hp:-40,pp:13,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VidalArmor:{name:"ヴィダーレンアーマ",hp:70,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VijfArmor:{name:"ヴェフスアーマ",hp:30,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    ViosArmor:{name:"ヴィオーセルアーマ",hp:0,pp:14,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VidalunArmor:{name:"ヴィダールアーマ",hp:45,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
-    VioselArmor:{name:"ヴィオースアーマ",hp:0,pp:8,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:5,plus:0},
+    SchwarzestArmor:{
+        name:"シュヴァルゼストアーマ",
+        hp:-25,
+        pp:3,
+        power:1.02,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    SchwarzgardeArmor:{
+        name:"シュヴァルガルデアーマ",
+        hp:25,
+        pp:3,
+        power:1.0,shoot:1.02,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    SchwarzrossoArmor:{
+        name:"シュヴァルロッゾアーマ",
+        hp:25,
+        pp:3,
+        power:1.0,shoot:1.0,magic:1.02,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VijfArmorArga:{
+        name:"ヴェフスアーマ・アルガ",
+        hp:20,
+        pp:7,
+        power:1.01,shoot:1.01,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VijfArmorBelta:{
+        name:"ヴェフスアーマ・ベルタ",
+        hp:20,pp:7,
+        power:1.0,shoot:1.01,magic:1.01,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VijfArmorSheza:{
+        name:"ヴェフスアーマ・ツェザ",
+        hp:20,
+        pp:7,
+        power:1.01,shoot:1.0,magic:1.01,
+        damege_protect:0,
+        def:{},rare:5,plus:0},
+
+    GreasArmor:{
+        name:"グライアスアーマ",
+        hp:-40,
+        pp:13,
+        power:1.02,shoot:1.02,magic:1.02,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VidalArmor:{
+        name:"ヴィダーレンアーマ",
+        hp:70,
+        pp:0,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VijfArmor:{
+        name:"ヴェフスアーマ",
+        hp:30,
+        pp:4,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    ViosArmor:{
+        name:"ヴィオーセルアーマ",
+        hp:0,
+        pp:14,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VidalunArmor:{
+        name:"ヴィダールアーマ",
+        hp:45,
+        pp:0,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
+    VioselArmor:{
+        name:"ヴィオースアーマ",
+        hp:0,
+        pp:8,
+        power:1.01,shoot:1.01,magic:1.01,
+        damege_protect:0,
+        def:{},
+        rare:5,plus:0},
+
     //星４
-    GeantArmor:{name:"ジオント・アーマ",hp:-20,pp:10,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    VialtoArmorSheza:{name:"ヴィアルトアーマ・ツェザ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    VialtoArmorBelta:{name:"ヴィアルトアーマ・ベルタ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    VialtoArmorArga:{name:"ヴィアルトアーマ・アルガ",hp:25,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    QualDeArmorSheza:{name:"クアルデアーマ・ツェザ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    QualDeArmorBelta:{name:"クアルデアーマ・ベルタ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    QualDeArmorArga:{name:"クアルデアーマ・アルガ",hp:0,pp:4,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    VialtoArmor:{name:"ヴィアルトアーマ",hp:30,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    CattleyaArmor:{name:"キャトリアアーマ",hp:20,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    QualDeArmor:{name:"クアルデアーマ",hp:6,pp:10,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
+    GeantArmor:{
+        name:"ジオント・アーマ",
+        hp:-20,
+        pp:10,
+        power:1.02,shoot:1.02,magic:1.02,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    VialtoArmorSheza:{
+        name:"ヴィアルトアーマ・ツェザ",
+        hp:25,
+        pp:0,
+        power:1.005,shoot:1.0,magic:1.005,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    VialtoArmorBelta:{
+        name:"ヴィアルトアーマ・ベルタ",
+        hp:25,
+        pp:0,
+        power:1.0,shoot:1.005,magic:1.005,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    VialtoArmorArga:{
+        name:"ヴィアルトアーマ・アルガ",
+        hp:25,
+        pp:0,
+        power:1.005,shoot:1.005,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    QualDeArmorSheza:{
+        name:"クアルデアーマ・ツェザ",
+        hp:0,
+        pp:4,
+        power:1.01,shoot:1.0,magic:1.01,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    QualDeArmorBelta:{
+        name:"クアルデアーマ・ベルタ",
+        hp:0,
+        pp:4,
+        power:1.0,shoot:1.01,magic:1.01,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    QualDeArmorArga:{
+        name:"クアルデアーマ・アルガ",
+        hp:0,
+        pp:4,
+        power:1.0,shoot:1.0,magic:0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    VialtoArmor:{
+        name:"ヴィアルトアーマ",
+        hp:30,
+        pp:0,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    CattleyaArmor:{
+        name:"キャトリアアーマ",
+        hp:20,
+        pp:2,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    QualDeArmor:{
+        name:"クアルデアーマ",
+        hp:0,
+        pp:6,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
     //星３,2,1
-    GoldPrimmArmor:{name:"ゴルドプリムアーマ",hp:10,pp:1,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    TheseusArmor:{name:"テルセウスアーマ",hp:0,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    RenaissaArmor:{name:"レネッサアーマ",hp:10,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    NEXPArmor:{name:"N-EXPアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    SilverPrimmArmor:{name:"シルヴァプリムアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    TzviaArmor:{name:"ツヴァイアーマ",hp:0,pp:2,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:0,plus:0},
-    PrimmArmor:{name:"プリムアーマ",hp:10,pp:0,power:0,shoot:0,magic:0,damege_protect:0,def:{},rare:1,plus:0},
+    GoldPrimmArmor:{
+        name:"ゴルドプリムアーマ",
+        hp:10,
+        pp:1,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    TheseusArmor:{
+        name:"テルセウスアーマ",
+        hp:0,
+        pp:0,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    RenaissaArmor:{
+        name:"レネッサアーマ",
+        hp:10,
+        pp:2,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    NEXPArmor:{
+        name:"N-EXPアーマ",
+        hp:0,
+        pp:2,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    SilverPrimmArmor:{
+        name:"シルヴァプリムアーマ",
+        hp:0,
+        pp:2,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    TzviaArmor:{
+        name:"ツヴァイアーマ",
+        hp:0,
+        pp:2,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:0,plus:0},
+
+    PrimmArmor:{
+        name:"プリムアーマ",
+        hp:10,
+        pp:0,
+        power:1.0,shoot:1.0,magic:1.0,
+        damege_protect:0,
+        def:{},
+        rare:1,plus:0},
 }   
 
 //ステータス設定

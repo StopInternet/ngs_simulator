@@ -71,6 +71,7 @@
         特殊能力名右側の数値は、戦闘力を示しています。<br>
         防具名の右側の数値は、追加戦闘力を示しています。<br>
         特殊能力名に（予想）が入ってる場合は、判明次第対応します<br>
+        HPとPPは、アドオンスキルは反映されません。
         <br>
       </p><br>
 
@@ -325,13 +326,62 @@
         <br>
         <h2>
         <hr>
-        戦闘力：
-        <div id="result_sentou">0</div> 
-        <button id="myButton">戦闘力を計算</button></h2>
+        ステータス<br>
+        &nbsp;
+        <table style="margin:auto;">
+          <tbody>
+            <tr>
+              <td>クラス名：</td>
+              <td id="all_class_select">ハンター</td>
+              <td>レベル：</td>
+              <td id="all_stats_level">0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>HP：</td>
+              <td id="all_stats_hp">0</td>
+              <td>PP：</td>
+              <td id="all_stats_pp">100</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>攻撃力：</td>
+              <td id="all_stats_damage">0</td>
+              <td>防御力：</td>
+              <td id="all_stats_def">0</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>下限補正値：</td>
+              <td id="all_floor_kagen">0%</td>
+              <td>～</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>打撃威力：</td>
+              <td id="All_Power">0%</td>
+              <td>射撃威力：</td>
+              <td id="All_Shoot">0%</td>
+              <td>&nbsp;&nbsp;法撃威力：</td>
+              <td id="All_Magic">0%</td>
+            </tr>
+            <tr>
+              <td>戦闘力：</td>
+              <td id="sentouryokudayo">0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="myButton">計算</button><br><br>
         <input type="text" id="result_sentou2" style="display:none">
-        <br><button id="Images">画像として出力</button><br>
+        <br><button id="Images">画像出力</button><br>
         <p>注意：必ず全ての設定（戦闘力を計算も含む）してから出力をしてください。<br>
-        どこか設定をしていないと、出力がされません。</p>
+        どこか設定をしていないと、画像出力がされません。（ステータス未対応）</p>
         <br><hr>
         
         <div id="image-container"></div>

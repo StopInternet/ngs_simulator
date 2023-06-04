@@ -11,6 +11,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  /* セレクトボックスのスタイル */
+ table {
+  border-collapse: collapse;
+}
+
+tr td {
+  border: 1px solid black;
+  padding: 8px;
+}
+ @media screen and (max-width:480px) {
+ 
+	/*　画面サイズが480px以下の場合ここの記述が適用される　*/
+  table{
+    font-size: 14px;
+  };
+ 
+}
  input[type="number"] {
   padding: 5px;
   border: 1px solid #ddd;

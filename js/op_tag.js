@@ -2,6 +2,7 @@
 //ウィーカー系は後回し
 
 const tag_op = {
+    kara:{name:"空スロット",level:1,value:0,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     //パワー系
     Might_1:{name:"パワーI",level:1,value:4,power:1.01,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Might_2:{name:"パワーII",level:2,value:5,power:1.015,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
@@ -187,7 +188,7 @@ const tag_op = {
 
     Crocys_Soul_1:{name:"クロコス・ソールI",level:1,value:7,power:1.0,shoot:1.01,magic:1.0,floor_Increase:1.0,hp:10,pp:3},
     Crocys_Soul_2:{name:"クロコス・ソールII",level:2,value:8,power:1.0,shoot:1.02,magic:1.0,floor_Increase:1.0,hp:10,pp:3},
-    Crocys_Soul_3:{name:"クロコス・ソールIII",level:3,value:10,power:1.0,shoot:125.0,magic:1.0,floor_Increase:1.0,hp:10,pp:3},
+    Crocys_Soul_3:{name:"クロコス・ソールIII",level:3,value:10,power:1.0,shoot:1.0125,magic:1.0,floor_Increase:1.0,hp:10,pp:3},
     Crocys_Soul_4:{name:"クロコス・ソールIV",level:4,value:11,power:1.0,shoot:1.03,magic:1.0,floor_Increase:1.0,hp:10,pp:3},
 
     Ams_Soul_1:{name:"アムス・ソールI",level:1,value:7,power:1.0,shoot:1.0,magic:1.01,floor_Increase:1.0,hp:10,pp:3},

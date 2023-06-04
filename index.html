@@ -154,6 +154,7 @@
         </select>
         <br>
     </h5><br>
+    能力を設定しない箇所には必ず「空スロット」を選択してください
     <p style="color:red">武器シリーズを変えるときは必ず 「強化値」 の再設定をしてください。</p>
     <hr>
         <!--防具の設定-->
@@ -208,6 +209,7 @@
 
         <br>
     </h5><br>
+    能力を設定しない箇所には必ず「空スロット」を選択してください
     <p style="color:red">防具を変えるときは必ず 「強化値」 の再設定をしてください。</p>
         <hr>
         <!--防具設定(2)-->
@@ -262,6 +264,7 @@
         
         <br>
     </h5><br>
+    能力を設定しない箇所には必ず「空スロット」を選択してください
     <p style="color:red">防具を変えるときは必ず 「強化値」 の再設定をしてください。</p>
         <br>
         <hr>
@@ -316,6 +319,7 @@
         <br>
     </h5>
     <br>
+    能力を設定しない箇所には必ず「空スロット」を選択してください
     <p style="color:red">防具を変えるときは必ず 「強化値」 の再設定をしてください。</p>
     <hr>
         <br>
@@ -329,6 +333,7 @@
         ステータス<br>
         &nbsp;
         <table style="margin:auto;">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
           <tbody>
             <tr>
               <td>クラス名：</td>
@@ -375,6 +380,71 @@
               <td></td>
               <td></td>
             </tr>
+            <tr>
+              <td>武器：</td>
+              <td id="buki_name"></td>
+              <td>攻撃力：</td>
+              <td id="buki_damage"></td>
+              <td>潜在レベル：</td>
+              <td id="senzaidayo"></td>
+            </tr>
+            <tr>
+            <td>防具1:</td>
+            <td id="unit1_name"></td>
+            <td>防御力：</td>
+            <td id="unit1_def"></td>
+            </tr>
+            <tr>
+            <td>防具2:</td>
+            <td id="unit2_name"></td>
+            <td>防御力：</td>
+            <td id="unit2_def"></td>
+            </tr>
+            <tr>
+            <td>防具3:</td>
+            <td id="unit3_name"></td>
+            <td>防御力：</td>
+            <td id="unit3_def"></td>
+            </tr>
+            <tr>
+              <td>特殊能力一覧：</td>
+            </tr>
+            <tr>
+              <td id="op1"></td>
+              <td id="op2"></td>
+              <td id="op3"></td>
+              <td id="op4"></td>
+            </tr>
+            <tr>
+              <td id="op5"></td>
+              <td id="op6"></td>
+              <td id="op7"></td>
+              <td id="op8"></td>
+            </tr>
+            <tr>
+              <td id="op9"></td>
+              <td id="op10"></td>
+              <td id="op11"></td>
+              <td id="op12"></td>
+            </tr>
+            <tr>
+              <td id="op13"></td>
+              <td id="op14"></td>
+              <td id="op15"></td>
+              <td id="op16"></td>
+            </tr>
+            <tr>
+              <td id="op17"></td>
+              <td id="op18"></td>
+              <td id="op19"></td>
+              <td id="op20"></td>
+            </tr>
+            <tr>
+              <td id="op21"></td>
+              <td id="op22"></td>
+              <td id="op23"></td>
+              <td id="op24"></td>
+            </tr>
           </tbody>
         </table>
         <button id="myButton">計算</button><br><br>
@@ -383,7 +453,7 @@
         <p>注意：必ず全ての設定（戦闘力を計算も含む）してから出力をしてください。<br>
         どこか設定をしていないと、画像出力がされません。（ステータス未対応）</p>
         <br><hr>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
         <div id="image-container"></div>
         <br>
         <br>
@@ -399,6 +469,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        
         
     </body>
     

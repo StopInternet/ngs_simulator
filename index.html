@@ -332,7 +332,7 @@
         <hr>
         ステータス<br>
         &nbsp;
-        <table style="margin:auto;">
+        <table style="margin:auto;color:black;background-color:white">
           <meta name="viewport" content="width=device-width,initial-scale=1">
           <tbody>
             <tr>
@@ -340,23 +340,18 @@
               <td id="all_class_select">ハンター</td>
               <td>レベル：</td>
               <td id="all_stats_level">0</td>
-              <td></td>
             </tr>
             <tr>
               <td>HP：</td>
               <td id="all_stats_hp">0</td>
               <td>PP：</td>
               <td id="all_stats_pp">100</td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <td>攻撃力：</td>
               <td id="all_stats_damage">0</td>
               <td>防御力：</td>
               <td id="all_stats_def">0</td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <td>下限補正値：</td>
@@ -375,10 +370,9 @@
             <tr>
               <td>戦闘力：</td>
               <td id="sentouryokudayo">0</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
             </tr>
             <tr>
               <td>武器：</td>
@@ -389,10 +383,42 @@
               <td id="senzaidayo"></td>
             </tr>
             <tr>
+              <td>特殊能力：</td>
+            </tr>
+            <tr>
+              <td id="op1"></td>
+              <td id="op2"></td>
+              <td id="op3"></td>
+            </tr>
+            <tr>
+              <td id="op4"></td>
+              <td id="op5"></td>
+              <td id="op6"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
             <td>防具1:</td>
             <td id="unit1_name"></td>
             <td>防御力：</td>
             <td id="unit1_def"></td>
+            </tr>
+            <tr>
+              <td>特殊能力：</td>
+            </tr>
+            <tr>
+              <td id="op7"></td>
+              <td id="op8"></td>
+              <td id="op9"></td>
+            </tr>
+            <tr>
+              <td id="op10"></td>
+              <td id="op11"></td>
+              <td id="op12"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
             </tr>
             <tr>
             <td>防具2:</td>
@@ -401,46 +427,36 @@
             <td id="unit2_def"></td>
             </tr>
             <tr>
+              <td>特殊能力：</td>
+            </tr>
+            <tr>
+              <td id="op13"></td>
+              <td id="op14"></td>
+              <td id="op15"></td>
+            </tr>
+            <tr>
+              <td id="op16"></td>
+              <td id="op17"></td>
+              <td id="op18"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
             <td>防具3:</td>
             <td id="unit3_name"></td>
             <td>防御力：</td>
             <td id="unit3_def"></td>
             </tr>
             <tr>
-              <td>特殊能力一覧：</td>
+              <td>特殊能力：</td>
             </tr>
             <tr>
-              <td id="op1"></td>
-              <td id="op2"></td>
-              <td id="op3"></td>
-              <td id="op4"></td>
-            </tr>
-            <tr>
-              <td id="op5"></td>
-              <td id="op6"></td>
-              <td id="op7"></td>
-              <td id="op8"></td>
-            </tr>
-            <tr>
-              <td id="op9"></td>
-              <td id="op10"></td>
-              <td id="op11"></td>
-              <td id="op12"></td>
-            </tr>
-            <tr>
-              <td id="op13"></td>
-              <td id="op14"></td>
-              <td id="op15"></td>
-              <td id="op16"></td>
-            </tr>
-            <tr>
-              <td id="op17"></td>
-              <td id="op18"></td>
               <td id="op19"></td>
               <td id="op20"></td>
+              <td id="op21"></td>
             </tr>
             <tr>
-              <td id="op21"></td>
               <td id="op22"></td>
               <td id="op23"></td>
               <td id="op24"></td>
@@ -450,8 +466,7 @@
         <button id="myButton">計算</button><br><br>
         <input type="text" id="result_sentou2" style="display:none">
         <br><button id="Images">画像出力</button><br>
-        <p>注意：必ず全ての設定（戦闘力を計算も含む）してから出力をしてください。<br>
-        どこか設定をしていないと、画像出力がされません。（ステータス未対応）</p>
+        <p>注意：スマホで出力すると見づらい場合があります。<br>パソコンで出力することをおすすめします。</p>
         <br><hr>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
         <div id="image-container"></div>

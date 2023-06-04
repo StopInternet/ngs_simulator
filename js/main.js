@@ -43,10 +43,10 @@ window.onload = function mains(){
             const option_op = document.createElement('option');
             option_op.value = opKey;
             option_op.text = tag_op[opKey].name +
-            " |打撃威力:"+Math.floor((tag_op[opKey].power-1)*100)+"%,"+
-            " |射撃威力："+Math.floor((tag_op[opKey].shoot-1)*100)+"%,"+
-            " |法撃威力："+Math.floor((tag_op[opKey].magic-1)*100)+"%,"+
-            " |下限補正:"+Math.floor((tag_op[opKey].floor_Increase-1)*100)+"%,"+
+            " |打撃威力:"+Math.round(((tag_op[opKey].power-1)*100)*100)/100+"%,"+
+            " |射撃威力："+Math.round(((tag_op[opKey].shoot-1)*100)*100)/100+"%,"+
+            " |法撃威力："+Math.round(((tag_op[opKey].magic-1)*100)*100)/100+"%,"+
+            " |下限補正:"+Math.round(((tag_op[opKey].floor_Increase-1)*100)*100)/100+"%,"+
             " |HP:"+tag_op[opKey].hp+
             " |PP:"+tag_op[opKey].pp+
             " |戦闘力値：+"+tag_op[opKey].value
@@ -823,12 +823,8 @@ var re_count=[
     tag_op[op1u3_name].name,tag_op[op2u3_name].name,tag_op[op3u3_name].name,
     tag_op[op4u3_name].name,tag_op[op5u3_name].name,tag_op[op6u3_name].name,
 ];
-for(var i=0;i<re_count.length;i++){
-    if(re_count[i]==null){
-        re_count[i]="未入力"
-    }else{
+for(var i=0;i<24;i++){
     document.getElementById("op"+(i+1)).innerHTML = re_count[i]
-    }
 }
 document.getElementById("buki_name").innerHTML=wepons[document.getElementById("wepon-select").value].name[1];
 document.getElementById("buki_damage").innerHTML=atk_n;
@@ -1112,11 +1108,11 @@ function generateImage(text) {
     var context = canvas.getContext('2d');
   
     // 背景色を設定
-    context.fillStyle = '#fff';
+    context.fillStyle = 'black';
     context.fillRect(0, 0, canvas.width, canvas.height);
   
     // テキストを描画
-    context.fillStyle = '#000';
+    context.fillStyle = 'black';
     context.font = '20px Arial';
     context.textAlign = 'center';
     context.textBaseline = 'middle';
@@ -1143,25 +1139,30 @@ function generateImage(text) {
 document.getElementById("Images").addEventListener('click',()=>{
     var table = document.querySelector('table');
     var outputDiv = document.getElementById('image-container');
-    html2canvas(table).then(function(canvas) {
-        // キャプチャしたCanvasの背景を黒く塗りつぶす
-        var ctx = canvas.getContext('2d');
-        ctx.globalCompositeOperation = 'destination-over';
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        // 新しいCanvasを作成し、キャプチャしたCanvasを描画
-        var newCanvas = document.createElement('canvas');
-        newCanvas.width = canvas.width;
-        newCanvas.height = canvas.height;
-        var newCtx = newCanvas.getContext('2d');
-        newCtx.drawImage(canvas, 0, 0);
+    var scaleFactor = 2; // 画像の拡大倍率（スマートフォンなどの高dpiディスプレイでの表示を考慮）
 
-        // Canvasから画像データURLを取得
-        var imageDataURL = canvas.toDataURL("image/png");
-        // 画像を表示するためのimg要素を作成
-        var img = document.createElement("img");
-        img.src = imageDataURL;
-        // 画像を表示するための要素にimg要素を追加
-        outputDiv.appendChild(img);
-});
-});
+  html2canvas(table, { scale: scaleFactor })
+    .then(function(canvas) {
+      // 新しいCanvasを作成し、キャプチャしたCanvasを描画
+      var newCanvas = document.createElement('canvas');
+      newCanvas.width = canvas.width;
+      newCanvas.height = canvas.height;
+      var newCtx = newCanvas.getContext('2d');
+      newCtx.fillStyle = 'white';
+      newCtx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+      newCtx.drawImage(canvas, 0, 0);
+
+      // 画像を表示するためのimg要素を作成
+      var img = document.createElement('img');
+      img.style.width = '100%'; // 画像の幅を親要素に合わせる
+      img.src = newCanvas.toDataURL('image/png');
+
+      // 画像を表示するための要素にimg要素を追加
+      outputDiv.innerHTML = '';
+      outputDiv.appendChild(img);
+    })
+    .catch(function(error) {
+      console.error('html2canvasエラー:', error);
+    });
+}
+);

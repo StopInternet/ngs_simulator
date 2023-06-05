@@ -61,6 +61,9 @@ select {
   box-sizing: border-box;
 }
 
+#addon_skill{
+  text-align: center;
+}
 /* セレクトボックスがフォーカスされた時のスタイル */
 select:focus {
   outline: none;

@@ -12,8 +12,22 @@ import tag_op from "./op_tag.js"
 import wepons from "./wepon_stats.js"
 import class_stats from "./class_stats.js"
 
+
 window.onload = function mains(){
     
+    //クッキーロード
+    document.getElementById("addon_hu").value = Cookies.get("addon_hu")
+    document.getElementById("addon_fi").value = Cookies.get("addon_fi")
+    document.getElementById("addon_ra").value = Cookies.get("addon_ra")
+    document.getElementById("addon_gu").value = Cookies.get("addon_gu")
+    document.getElementById("addon_fo").value = Cookies.get("addon_fo")
+    document.getElementById("addon_te").value = Cookies.get("addon_te")
+    document.getElementById("addon_br").value = Cookies.get("addon_br")
+    document.getElementById("addon_bo").value= Cookies.get("addon_bo")
+    document.getElementById("addon_wa_hp").value = Cookies.get("addon_wa_hp")
+    document.getElementById("addon_wa_pp").value = Cookies.get("addon_wa_pp")
+    document.getElementById("addon_sl").value = Cookies.get("addon_sl")
+
     //クラスと、クラススキル習得数の生成
     const classSelect = document.getElementById('class-select');
     for (const classKey in class_stats) {
@@ -397,6 +411,28 @@ var storedValue = getCookie("myCookie");
 
 
 myButton.addEventListener("click", function() {
+var hu_a = document.getElementById("addon_hu").value;
+var fi_a = document.getElementById("addon_fi").value;
+var ra_a = document.getElementById("addon_ra").value;
+var gu_a = document.getElementById("addon_gu").value;
+var fo_a = document.getElementById("addon_fo").value;
+var te_a = document.getElementById("addon_te").value;
+var br_a = document.getElementById("addon_br").value;
+var bo_a = document.getElementById("addon_bo").value;
+var wa_a_hp = document.getElementById("addon_wa_hp").value;
+var wa_a_pp = document.getElementById("addon_wa_pp").value;
+var sl_a = document.getElementById("addon_sl").value;
+    Cookies.set('addon_hu',hu_a),
+    Cookies.set('addon_fi', fi_a),
+    Cookies.set('addon_ra', ra_a) ,
+    Cookies.set('addon_gu', gu_a),
+    Cookies.set('addon_fo', fo_a),
+    Cookies.set('addon_te', te_a),
+    Cookies.set('addon_br', br_a),
+    Cookies.set('addon_bo', bo_a),    
+    Cookies.set('addon_wa_hp', wa_a_hp),
+    Cookies.set('addon_wa_pp', wa_a_pp),
+    Cookies.set('addon_sl', sl_a),
 /**
  * /**
   戦闘力計算式
@@ -781,6 +817,9 @@ if(document.getElementById("unit3_op6_select").value != "null"){
     U3_Hp += tag_op[op6u3_name].hp;
     U3_pp += tag_op[op6u3_name].pp;
 }
+
+//アドオンスキル取得処理
+var all_addon_hp = Number(hu_a)+Number(fi_a)+Number(fo_a)+Number(te_a)+Number(ra_a)+Number(gu_a)+Number(br_a)+Number(bo_a)+Number(wa_a_hp)+Number(sl_a)
 //武器
 opAllw = op1sw + op2sw + op3sw + op4sw + op5sw + op6sw
 //防具
@@ -799,8 +838,8 @@ calculaterStats(
     W_pp,U1_pp,U2_pp,U3_pp,def1_pp,def2_pp,def3_pp,
     alluPower,alluShoot,alluMagic
     );
-document.getElementById("all_stats_hp").innerHTML = class_h+All_Hp; 
-document.getElementById("all_stats_pp").innerHTML = 100+All_pp;
+document.getElementById("all_stats_hp").innerHTML = class_h+All_Hp+all_addon_hp; 
+document.getElementById("all_stats_pp").innerHTML = 100+All_pp+Number(wa_a_pp);
 document.getElementById("all_stats_damage").innerHTML = class_a+atk_n;
 document.getElementById("all_stats_def").innerHTML = class_d + def_1+def_2+def_3;
 document.getElementById("All_Power").innerHTML = All_Power+"%";
@@ -835,6 +874,8 @@ document.getElementById("unit2_name").innerHTML=unit_stats[selectField_unit2.val
 document.getElementById("unit2_def").innerHTML=def_2;
 document.getElementById("unit3_name").innerHTML=unit_stats[selectField_unit3.value].name;
 document.getElementById("unit3_def").innerHTML=def_3;
+
+    
 });
 //武器OPの検索機能
 const searchInput_w1 = document.getElementById('search-input_w1');

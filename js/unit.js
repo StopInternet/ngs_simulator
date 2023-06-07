@@ -130,6 +130,15 @@ const unit_stats = {
         def:{},
         rare:6,plus:1},
     
+    //イグゼトアーマ
+    IguzeArmor:{
+        name:"イグゼトアーマ",
+        hp:35,
+        pp:5,
+        power:1.015,shoot:1.015,magic:1.015,
+        damege_protect:0,
+        def:{},
+        rare:6,plus:1},
     //ディフロージスアーマ
     DefrozzisArmor:{
         name:"ディフロージスアーマ",
@@ -524,6 +533,7 @@ set_protect_stats('SestatoArmorSheza',20,6)
 set_protect_stats('SestatoArmorBelta',20,6)
 set_protect_stats('SestatoArmorArga',20,6)
 set_protect_stats('SestatoArmor',21,6)
+set_protect_stats('IguzeArmor',21,6)
 set_protect_stats('DefrozzisArmor',20,6)
 set_protect_stats('DefrozzaArmor',22,6)
 

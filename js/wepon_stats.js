@@ -34,6 +34,7 @@ const wepons = {
     Rugged:{name:{},atk:{0:490},Variance:0,properties:{}},
     Crystia:{name:{},atk:{0:473},Variance:0,properties:{}},
     KaizaarMK1:{name:{},atk:{0:465},Variance:0,properties:{}},
+    Monorekus:{name:{},atk:{0:465},Variance:0,properties:{}},
     //6
     Evolorbit:{name:{},atk:{0:355},Variance:0,properties:{}},
     RokzRoughewn:{name:{},atk:{0:353},Variance:0,properties:{}},
@@ -288,6 +289,7 @@ stats_set("Kaizaar","カイゼラム",7)
 stats_set("Rugged","ラゲード",7)
 stats_set("Crystia","クリスティア",7)
 stats_set("KaizaarMK1","カイゼラム試製壱型",7)
+stats_set("Monorekus","モノレクス",7)
 //6
 stats_set("Evolorbit","エヴォルオーヴァ",6)
 stats_set("RokzRoughewn","ロクス・ラグフェン",6)

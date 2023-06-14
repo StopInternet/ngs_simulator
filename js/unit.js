@@ -484,6 +484,12 @@ function set_protect_stats(id,def,rare){
         for(var i7_2=51;i7_2<=60;i7_2++){
             unit_stats[id].def[i7_2] = def+(i7_2+1)
         }
+        //61~70
+        if(rare==7){
+            for(var i62=61;i62<=70;i62++){
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
+            }
+        }
     }
     //6,3,2,1
     if(rare===6 || rare===3 || rare===2 || rare===1){

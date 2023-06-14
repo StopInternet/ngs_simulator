@@ -377,6 +377,7 @@ const tag_op = {
     Esperio_1:{name:"エスペリオI",level:1,value:0,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Esperio_2:{name:"エスペリオII",level:2,value:0,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Hi_Perio_1:{name:"ハイペリオI",level:1,value:0,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    endemio:{name:"エンディミオ",level:1,value:0,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
 
     //アディ・スタ
     stamda_ade:{name:"アディ・スタムダ",level:1,value:10,power:1.025,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:20,pp:0},
@@ -495,6 +496,10 @@ const tag_op = {
     Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,mフトagic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+
+    //ハイ・ドミナ
+    highearu_domina:{name:"ハイエアル・ドミナ",level:1,value:14,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4},
+
 }
 
 export default tag_op;

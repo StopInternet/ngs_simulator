@@ -17,6 +17,8 @@
 
 const wepons = {
     //id　名前　ダメージ補正値　潜在レベル
+    //9
+    tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
     Livider:{name:{},atk:{0:466},Variance:0,properties:{}},
     NeosAstraean:{name:{},atk:{0:535},Variance:0,properties:{}},
@@ -168,7 +170,7 @@ function stats_set(id,name,rare){
                 wepons[id].atk[i8_3] = wepons[id].atk[50]+i8p3;
             }
             for(var i8_4=61;i8_4<=70;i8_4++){
-                const i8p4 = 9.3*(i8_4-60)
+                const i8p4 = 13.3*(i8_4-60)
                 wepons[id].atk[i8_4] = wepons[id].atk[60]+i8p4;
             }
         }
@@ -329,6 +331,8 @@ for (const weapon in wepons) {
 
 //id 名前 レア度
 //stats_set("","",0)
+//9
+stats_set("tesua","テスア",9)
 //8
 stats_set("NeosAstraean","ネオス・アストリオン",8)
 stats_set("NeosJustitean","ネオス・ユースティロン",8)

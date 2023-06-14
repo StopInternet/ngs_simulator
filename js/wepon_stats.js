@@ -116,14 +116,44 @@ function stats_set(id,name,rare){
         wepons[id].properties[i] = i
     }
     
-    //レア度８，７の+30まで
+    //レア度9,8,7の+30まで
     
-    if(rare === 8||rare === 7){
+    if(rare == 9 || rare === 8||rare === 7){
         for(var i=1;i<=30;i++){
             const plus78 = 3*i
             wepons[id].atk[i] = wepons[id].atk[0]+plus78
         }
+        //レア度9の強化値
+        /**
+         * 31~40,41~50:約1.09倍,差分0.4
+         * 41~50,51~60:約1.24倍,差分2
+         * 51~60,61~70:約1.62倍,差分3.1
+         */
+        if(rare==9){
+            for(var i9=31;i9<=40;i9++){
+                const i9p = 2.6*(i9-30)
+                wepons[id].atk[i9] = wepons[id].atk[30]+i9p;
+            }
+            for(var i9_2=41;i9_2<=50;i9_2++){
+                const i9p2 = 3*(i9_2-40)
+                wepons[id].atk[i9_2] = wepons[id].atk[40]+i9p2;
+            }
+            for(var i9_3=51;i9_3<=60;i9_3++){
+                const i9p3 = 5*(i9_3-50)
+                wepons[id].atk[i9_3] = wepons[id].atk[50]+i9p3;
+            }
+            for(var i9_4=61;i9_4<=70;i9_4++){
+                const i9p4 = 8.1*(i9_4-60)
+                wepons[id].atk[i9_4] = wepons[id].atk[60]+i9p4;
+            }
+        }
         //レア度８の強化値
+        /**
+         * 4.2
+         * 31~40,41~50:約1.09倍,差分0.5
+         * 41~50,51~60:約1.24倍,差分2.1
+         * 51~60,61~70:約1.52倍,差分3.2
+         */
         if(rare==8){
             for(var i8=31;i8<=40;i8++){
                 const i8p = 3.5*(i8-30)
@@ -137,8 +167,18 @@ function stats_set(id,name,rare){
                 const i8p3 = 6.1*(i8_3-50)
                 wepons[id].atk[i8_3] = wepons[id].atk[50]+i8p3;
             }
+            for(var i8_4=61;i8_4<=70;i8_4++){
+                const i8p4 = 9.3*(i8_4-60)
+                wepons[id].atk[i8_4] = wepons[id].atk[60]+i8p4;
+            }
         }
         //レア度7の強化値
+        /**
+         * 5.5
+         * 31~40,41~50:約1.09倍,差分0.4
+         * 41~50,51~60:約1.24倍,差分2.2
+         * 51~60,61~70:約1.53倍,差分3.3
+         */
         if(rare==7){
             for(var i7=31;i7<=40;i7++){
                 const i7p = 4.6*(i7-30)
@@ -151,6 +191,10 @@ function stats_set(id,name,rare){
             for(var i7_3=51;i7_3<=60;i7_3++){
                 const i7p3 = 6.2*(i7_3-50)
                 wepons[id].atk[i7_3] = wepons[id].atk[50]+i7p3;
+            }
+            for(var i7_4=61;i7_4<=70;i7_4++){
+                const i7p4 = 9.5*(i7_4-60)
+                wepons[id].atk[i7_4] = wepons[id].atk[60]+i7p4;
             }
         }
     }
@@ -167,6 +211,11 @@ function stats_set(id,name,rare){
          * +50 :4
          * +60 :5.8
         */
+       /**星6
+         * 11~20,21~40:約2倍,差分1.5
+         * 41~50,51~60:約1.33倍,差分1
+         * 51~60,61~70:約1.24倍,差分2.2
+         */
         if(rare===6){
             for(var i6w1=11;i6w1<=20;i6w1++){
                 wepons[id].atk[i6w1] = wepons[id].atk[10]+(1.5*(i6w1-10))
@@ -182,10 +231,14 @@ function stats_set(id,name,rare){
             }
         }
         //レア度５，４の強化値
+        
         if(rare===5||rare===4){
             for(var i5w=11;i5w<=40;i5w++){
                 wepons[id].atk[i5w] = wepons[id].atk[10]+(1*(i5w-10))
             }
+            /**
+         * 2.8倍
+         */
             if(rare===5){
                 for(var i5w2=41;i5w2<=50;i5w2++){
                     wepons[id].atk[i5w2] = wepons[id].atk[40]+(5.2*(i5w2-40))
@@ -194,6 +247,9 @@ function stats_set(id,name,rare){
                     wepons[id].atk[i5w3] = wepons[id].atk[50]+(14.6*(i5w3-50))
                 }
             }
+            /**
+             * 2.33倍
+             */
             if(rare===4){
                 for(var i4w=41;i4w<=50;i4w++){
                     wepons[id].atk[i4w] = wepons[id].atk[40]+(6.8*(i4w-40))

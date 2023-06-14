@@ -452,59 +452,47 @@ const tag_op = {
     DefiCeires_p2:{name:"デフィ・マケメスP.02(予想)",level:1,value:8,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     DefiElysis_p2:{name:"デフィ・ハウメスP.02(予想)",level:1,value:8,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
 
-    //エディ・スタ
-    stamda_ede:{name:"エディ・スタムダ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stamsya_ede:{name:"エディ・スタムシャ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stamhou_ede:{name:"エィ・スタムホウ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stadasya_ede:{name:"エディ・スタダシャ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stadahou_ede:{name:"エディ・スタダホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stasyahou_ede:{name:"エディ・スタシャホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディ・スタ複合
+    stadasya_ede:{name:"エディ・スタダシャ",level:1,value:14,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.015,hp:20,pp:0},
+    stadahou_ede:{name:"エディ・スタダホウ",level:1,value:14,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.015,hp:20,pp:0},
+    stasyahou_ede:{name:"エディ・スタシャホウ",level:1,value:14,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:20,pp:0},
 
-    //エディ・スピ
-    supireda_ede:{name:"エディ・スピレダ",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    supisya_ede:{name:"エディ・スピレシャ",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    supihou_ede:{name:"エディ・スピレホウ",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    supidasya_ede:{name:"エディ・スピダシャ",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    supidahou_ede:{name:"エディ・スピダホウ",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    supisyahou_ede:{name:"エディ・スピシャホウ",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディ・スピ複合
+    supidasya_ede:{name:"エディ・スピダシャ",level:1,value:14,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.015,hp:0,pp:6},
+    supidahou_ede:{name:"エディ・スピダホウ",level:1,value:14,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.015,hp:0,pp:6},
+    supisyahou_ede:{name:"エディ・スピシャホウ",level:1,value:14,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:6},
 
-    //エディ・スタピ
-    stabida_ede:{name:"エディ・スタピダ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stapisya_ede:{name:"エディ・スタピシャ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stapihou_ede:{name:"エディ・スタピホウ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stapidasya_ede:{name:"エディ・スタピダシャ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stapidahou_ede:{name:"エディ・スタピダホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    stapisyahou_ede:{name:"エディ・スタピシャホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディ・スタピ複合
+    stapidasya_ede:{name:"エディ・スタピダシャ",level:1,value:14,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.015,hp:10,pp:3},
+    stapidahou_ede:{name:"エディ・スタピダホウ",level:1,value:14,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.015,hp:10,pp:3},
+    stapisyahou_ede:{name:"エディ・スタピシャホウ",level:1,value:14,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:10,pp:3},
 
     //エディ・アルム
-    arumda_ede:{name:"エディ・アルムダ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    arumsya_ede:{name:"エディ・アルムシャ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    arumhou_ede:{name:"エディ・アルムホウ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    arumdasya_ede:{name:"エディ・アムダシャ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    arumdahou_ede:{name:"エディ・アムダホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    arumsyahou_ede:{name:"エディ・アムシャホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    arumdasya_ede:{name:"エディ・アムダシャ",level:1,value:15,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.03,hp:0,pp:0},
+    arumdahou_ede:{name:"エディ・アムダホウ",level:1,value:15,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.03,hp:0,pp:0},
+    arumsyahou_ede:{name:"エディ・アムシャホウ",level:1,value:15,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.03,hp:0,pp:0},
 
-    //エディ・ガーディ
-    gardda_ede:{name:"エディ・ガーディダ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    gardsya_ede:{name:"エディ・ガーディシャ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    gardhou_ede:{name:"エディ・ガーディホウ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    garddasya_ede:{name:"エディ・ガディダシャ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    garddahou_ede:{name:"エディ・ガディダホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    gardsyahou_ede:{name:"エディ・ガディシャホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディ・ガディ複合
+    garddasya_ede:{name:"エディ・ガディダシャ",level:1,value:14,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.015,hp:0,pp:0},
+    garddahou_ede:{name:"エディ・ガディダホウ",level:1,value:14,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
+    gardsyahou_ede:{name:"エディ・ガディシャホウ",level:1,value:14,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
 
-    //エディ・レジリ
-    rezirida_ede:{name:"エディ・レジリダ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    rezirisya_ede:{name:"エディ・レジリシャ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    rezirihou_ede:{name:"エディ・レジリホウ(予想)",level:1,value:12,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディレジダ複合
+    rezidasya_ede:{name:"エディ・レジダシャ",level:1,value:14,power:1.04,shoot:1.4,magic:1.0,floor_Increase:1.015,hp:0,pp:0},
+    rezidahou_ede:{name:"エディ・レジダホウ",level:1,value:14,power:1.04,shoot:1.0,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
+    rezisyahou_ede:{name:"エディ・レジシャホウ",level:1,value:14,power:1.0,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
 
-    //エディレジダ
-    rezidasya_ede:{name:"エディ・レジダシャ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    rezidahou_ede:{name:"エディ・レジダホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    rezisyahou_ede:{name:"エディ・レジシャホウ(予想)",level:1,value:15,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    //エディパルフト
+    sutamu_edeparu:{name:"エディ・スタムパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:20,pp:0},
+    supire_edeparu:{name:"エディ・スピレパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:6},
+    sutapi_edeparu:{name:"エディ・スタピパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:10,pp:3},
+    arumu_edeparu:{name:"エディ・アルムパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.03,hp:0,pp:0},
+    guard_edeparu:{name:"エディ・ガーディパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
+    reziri_edeparu:{name:"エディ・レジリパルフト",level:1,value:15,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.015,hp:0,pp:0},
     
     //ソブリナ
     Earu_Sbrina:{name:"エアル・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,mフトagic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
 }

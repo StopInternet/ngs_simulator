@@ -436,22 +436,8 @@ function stats_set(id,name,hp,pp,power,shoot,magic,damege_protect,plus_a){
 }
 
 function set_protect_stats(id,def,rare){
-    function count8s(plus){
-        if(plus==40||plus==50||plus==60){
-            return plus=10;
-        }
-        if(plus<40){
-            return plus -= 30;
-        }
-        if(41<=plus<50){
-            return plus -= 40;
-        }
-        if(51<=plus<60){
-            return plus -= 50;
-        }
-    }
     //7,6,3,2,1
-    if(rare===7 || rare===6 || rare===3 || rare===2 || rare===1){
+    if(rare==8||rare===7 || rare===6 || rare===3 || rare===2 || rare===1){
         //防御値設定
         unit_stats[id].def[0] = def
         for(var ia=1;ia<=40;ia++){
@@ -505,6 +491,7 @@ function set_protect_stats(id,def,rare){
         for(var i6=41;i6<=50;i6++){
             unit_stats[id].def[i6] = def+i6;
         }
+        //51~60
         if(rare===6){
             for(var i61=51;i61<=60;i61++){
                 unit_stats[id].def[i61] = unit_stats[id].def[50] + (1.6*(i61-50))
@@ -513,6 +500,12 @@ function set_protect_stats(id,def,rare){
         if(rare===3||rare===2||rare===1){
             for(var i31=51;i31<=60;i31++){
                 unit_stats[id].def[i31] = unit_stats[id].def[50] + (2.2*(i31-50))
+            }
+        }
+        //61~70
+        if(rare==6){
+            for(var i62=61;i62<=70;i62++){
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1.6*(i62-50))
             }
         }
     }

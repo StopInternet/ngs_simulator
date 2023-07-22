@@ -1,6 +1,7 @@
 /**
  * ✪８・７武器は+30までは３ずつ上がってる
- * ✪8は+31~+40の間は3.5ずつ上がってる
+ * ✪8は
+ * +31~+40の間は3.5ずつ上がってる
  * ＋41~50は4ずつあがってる
  * +51~60は6.1ずつ上がってる。
  * ✪７
@@ -17,6 +18,7 @@
 
 const wepons = {
     //id　名前　ダメージ補正値　潜在レベル
+    //
     //9
     tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
@@ -29,6 +31,7 @@ const wepons = {
     Tenebrous:{name:{},atk:{0:448},Variance:0,properties:{}},
     Effulgent:{name:{},atk:{0:446},Variance:0,properties:{}},
     PrimmLibra:{name:{},atk:{0:436},Variance:0,properties:{}},
+    revol:{name:{},atk:{0:524},Variance:0,properties:{}},
 
     //7
     Obsidia:{name:{},atk:{0:488},Variance:0,properties:{}},
@@ -132,20 +135,12 @@ function stats_set(id,name,rare){
          * 51~60,61~70:約1.62倍,差分3.1
          */
         if(rare==9){
-            for(var i9=31;i9<=40;i9++){
-                const i9p = 2.6*(i9-30)
-                wepons[id].atk[i9] = wepons[id].atk[30]+i9p;
-            }
-            for(var i9_2=41;i9_2<=50;i9_2++){
-                const i9p2 = 3*(i9_2-40)
-                wepons[id].atk[i9_2] = wepons[id].atk[40]+i9p2;
-            }
-            for(var i9_3=51;i9_3<=60;i9_3++){
-                const i9p3 = 5*(i9_3-50)
-                wepons[id].atk[i9_3] = wepons[id].atk[50]+i9p3;
+            for(var i9_3=1;i9_3<=60;i9_3++){
+                const i9p3 = 4.5*i9_3
+                wepons[id].atk[i9_3] = wepons[id].atk[0]+i9p3;
             }
             for(var i9_4=61;i9_4<=70;i9_4++){
-                const i9p4 = 8.1*(i9_4-60)
+                const i9p4 = 8.5*(i9_4-60)
                 wepons[id].atk[i9_4] = wepons[id].atk[60]+i9p4;
             }
         }
@@ -195,7 +190,7 @@ function stats_set(id,name,rare){
                 wepons[id].atk[i7_3] = wepons[id].atk[50]+i7p3;
             }
             for(var i7_4=61;i7_4<=70;i7_4++){
-                const i7p4 = 9.5*(i7_4-60)
+                const i7p4 = 13*(i7_4-60)
                 wepons[id].atk[i7_4] = wepons[id].atk[60]+i7p4;
             }
         }
@@ -230,6 +225,9 @@ function stats_set(id,name,rare){
             }
             for(var i6w4=51;i6w4<=60;i6w4++){
                 wepons[id].atk[i6w4] = wepons[id].atk[50]+(5.8*(i6w4-50))
+            }
+            for(var i6w5=61;i6w5<=70;i6w5++){
+                wepons[id].atk[i6w5] = wepons[id].atk[60]+(19.4*(i6w5-60))
             }
         }
         //レア度５，４の強化値
@@ -334,6 +332,7 @@ for (const weapon in wepons) {
 //9
 stats_set("tesua","テスア",9)
 //8
+stats_set("revol","レヴォル",8)
 stats_set("NeosAstraean","ネオス・アストリオン",8)
 stats_set("NeosJustitean","ネオス・ユースティロン",8)
 stats_set("Gunblaze","ガンブレイズ",8)

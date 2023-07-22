@@ -511,7 +511,7 @@ function set_protect_stats(id,def,rare){
         //61~70
         if(rare==6){
             for(var i62=61;i62<=70;i62++){
-                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1.6*(i62-50))
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
             }
         }
     }

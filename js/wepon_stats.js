@@ -112,7 +112,7 @@ function stats_set(id,name,rare){
         wepons[id].Variance = 0.7
        }
     //50%
-    if(rare==7||rare==8){
+    if(rare==7||rare==8||rare==9){
          wepons[id].Variance = 0.5
      }
 

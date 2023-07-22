@@ -877,7 +877,7 @@ document.getElementById("unit2_name").innerHTML=unit_stats[selectField_unit2.val
 document.getElementById("unit2_def").innerHTML=def_2;
 document.getElementById("unit3_name").innerHTML=unit_stats[selectField_unit3.value].name;
 document.getElementById("unit3_def").innerHTML=def_3;
-
+document.getElementById("skill_ave").innerHTML = skill_averege;
     
 });
 //武器OPの検索機能

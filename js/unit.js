@@ -462,10 +462,16 @@ function set_protect_stats(id,def,rare){
             for(var i51=51;i51<=60;i51++){
                 unit_stats[id].def[i51] = unit_stats[id].def[50] + (1.6*(i51-50))
             }
+            for(var i62=61;i62<=70;i62++){
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
+            }
         }
         if(rare===4){
             for(var i41=51;i41<=60;i41++){
                 unit_stats[id].def[i41] = unit_stats[id].def[50] + (2*(i41-50))
+            }
+            for(var i62=61;i62<=70;i62++){
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
             }
         }
     }
@@ -502,16 +508,16 @@ function set_protect_stats(id,def,rare){
             for(var i61=51;i61<=60;i61++){
                 unit_stats[id].def[i61] = unit_stats[id].def[50] + (1.6*(i61-50))
             }
+            for(var i62=61;i62<=70;i62++){
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
+            }
         }
         if(rare===3||rare===2||rare===1){
             for(var i31=51;i31<=60;i31++){
                 unit_stats[id].def[i31] = unit_stats[id].def[50] + (2.2*(i31-50))
             }
-        }
-        //61~70
-        if(rare==6){
-            for(var i62=61;i62<=70;i62++){
-                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
+            for(var ir2=61;ir2<=70;ir2++){
+                unit_stats[id].def[ir2] = unit_stats[id].def[60] + (1*(ir2-60))
             }
         }
     }

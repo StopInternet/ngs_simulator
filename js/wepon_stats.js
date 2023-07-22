@@ -246,6 +246,9 @@ function stats_set(id,name,rare){
                 for(var i5w3=51;i5w3<=60;i5w3++){
                     wepons[id].atk[i5w3] = wepons[id].atk[50]+(14.6*(i5w3-50))
                 }
+                for(var i5w6=61;i5w6<=70;i5w6++){
+                    wepons[id].atk[i5w6] = wepons[id].atk[60]+(21.5*(i5w6-60))
+                }
             }
             /**
              * 2.33倍
@@ -256,6 +259,9 @@ function stats_set(id,name,rare){
                 }
                 for(var i4w2=51;i4w2<=60;i4w2++){
                     wepons[id].atk[i4w2] = wepons[id].atk[50]+(15.9*(i4w2-50))
+                }
+                for(var i4w6=61;i4w6<=70;i4w6++){
+                    wepons[id].atk[i4w6] = wepons[id].atk[60]+(22.3*(i4w6-60))
                 }
             }
         }
@@ -272,6 +278,9 @@ function stats_set(id,name,rare){
         }
         for(var i3w4=51;i3w4<=60;i3w4++){
             wepons[id].atk[i3w4] = wepons[id].atk[50]+(18.6*(i3w4-50))
+        }
+        for(var i3w6=61;i3w6<=70;i3w6++){
+            wepons[id].atk[i3w6] = wepons[id].atk[60]+(22.8*(i3w6-60))
         }
     }
 }
@@ -293,6 +302,9 @@ function stats_set(id,name,rare){
         for(var i2w5=51;i2w5<=60;i2w5++){
             wepons[id].atk[i2w5] = wepons[id].atk[50]+(18.6*(i2w5-50))
         }
+        for(var i2w6=61;i2w6<=70;i2w6++){
+            wepons[id].atk[i2w6] = wepons[id].atk[60]+(22.8*(i2w6-60))
+        }
     }
     //レア度1の強化値
     if(rare===1){
@@ -313,6 +325,9 @@ function stats_set(id,name,rare){
         }
         for(var i1w5=51;i1w5<=60;i1w5++){
             wepons[id].atk[i1w5] = wepons[id].atk[50]+(18.6*(i1w5-50))
+        }
+        for(var i1w6=61;i1w6<=70;i1w6++){
+            wepons[id].atk[i1w6] = wepons[id].atk[60]+(22.8*(i1w6-60))
         }
     }
 }

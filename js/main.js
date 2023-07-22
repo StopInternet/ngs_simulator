@@ -820,6 +820,9 @@ if(document.getElementById("unit3_op6_select").value != "null"){
 
 //アドオンスキル取得処理
 var all_addon_hp = Number(hu_a)+Number(fi_a)+Number(fo_a)+Number(te_a)+Number(ra_a)+Number(gu_a)+Number(br_a)+Number(bo_a)+Number(wa_a_hp)+Number(sl_a)
+//スキルレベル平均
+var skill_averege = all_addon_hp/10
+
 //武器
 opAllw = op1sw + op2sw + op3sw + op4sw + op5sw + op6sw
 //防具

@@ -7,8 +7,45 @@
 
 const unit_stats = {
     //{name:""",hp:0,pp:0,power:1.0,shoot:1.0,magic:1.0,damege_protect:0,def:{},rare:0,plus:0},
-    //星７
+    //星8（予想
 
+    //オクトスアーマ
+    OqutosArmorArga:{
+        name:"オクトスアーマ・アルガ(予想)",
+        hp:35,
+        pp:5,
+        power:1.045,shoot:1.045,magic:1.00,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:18},
+
+    OqutosArmorBeruta:{
+        name:"オクトスアーマ・ベルタ(予想)",
+        hp:35,
+        pp:5,
+        power:1.045,shoot:1.00,magic:1.045,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:18},
+    
+    OqutosArmorTueza:{
+        name:"オクトスアーマ・ツェザ(予想)",
+        hp:35,
+        pp:5,
+        power:1.00,shoot:1.045,magic:1.045,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:18},
+    
+    OqutosArmor:{
+        name:"オクトスアーマ(予想)",
+        hp:30,
+        pp:5,
+        power:1.0425,shoot:1.0425,magic:1.0425,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:18},
+    //星７
     //レクレールアーマ
     EclaireurArmor:{
         name:"レクレールアーマ",
@@ -463,7 +500,7 @@ function set_protect_stats(id,def,rare){
                 unit_stats[id].def[i51] = unit_stats[id].def[50] + (1.6*(i51-50))
             }
             for(var i62=61;i62<=70;i62++){
-                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1*(i62-60))
+                unit_stats[id].def[i62] = unit_stats[id].def[60] + (1.5*(i62-60))
             }
         }
         if(rare===4){
@@ -475,7 +512,25 @@ function set_protect_stats(id,def,rare){
             }
         }
     }
-
+    //✪8
+    if(rare==8){
+        //41~50
+        for(var i8=41;i8<=50;i8++){
+            if(i8 == 50){
+                unit_stats[id].def[i8] = def+(i8)
+                continue;
+            }
+            unit_stats[id].def[i8] = def+i8;
+        }
+        //51~60
+        for(var i8_2=51;i8_2<=60;i8_2++){
+            unit_stats[id].def[i8_2] = def+(i8_2)
+        }
+        //61~70
+        for(var i82=61;i82<=70;i82++){
+            unit_stats[id].def[i82] = unit_stats[id].def[60] + (1*(i82-60))
+        }
+    }
     //7
     if(rare===7){
         //41~50
@@ -522,8 +577,13 @@ function set_protect_stats(id,def,rare){
         }
     }
 }
-//✪8
+//✪8予想
+set_protect_stats("OqutosArmorArga",42,8);
+set_protect_stats("OqutosArmorBeruta",42,8);
+set_protect_stats("OqutosArmorTueza",42,8);
+set_protect_stats("OqutosArmor",42,8);
 
+//
 set_protect_stats('EclaireurArmor',35,7);
 set_protect_stats('AjaxArmor',41,7);
 set_protect_stats('EfitusArmorArga',39,7);

@@ -3,8 +3,7 @@
 サイトリンクはこちら<br>
 https://stopinternet.github.io/ngs_simulator/
 <br>
-<h2>更新内容はPSO2NGS JP Discordにて<br>
-（緊急クエスト告知Discord鯖）</h2>
+<h2>更新内容はPSO2NGS JP Discordにて（緊急クエスト告知Discord鯖）</h2>
 <hr>
 <h3>説明</h3>
 クラス名、クラスレベル、クラススキル、<br>

@@ -20,6 +20,7 @@ const wepons = {
     //id　名前　ダメージ補正値　潜在レベル
     //
     //9
+    fashieru:{name:{},atk:{0:637},Variance:0,properties:{}},
     tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
     Livider:{name:{},atk:{0:466},Variance:0,properties:{}},
@@ -345,6 +346,7 @@ for (const weapon in wepons) {
 //id 名前 レア度
 //stats_set("","",0)
 //9
+stats_set("fashieru","ファーシュメル",9)
 stats_set("tesua","テスア",9)
 //8
 stats_set("revol","レヴォル",8)

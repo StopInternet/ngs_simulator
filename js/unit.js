@@ -38,13 +38,13 @@ const unit_stats = {
         rare:8,plus:18},
     
     OqutosArmor:{
-        name:"オクトスアーマ(予想)",
+        name:"オクトスアーマ",
         hp:20,
         pp:0,
         power:1.045,shoot:1.045,magic:1.045,
         damege_protect:1,
         def:{},
-        rare:8,plus:18},
+        rare:8,plus:13.5},
     //星７
     //レクレールアーマ
     EclaireurArmor:{
@@ -524,7 +524,7 @@ function set_protect_stats(id,def,rare){
         }
         //51~60
         for(var i8_2=51;i8_2<=60;i8_2++){
-            unit_stats[id].def[i8_2] = def+(i8_2)
+            unit_stats[id].def[i8_2] = def+i8_2+1
         }
         //61~70
         for(var i82=61;i82<=70;i82++){
@@ -578,6 +578,14 @@ function set_protect_stats(id,def,rare){
     }
 }
 //✪8予想
+/**
+ * +10~+50:+1ずつで系最大50上昇
+ * +50で+1
+ * +0:42
+ * +50:93
+ * +60:103
+ * +70:113
+ */
 set_protect_stats("OqutosArmorArga",42,8);
 set_protect_stats("OqutosArmorBeruta",42,8);
 set_protect_stats("OqutosArmorTueza",42,8);

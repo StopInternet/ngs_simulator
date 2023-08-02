@@ -509,7 +509,7 @@ const tag_op = {
 
     //ハイ・ドミナ
     highearu_domina:{name:"ハイエアル・ドミナ",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4},
-
+    highearuLC_domina:{name:"ハイエアル・ドミナLC",level:1,value:11,power:1.0275,shoot:1.0275,magic:1.0275,floor_Increase:1.02,hp:10,pp:4},
     //LCシリーズ
 
 

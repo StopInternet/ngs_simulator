@@ -39,9 +39,9 @@ const unit_stats = {
     
     OqutosArmor:{
         name:"オクトスアーマ(予想)",
-        hp:30,
-        pp:5,
-        power:1.0425,shoot:1.0425,magic:1.0425,
+        hp:20,
+        pp:0,
+        power:1.045,shoot:1.045,magic:1.045,
         damege_protect:1,
         def:{},
         rare:8,plus:18},

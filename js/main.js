@@ -275,7 +275,7 @@ selectField_unit1.addEventListener("change", function() {
     def1_hp = unit_stats[selectField_unit1.value].hp;
     def1_pp = unit_stats[selectField_unit1.value].pp;
     //某業力最大
-    def_1 = unit_stats[selectField_unit1.value].def[60];
+    def_1 = unit_stats[selectField_unit1.value].def[70];
     add_1 = unit_stats[selectField_unit1.value].plus;
     document.getElementById("select_unit1_plus").innerHTML = Math.floor(def_1)
     document.getElementById("select_unit1_name").innerHTML = select_unit1Name
@@ -298,7 +298,7 @@ selectField_unit2.addEventListener("change", function() {
     MagicU2 = unit_stats[selectField_unit2.value].magic
     def2_hp = unit_stats[selectField_unit2.value].hp;
     def2_pp = unit_stats[selectField_unit2.value].pp;
-    def_2 = unit_stats[selectField_unit2.value].def[60];
+    def_2 = unit_stats[selectField_unit2.value].def[70];
     add_2 = unit_stats[selectField_unit2.value].plus;
     document.getElementById("select_unit2_plus").innerHTML = Math.floor(def_2)
     document.getElementById("select_unit2_name").innerHTML = select_unit2Name
@@ -321,7 +321,7 @@ selectField_unit3.addEventListener("change", function() {
     MagicU3 = unit_stats[selectField_unit3.value].magic
     def3_hp = unit_stats[selectField_unit3.value].hp;
     def3_pp = unit_stats[selectField_unit3.value].pp;
-    def_3 = unit_stats[selectField_unit3.value].def[60];
+    def_3 = unit_stats[selectField_unit3.value].def[70];
     add_3 = unit_stats[selectField_unit3.value].plus;
     document.getElementById("select_unit3_plus").innerHTML = Math.floor(def_3)
     document.getElementById("select_unit3_name").innerHTML = select_unit3Name

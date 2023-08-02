@@ -84,6 +84,7 @@ const tag_op = {
     Mastery_2:{name:"アビリティII",level:2,value:8,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.01,hp:0,pp:0},
     Mastery_3:{name:"アビリティIII",level:3,value:10,power:1.015,shoot:1.015,magic:1.015,floor_Increase:1.015,hp:0,pp:0},
     Mastery_4:{name:"アビリティIV",level:4,value:12,power:1.025,shoot:1.025,magic:1.025,floor_Increase:1.025,hp:0,pp:0},
+    Mastery_LC:{name:"アビリティLC",level:4,value:11,power:1.0225,shoot:1.0225,magic:1.0225,floor_Increase:1.025,hp:0,pp:0},
 
     //レジスト系
     Burn_Ward_1:{name:"バーンレジストI",level:1,value:4,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
@@ -241,6 +242,7 @@ const tag_op = {
 
     //グラディエ・ソール
     Gradie_Soul:{name:"グラディエ・ソール",level:1,value:12,power:1.0375,shoot:1.0375,magic:1.0375,floor_Increase:1.0,hp:20,pp:6},
+    GradieLC_Soul:{name:"グラディエ・ソールLC",level:1,value:11,power:1.035,shoot:1.035,magic:1.035,floor_Increase:1.0,hp:20,pp:6},
 
     //ノート系
     //エアルノート
@@ -286,6 +288,7 @@ const tag_op = {
 
     //二リア系
     harufiniria:{name:"ハルフィニリア",level:1,value:13,power:1.04,shoot:1.04,magic:1.04,floor_Increase:1.0,hp:15,pp:5},
+    harufiniriaLC:{name:"ハルフィニリアLC",level:1,value:11,power:1.0375,shoot:1.0375,magic:1.0375,floor_Increase:1.0,hp:15,pp:5},
 
     //デコルド
     Decold_Standard_1:{name:"デコルド・スタンダルドI",level:1,value:1,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
@@ -322,6 +325,7 @@ const tag_op = {
     euteli_gigasu:{name:"ギガス・エウティ",level:1,value:11,power:1.025,shoot:1.0,magic:1.025,floor_Increase:1.0,hp:15,pp:0},
     taria_gigasu:{name:"ギガス・タリアー",level:1,value:11,power:1.0,shoot:1.025,magic:1.025,floor_Increase:1.0,hp:15,pp:0},
     maesu_gigasu:{name:"ギガス・マエスティ",level:1,value:13,power:1.035,shoot:1.035,magic:1.035,floor_Increase:1.0,hp:20,pp:0},
+    maesuLC_gigasu:{name:"ギガス・マエスティLC",level:1,value:11,power:1.0325,shoot:1.0325,magic:1.0325,floor_Increase:1.0,hp:20,pp:0},
 
     //ドレド系
     Dread_Keeper_1:{name:"ドレド・キーパI",level:1,value:7,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.01,hp:10,pp:3},
@@ -505,6 +509,9 @@ const tag_op = {
 
     //ハイ・ドミナ
     highearu_domina:{name:"ハイエアル・ドミナ",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4},
+
+    //LCシリーズ
+
 
 }
 

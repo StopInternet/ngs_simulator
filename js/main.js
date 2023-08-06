@@ -172,17 +172,17 @@ var def1_pp = 0;
 var def2_pp = 0;
 var def3_pp = 0;
 //打撃補正
-var Ata1 = 0;
-var Ata2 = 0;
-var Ata3 = 0;
+var Ata1 = 1;
+var Ata2 = 1;
+var Ata3 = 1;
 //射撃補正
-var ShootU1 =0;
-var ShootU2 =0;
-var ShootU3 =0;
+var ShootU1 =1;
+var ShootU2 =1;
+var ShootU3 =1;
 //砲撃補正
-var MagicU1 = 0;
-var MagicU2 = 0;
-var MagicU3 = 0; 
+var MagicU1 = 1;
+var MagicU2 = 1;
+var MagicU3 = 1; 
 //追加補正
 var add_1 = 0;
 var add_2 = 0;
@@ -204,7 +204,7 @@ var select_class_skill = document.getElementById("skill");
 selectField_class.addEventListener("input",function(){
     var select_class = class_stats[selectField_class.value].name;
     document.getElementById("class_name").innerHTML = class_stats[selectField_class.value].img+" "+select_class;
-    document.getElementById("all_class_select").innerHTML = class_stats[selectField_class.value].img+" "+select_class;
+    document.getElementById("all_class_select").innerHTML = "クラス:"+ class_stats[selectField_class.value].img+" "+select_class;
     //レベル最大設定
     const select_classL = 75;
     class_h = class_stats[selectField_class.value].hp[select_classL];
@@ -215,7 +215,7 @@ selectField_class.addEventListener("input",function(){
     document.getElementById("all_stats_hp").innerHTML = class_h;
     document.getElementById("class_atk").innerHTML = class_a;
     document.getElementById("class_def").innerHTML = class_d;
-    document.getElementById("all_stats_level").innerHTML = select_classL;
+    document.getElementById("all_stats_level").innerHTML = "レべル:"+select_classL;
     document.getElementById("all_stats_damage").innerHTML = class_a
     document.getElementById("all_stats_def").innerHTML = class_d
     //クラススキル最大設定
@@ -233,7 +233,7 @@ selectField_classL.addEventListener("input",function(){
     document.getElementById("all_stats_hp").innerHTML = class_h;
     document.getElementById("class_atk").innerHTML = class_a;
     document.getElementById("class_def").innerHTML = class_d;
-    document.getElementById("all_stats_level").innerHTML = select_classL;
+    document.getElementById("all_stats_level").innerHTML = "レべル:"+select_classL;
     document.getElementById("all_stats_damage").innerHTML = class_a
     document.getElementById("all_stats_def").innerHTML = class_d
 
@@ -841,16 +841,31 @@ calculaterStats(
     W_pp,U1_pp,U2_pp,U3_pp,def1_pp,def2_pp,def3_pp,
     alluPower,alluShoot,alluMagic
     );
-document.getElementById("all_stats_hp").innerHTML = class_h+All_Hp+all_addon_hp; 
-document.getElementById("all_stats_pp").innerHTML = 100+All_pp+Number(wa_a_pp);
-document.getElementById("all_stats_damage").innerHTML = class_a+atk_n;
-document.getElementById("all_stats_def").innerHTML = class_d + def_1+def_2+def_3;
-document.getElementById("All_Power").innerHTML = All_Power+"%";
-document.getElementById("All_Shoot").innerHTML = All_Shoot+"%";
-document.getElementById("All_Magic").innerHTML = All_Magic+"%";
-document.getElementById("all_floor_kagen").innerHTML = All_floor_Increase+"%";
-document.getElementById("sentouryokudayo").innerHTML = Math.floor(result);
-
+document.getElementById("all_stats_hp").innerHTML = "HP: "+(class_h+All_Hp+all_addon_hp); 
+document.getElementById("all_stats_pp").innerHTML = "PP: "+(100+All_pp+Number(wa_a_pp));
+document.getElementById("all_stats_damage").innerHTML = "攻撃力: "+(class_a+atk_n);
+document.getElementById("all_stats_def").innerHTML = "防御力: "+(class_d + def_1+def_2+def_3);
+document.getElementById("All_Power").innerHTML = "打撃威力: "+All_Power+"%";
+document.getElementById("All_Shoot").innerHTML = "射撃威力: "+All_Shoot+"%";
+document.getElementById("All_Magic").innerHTML = "法撃威力: "+All_Magic+"%";
+document.getElementById("all_floor_kagen").innerHTML= "下限補正: "+All_floor_Increase+"%"+"～100%";
+document.getElementById("sentouryokudayo").innerHTML = "戦闘力: "+Math.floor(result);
+//武器威力
+document.getElementById("w1_power1").innerHTML = "打: "+ Math.floor(((W_Power-1))*1000)/10+"%";
+document.getElementById("w1_power2").innerHTML = "射: "+ Math.floor(((W_Shoot-1))*1000)/10+"%";
+document.getElementById("w1_power3").innerHTML = "法: "+ Math.floor(((W_Magic-1))*1000)/10+"%";
+//防具１威力
+document.getElementById("Unit1_power1").innerHTML = "打: "+ Math.floor(((Ata1*U1_Power)-1)*1000)/10+"%";
+document.getElementById("Unit1_power2").innerHTML = "射: "+ Math.floor(((ShootU1*U1_Shoot-1))*1000)/10+"%";
+document.getElementById("Unit1_power3").innerHTML = "法:  "+ Math.floor(((MagicU1*U1_Magic-1))*1000)/10+"%";
+//防具2威力
+document.getElementById("Unit2_power1").innerHTML = "打: "+ Math.floor(((Ata2*U2_Power)-1)*1000)/10+"%";
+document.getElementById("Unit2_power2").innerHTML = "射: "+ Math.floor(((ShootU2*U2_Shoot-1))*1000)/10+"%";
+document.getElementById("Unit2_power3").innerHTML = "法: "+ Math.floor(((MagicU2*U2_Magic-1))*1000)/10+"%";
+//防具3威力
+document.getElementById("Unit3_power1").innerHTML = "打: "+ Math.floor(((Ata3*U3_Power)-1)*1000)/10+"%";
+document.getElementById("Unit3_power2").innerHTML = "射: "+ Math.floor(((ShootU3*U3_Shoot-1))*1000)/10+"%";
+document.getElementById("Unit3_power3").innerHTML = "法: " + Math.floor(((MagicU3*U3_Magic-1))*1000)/10+"%";
 var re_count=[
     //武器op
     tag_op[op1_name].name,tag_op[op2_name].name,tag_op[op3_name].name,
@@ -868,16 +883,16 @@ var re_count=[
 for(var i=0;i<24;i++){
     document.getElementById("op"+(i+1)).innerHTML = re_count[i]
 }
-document.getElementById("buki_name").innerHTML=wepons[document.getElementById("wepon-select").value].name[1];
-document.getElementById("buki_damage").innerHTML=atk_n;
-document.getElementById("senzaidayo").innerHTML=senzai;
-document.getElementById("unit1_name").innerHTML=unit_stats[selectField_unit1.value].name;
-document.getElementById("unit1_def").innerHTML=def_1;
-document.getElementById("unit2_name").innerHTML=unit_stats[selectField_unit2.value].name;
-document.getElementById("unit2_def").innerHTML=def_2;
-document.getElementById("unit3_name").innerHTML=unit_stats[selectField_unit3.value].name;
-document.getElementById("unit3_def").innerHTML=def_3;
-document.getElementById("skill_ave").innerHTML = skill_averege;
+document.getElementById("buki_name").innerHTML="武器: "+wepons[document.getElementById("wepon-select").value].name[1];
+document.getElementById("buki_damage").innerHTML="武器攻撃力: "+atk_n;
+document.getElementById("senzaidayo").innerHTML="潜在レベル: "+senzai;
+document.getElementById("unit1_name").innerHTML="ユニット1: "+unit_stats[selectField_unit1.value].name;
+document.getElementById("unit1_def").innerHTML="防御力: "+def_1;
+document.getElementById("unit2_name").innerHTML="ユニット2: "+unit_stats[selectField_unit2.value].name;
+document.getElementById("unit2_def").innerHTML="防御力: "+def_2;
+document.getElementById("unit3_name").innerHTML="ユニット3: "+unit_stats[selectField_unit3.value].name;
+document.getElementById("unit3_def").innerHTML="防御力: "+def_3;
+document.getElementById("skill_ave").innerHTML = "スキルレベル平均: "+skill_averege;
     
 });
 //武器OPの検索機能

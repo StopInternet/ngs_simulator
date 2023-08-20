@@ -10,9 +10,18 @@ const unit_stats = {
     //星8（予想
 
     //オクトスアーマ
+    OqutosArmorZetubou:{
+        name:"オクトスアーマ・絶望産(予想)",
+        hp:0,
+        pp:0,
+        power:1.05,shoot:1.05,magic:1.05,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:19
+    },
     OqutosArmorArga:{
         name:"オクトスアーマ・アルガ(予想)",
-        hp:35,
+        hp:15,
         pp:5,
         power:1.045,shoot:1.045,magic:1.00,
         damege_protect:1,
@@ -21,7 +30,7 @@ const unit_stats = {
 
     OqutosArmorBeruta:{
         name:"オクトスアーマ・ベルタ(予想)",
-        hp:35,
+        hp:15,
         pp:5,
         power:1.045,shoot:1.00,magic:1.045,
         damege_protect:1,
@@ -30,7 +39,7 @@ const unit_stats = {
     
     OqutosArmorTueza:{
         name:"オクトスアーマ・ツェザ(予想)",
-        hp:35,
+        hp:15,
         pp:5,
         power:1.00,shoot:1.045,magic:1.045,
         damege_protect:1,
@@ -586,6 +595,7 @@ function set_protect_stats(id,def,rare){
  * +60:103
  * +70:113
  */
+set_protect_stats("OqutosArmorZetubou",39,8);
 set_protect_stats("OqutosArmorArga",42,8);
 set_protect_stats("OqutosArmorBeruta",42,8);
 set_protect_stats("OqutosArmorTueza",42,8);

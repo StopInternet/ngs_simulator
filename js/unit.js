@@ -20,31 +20,31 @@ const unit_stats = {
         rare:8,plus:19
     },
     OqutosArmorArga:{
-        name:"オクトスアーマ・アルガ(予想)",
-        hp:15,
-        pp:5,
+        name:"オクトスアーマ・アルガ",
+        hp:40,
+        pp:6,
         power:1.045,shoot:1.045,magic:1.00,
         damege_protect:1,
         def:{},
-        rare:8,plus:18},
-
+        rare:8,plus:13.5},
+    
     OqutosArmorBeruta:{
-        name:"オクトスアーマ・ベルタ(予想)",
-        hp:15,
-        pp:5,
+        name:"オクトスアーマ・ベルタ",
+        hp:40,
+        pp:6,
         power:1.045,shoot:1.00,magic:1.045,
         damege_protect:1,
         def:{},
-        rare:8,plus:18},
+        rare:8,plus:13.5},
     
     OqutosArmorTueza:{
-        name:"オクトスアーマ・ツェザ(予想)",
-        hp:15,
-        pp:5,
+        name:"オクトスアーマ・ツェザ",
+        hp:40,
+        pp:6,
         power:1.00,shoot:1.045,magic:1.045,
         damege_protect:1,
         def:{},
-        rare:8,plus:18},
+        rare:8,plus:13.5},
     
     OqutosArmor:{
         name:"オクトスアーマ",
@@ -596,9 +596,9 @@ function set_protect_stats(id,def,rare){
  * +70:113
  */
 set_protect_stats("OqutosArmorZetubou",39,8);
-set_protect_stats("OqutosArmorArga",42,8);
-set_protect_stats("OqutosArmorBeruta",42,8);
-set_protect_stats("OqutosArmorTueza",42,8);
+set_protect_stats("OqutosArmorArga",43,8);
+set_protect_stats("OqutosArmorBeruta",43,8);
+set_protect_stats("OqutosArmorTueza",43,8);
 set_protect_stats("OqutosArmor",42,8);
 
 //

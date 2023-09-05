@@ -23,6 +23,7 @@ const wepons = {
     fashieru:{name:{},atk:{0:637},Variance:0,properties:{}},
     tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
+    arqueim:{name:{},atk:{0:530},Variance:0,properties:{}},
     Livider:{name:{},atk:{0:466},Variance:0,properties:{}},
     NeosAstraean:{name:{},atk:{0:535},Variance:0,properties:{}},
     NeosJustitean:{name:{},atk:{0:445},Variance:0,properties:{}},
@@ -349,6 +350,7 @@ for (const weapon in wepons) {
 stats_set("fashieru","ファーシュメル",9)
 stats_set("tesua","テスア",9)
 //8
+stats_set("arqueim","アルクエイム",8)
 stats_set("revol","レヴォル",8)
 stats_set("NeosAstraean","ネオス・アストリオン",8)
 stats_set("NeosJustitean","ネオス・ユースティロン",8)

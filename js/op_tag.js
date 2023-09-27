@@ -332,11 +332,14 @@ const tag_op = {
     Dread_Keeper_2:{name:"ドレド・キーパII",level:2,value:7.5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.015,hp:15,pp:4},
     Dread_Keeper_3:{name:"ドレド・キーパIII",level:3,value:10,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.02,hp:30,pp:7},
     Dread_Keeper_4:{name:"ドレド・キーパIV",level:4,value:11,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.06,hp:50,pp:10},
+    Dread_Keeper_5:{name:"ドレド・キーパV(予想)",level:4,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.065,hp:60,pp:15},
+    GrandDread_Keeper_5:{name:"グランドドレド・キーパV(予想)",level:4,value:13,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.07,hp:70,pp:20},
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
     FomidoFusia:{name:"フォミド・フュージア",level:2,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
     DelieraFusia:{name:"ディエラ・フュージア",level:3,value:6,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
+    IrizisFusia:{name:"イリジス・フュージア",level:3,value:6,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
 
     //ウィーカー系
     Fire_Exploit_1:{name:"フレイムウィーカーI(弱点時)",level:1,value:6,power:1.025,shoot:1.025,magic:1.025,floor_Increase:1.0,hp:0,pp:0},
@@ -448,6 +451,7 @@ const tag_op = {
     SezunSpringfiv:{name:"セズン・スプリングフィーヴ",level:1,value:10,power:1.05,shoot:1.05,magic:1.05,floor_Increase:1.0,hp:0,pp:0},
     SezunSecundaAnibafi:{name:"セズン・セクンダアニバフィーヴ",level:1,value:10,power:1.05,shoot:1.05,magic:1.05,floor_Increase:1.0,hp:0,pp:0},
     SeznErevCelemofive:{name:"セズン・イレヴセレモフィーヴ",level:1,value:10,power:1.1,shoot:1.1,magic:1.1,floor_Increase:1.0,hp:0,pp:0},
+    SeznHallow23:{name:"セズン・ハロウィーヴ'23",level:1,value:10,power:1.1,shoot:1.1,magic:1.1,floor_Increase:1.0,hp:0,pp:0},
 
     //デフィp1
     DefiElysis_p1:{name:"デフィ・エリシスP.01",level:1,value:5,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
@@ -462,6 +466,15 @@ const tag_op = {
     DefiPlutos_p2:{name:"デフィ・プルトスP.02",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
     DefiMakems_p2:{name:"デフィ・マケメスP.02",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.2,hp:0,pp:0},
     DefiHaumes_p2:{name:"デフィ・ハウメスP.02",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+    DefiSednis_p2:{name:"デフィ・セド二スP.02",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+
+    //デフィp3
+    DefiElysis_p3:{name:"デフィ・エリシスP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+    DefiSeires_p3:{name:"デフィ・セイレスP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+    DefiPlutos_p3:{name:"デフィ・プルトスP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+    DefiMakems_p3:{name:"デフィ・マケメスP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.2,hp:0,pp:0},
+    DefiHaumes_p3:{name:"デフィ・ハウメスP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
+    DefiSednis_p3:{name:"デフィ・セド二スP.03",level:1,value:7,power:1.07,shoot:1.07,magic:1.07,floor_Increase:1.0,hp:0,pp:0},
 
     //エディ・スタ複合
     stadasya_ede:{name:"エディ・スタダシャ",level:1,value:14,power:1.04,shoot:1.04,magic:1.0,floor_Increase:1.015,hp:20,pp:0},
@@ -503,15 +516,15 @@ const tag_op = {
     
     //ソブリナ
     Earu_Sbrina:{name:"エアル・ソブリナ",level:1,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
-    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:6,power:1.0,shoot:1.0,mフトagic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:7,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
-    Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:8,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
+    Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
+    Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
 
     //ハイ・ドミナ
     highearu_domina:{name:"ハイエアル・ドミナ",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4},
     highearuLC_domina:{name:"ハイエアル・ドミナLC",level:1,value:11,power:1.0275,shoot:1.0275,magic:1.0275,floor_Increase:1.02,hp:10,pp:4},
+    highritemu_domina:{name:"ハイリテム・ドミナ(予想)",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4}
     //LCシリーズ
-
 
 }
 

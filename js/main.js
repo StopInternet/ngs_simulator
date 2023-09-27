@@ -206,7 +206,7 @@ selectField_class.addEventListener("input",function(){
     document.getElementById("class_name").innerHTML = class_stats[selectField_class.value].img+" "+select_class;
     document.getElementById("all_class_select").innerHTML = "クラス:"+ class_stats[selectField_class.value].img+" "+select_class;
     //レベル最大設定
-    const select_classL = 75;
+    const select_classL = 80;
     class_h = class_stats[selectField_class.value].hp[select_classL];
     class_a = class_stats[selectField_class.value].atk[select_classL];
     class_d = class_stats[selectField_class.value].def[select_classL];

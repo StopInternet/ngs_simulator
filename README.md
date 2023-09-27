@@ -3,8 +3,6 @@
 サイトリンクはこちら<br>
 https://stopinternet.github.io/ngs_simulator/
 <br>
-<h2>更新内容はPSO2NGS JP Discordにて（緊急クエスト告知Discord鯖）</h2>
-<hr>
 <h3>説明</h3>
 クラス名、クラスレベル、クラススキル、<br>
 打撃威力、射撃威力、法撃威力
@@ -18,3 +16,5 @@ https://stopinternet.github.io/ngs_simulator/
 <br>武器：ネオス・アストリオンシリーズ、攻撃力：761、潜在レベル：6
 <br>防具1:レクレールアーマ、防御力：96 etc...
 <hr>
+<h2>更新内容</h2>
+・9/27：9/26放送のヘッドラインの追加分を実装いたしました。

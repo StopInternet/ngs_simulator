@@ -333,7 +333,7 @@ const tag_op = {
     Dread_Keeper_3:{name:"ドレド・キーパIII",level:3,value:10,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.02,hp:30,pp:7},
     Dread_Keeper_4:{name:"ドレド・キーパIV",level:4,value:11,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.06,hp:50,pp:10},
     Dread_Keeper_5:{name:"ドレド・キーパV",level:4,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.08,hp:60,pp:12},
-    GrandDread_Keeper_5:{name:"グランドドレド・キーパV(予想)",level:4,value:13,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.07,hp:70,pp:20},
+    GrandDread_Keeper_5:{name:"グランドドレド・キーパV(予想)",level:4,value:13,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.08,hp:60,pp:15},
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
@@ -516,7 +516,7 @@ const tag_op = {
     
     //ソブリナ
     Earu_Sbrina:{name:"エアル・ソブリナ",level:1,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
-    Ritemu_Sbrina:{name:"リテム・ソブリナ(予想)",level:1,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
+    Ritemu_Sbrina:{name:"リテム・ソブリナ",level:1,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
     Kuvaru_Sbrina:{name:"クヴァル・ソブリナ(予想)",level:1,value:5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
     Stia_Sbrina:{name:"スティラ・ソブリナ(予想)",level:1,value:5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.0,hp:0,pp:0},
 

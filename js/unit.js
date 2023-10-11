@@ -54,6 +54,15 @@ const unit_stats = {
         damege_protect:1,
         def:{},
         rare:8,plus:13.5},
+
+    OqutosArmorVio:{
+        name:"オクトスアーマ・ヴィオ",
+        hp:0,
+        pp:10,
+        power:1.045,shoot:1.045,magic:1.045,
+        damege_protect:1,
+        def:{},
+        rare:8,plus:13.5},
     //星７
     //レクレールアーマ
     EclaireurArmor:{
@@ -600,6 +609,7 @@ set_protect_stats("OqutosArmorArga",43,8);
 set_protect_stats("OqutosArmorBeruta",43,8);
 set_protect_stats("OqutosArmorTueza",43,8);
 set_protect_stats("OqutosArmor",42,8);
+set_protect_stats("OqutosArmorVio",35,8);
 
 //
 set_protect_stats('EclaireurArmor',35,7);

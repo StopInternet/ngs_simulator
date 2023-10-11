@@ -332,7 +332,7 @@ const tag_op = {
     Dread_Keeper_2:{name:"ドレド・キーパII",level:2,value:7.5,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.015,hp:15,pp:4},
     Dread_Keeper_3:{name:"ドレド・キーパIII",level:3,value:10,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.02,hp:30,pp:7},
     Dread_Keeper_4:{name:"ドレド・キーパIV",level:4,value:11,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.06,hp:50,pp:10},
-    Dread_Keeper_5:{name:"ドレド・キーパV(予想)",level:4,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.065,hp:60,pp:15},
+    Dread_Keeper_5:{name:"ドレド・キーパV",level:4,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.08,hp:60,pp:12},
     GrandDread_Keeper_5:{name:"グランドドレド・キーパV(予想)",level:4,value:13,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.07,hp:70,pp:20},
 
     //メガス系
@@ -523,7 +523,7 @@ const tag_op = {
     //ハイ・ドミナ
     highearu_domina:{name:"ハイエアル・ドミナ",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4},
     highearuLC_domina:{name:"ハイエアル・ドミナLC",level:1,value:11,power:1.0275,shoot:1.0275,magic:1.0275,floor_Increase:1.02,hp:10,pp:4},
-    highritemu_domina:{name:"ハイリテム・ドミナ(予想)",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.02,hp:10,pp:4}
+    highritemu_domina:{name:"ハイリテナ・ドミナ",level:1,value:12,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.0225,hp:30,pp:0}
     //LCシリーズ
 
 }

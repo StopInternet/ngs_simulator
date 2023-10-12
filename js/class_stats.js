@@ -30,9 +30,14 @@ function stats_calc75(clas,level,hp,atk,def){
 }
 
 function stats_calc80(clas,level,hp,atk,def){
+    /**
     class_stats[clas].hp[level] = Math.round(hp * Math.pow(1.05,(level-1)/5));
     class_stats[clas].atk[level] = Math.round(450 * Math.pow(1.1,((level-1)/5))+(atk-450));
     class_stats[clas].def[level] = Math.round(300 * Math.pow(1.08, (level-1)/5) + (def-300));
+    */
+    class_stats[clas].hp[level] = Math.round(class_stats[clas].hp[level-1]*1.00809061);
+    class_stats[clas].atk[level] = Math.round(class_stats[clas].atk[level-1]+6);
+    class_stats[clas].def[level] = Math.round(class_stats[clas].def[level-1]+3);
 }
 
 var lv75 = false;

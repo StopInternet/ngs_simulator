@@ -35,7 +35,16 @@ function stats_calc80(clas,level,hp,atk,def){
     class_stats[clas].atk[level] = Math.round(450 * Math.pow(1.1,((level-1)/5))+(atk-450));
     class_stats[clas].def[level] = Math.round(300 * Math.pow(1.08, (level-1)/5) + (def-300));
     */
-    class_stats[clas].hp[level] = Math.round(class_stats[clas].hp[level-1]*1.00809061);
+   if(clas == "Hu"|| clas == "Fi"|| 
+      clas == "Br"|| clas == "Bo"){
+        class_stats[clas].hp[level] = Math.round(class_stats[clas].hp[level-1]+5);
+   }
+   if(clas == "Ra"|| clas == "Gu"||
+      clas == "Fo"|| clas == "Te"||
+      clas == "Wa"|| clas == "Sl"){
+        class_stats[clas].hp[level] = Math.round(class_stats[clas].hp[level-1]+4);
+   }
+    
     class_stats[clas].atk[level] = Math.round(class_stats[clas].atk[level-1]+6);
     class_stats[clas].def[level] = Math.round(class_stats[clas].def[level-1]+3);
 }

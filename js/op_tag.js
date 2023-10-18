@@ -333,13 +333,13 @@ const tag_op = {
     Dread_Keeper_3:{name:"ドレド・キーパIII",level:3,value:10,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.02,hp:30,pp:7},
     Dread_Keeper_4:{name:"ドレド・キーパIV",level:4,value:11,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.06,hp:50,pp:10},
     Dread_Keeper_5:{name:"ドレド・キーパV",level:4,value:13,power:1.0,shoot:1.0,magic:1.0,floor_Increase:1.08,hp:60,pp:12},
-    GrandDread_Keeper_5:{name:"グランドドレド・キーパV(予想)",level:4,value:13,power:1.03,shoot:1.03,magic:1.03,floor_Increase:1.08,hp:60,pp:15},
+    GrandDread_Keeper_5:{name:"グランドレド・キーパ",level:4,value:13,power:1.025,shoot:1.025,magic:1.025,floor_Increase:1.05,hp:15,pp:3},
 
     //メガス系
     MegasFusia:{name:"メガス・フュージア",level:1,value:4,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
     FomidoFusia:{name:"フォミド・フュージア",level:2,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
-    DelieraFusia:{name:"ディエラ・フュージア",level:3,value:6,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
-    IrizisFusia:{name:"イリジス・フュージア",level:3,value:6,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
+    DelieraFusia:{name:"ディエラ・フュージア",level:3,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
+    IrizisFusia:{name:"イリジス・フュージア",level:3,value:5,power:1.01,shoot:1.01,magic:1.01,floor_Increase:1.0,hp:0,pp:0},
 
     //ウィーカー系
     Fire_Exploit_1:{name:"フレイムウィーカーI(弱点時)",level:1,value:6,power:1.025,shoot:1.025,magic:1.025,floor_Increase:1.0,hp:0,pp:0},

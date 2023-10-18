@@ -23,7 +23,7 @@ const wepons = {
     fashieru:{name:{},atk:{0:637},Variance:0,properties:{}},
     tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
-    buronaga:{name:{},atk:{0:531},Variance:0,properties:{}},
+    buronaga:{name:{},atk:{0:535},Variance:0,properties:{}},
     arqueim:{name:{},atk:{0:530},Variance:0,properties:{}},
     Livider:{name:{},atk:{0:466},Variance:0,properties:{}},
     NeosAstraean:{name:{},atk:{0:535},Variance:0,properties:{}},

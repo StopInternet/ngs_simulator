@@ -784,7 +784,17 @@ if(document.getElementById("unit3_op6_select").value != "null"){
 }
 
 //アドオンスキル取得処理
-var all_addon_hp = Number(hu_a)+Number(fi_a)+Number(fo_a)+Number(te_a)+Number(ra_a)+Number(gu_a)+Number(br_a)+Number(bo_a)+Number(wa_a_hp)+Number(sl_a)
+var all_addon_hp = Number(document.getElementById("addon_hu").value)+
+Number(document.getElementById("addon_fi").value)+
+Number(document.getElementById("addon_ra").value)+
+Number(document.getElementById("addon_gu").value)+
+Number(document.getElementById("addon_fo").value)+
+Number(document.getElementById("addon_te").value)+
+Number(document.getElementById("addon_br").value)+
+Number(document.getElementById("addon_bo").value)+
+Number(document.getElementById("addon_wa_hp").value)+
+Number(document.getElementById("addon_sl").value)
+
 //スキルレベル平均
 var skill_averege = all_addon_hp/10
 
@@ -807,7 +817,7 @@ calculaterStats(
     alluPower,alluShoot,alluMagic
     );
 document.getElementById("all_stats_hp").innerHTML = "HP: "+(class_h+All_Hp+all_addon_hp); 
-document.getElementById("all_stats_pp").innerHTML = "PP: "+(100+All_pp+Number(wa_a_pp));
+document.getElementById("all_stats_pp").innerHTML = "PP: "+(100+All_pp+Number(document.getElementById("addon_wa_pp").value));
 document.getElementById("all_stats_damage").innerHTML = "攻撃力: "+(class_a+atk_n);
 document.getElementById("all_stats_def").innerHTML = "防御力: "+(class_d + def_1+def_2+def_3);
 document.getElementById("All_Power").innerHTML = "打撃威力: "+All_Power+"%";

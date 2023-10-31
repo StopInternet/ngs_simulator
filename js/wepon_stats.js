@@ -4,6 +4,7 @@
  * +31~+40の間は3.5ずつ上がってる
  * ＋41~50は4ずつあがってる
  * +51~60は6.1ずつ上がってる。
+ * フリューガルド
  * ✪７
  * 30-40 : 4.6
  * 41-50 : 5
@@ -19,7 +20,10 @@
 const wepons = {
     //id　名前　ダメージ補正値　潜在レベル
     //
+    //10
+    furyu_garudo:{name:{},atk:{0:735},Variance:0,properties:{}},
     //9
+    mereku:{name:{},atk:{0:635},Variance:0,properties:{}},
     fashieru:{name:{},atk:{0:637},Variance:0,properties:{}},
     tesua:{name:{},atk:{0:637},Variance:0,properties:{}},
     //8
@@ -124,8 +128,25 @@ function stats_set(id,name,rare){
         wepons[id].properties[i] = i
     }
     
+    //レア10
+    if(rare==10){
+        // 1 ~ 30
+        for(var i=1;i<=30;i++){
+            const plus10 = 3*i
+            wepons[id].atk[i] = wepons[id].atk[0]+plus10
+        }
+        // 31 ~ 60
+        for(var i10=1; i10<=60; i10++){
+            const i10p = 4.5*i10p
+            wepons[id].atk[i10p] = wepons[id].atk[0]+i10p;
+        }
+        // 61 ~ 70
+        for(var i10_2=61;i10_2<=70;i10_2++){
+            const i10p2 = 8.5*(i10p2-60)
+            wepons[id].atk[i10p2] = wepons[id].atk[60]+i10p2;
+        }
+    }
     //レア度9,8,7の+30まで
-    
     if(rare == 9 || rare === 8||rare === 7){
         for(var i=1;i<=30;i++){
             const plus78 = 3*i
@@ -347,7 +368,10 @@ for (const weapon in wepons) {
 
 //id 名前 レア度
 //stats_set("","",0)
+//10
+stats_set("furyu_garudo","（予想）フリューガルド",9)
 //9
+stats_set("mereku","メレク",9)
 stats_set("fashieru","ファーシュメル",9)
 stats_set("tesua","テスア",9)
 //8

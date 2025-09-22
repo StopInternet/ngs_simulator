@@ -1,4 +1,4 @@
-<h1>NGS Stats Calc 【NSC】 <br> NGSステータス計算シミュレーター<h1>
+<h1>【Closed】NGS Stats Calc 【NSC】 <br> NGSステータス計算シミュレーター<h1>
 <br>
 サイトリンクはこちら<br>
 https://stopinternet.github.io/ngs_simulator/
